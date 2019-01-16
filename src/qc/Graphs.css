@@ -1,0 +1,69 @@
+:root {
+  --yellow: #fff;
+  --black: #272727;
+}
+
+.graph-container {
+  display: grid;
+  /* height: 600px; */
+  /* grid-gap: 50px; */
+  min-width: 1200px;
+  min-height: 600px;
+  /* border: 5px solid var(--yellow); */
+  grid-auto-flow: dense;
+  grid-template-columns: 2fr 3fr;
+  background-color: var(--yellow);
+}
+
+.item-xs {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  /* display: grid; */
+  min-width: 100px;
+  min-height: 250px;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  /* border: 5px solid rgba(0, 0, 0, 0.03); */
+  border-radius: 3px;
+  /* font-size: 35px; */
+  background-color: var(--yellow); /* best colour */
+}
+.item-sm {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  /* display: grid; */
+  min-width: 200px;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  /* border: 5px solid rgba(0, 0, 0, 0.03); */
+  border-radius: 3px;
+  /* font-size: 35px; */
+  background-color: var(--yellow); /* best colour */
+}
+.item-md {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  /* display: grid; */
+  min-width: 97%;
+  min-height: 400px;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  /* border: 5px solid rgba(0, 0, 0, 0.03); */
+  /* border-radius: 3px; */
+  /* font-size: 35px; */
+  background-color: var(--yellow); /* best colour */
+}
+.item-lg {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  /* display: grid; */
+  min-width: 1200px;
+  min-height: 600px;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  /* border: 5px solid rgba(0, 0, 0, 0.03); */
+  border-radius: 3px;
+  /* font-size: 35px; */
+  background-color: var(--yellow); /* best colour */
+}

@@ -1,0 +1,198 @@
+
+  {
+    "_id": "1q2eGGgB5qj7UjEOU_y4",
+    "_index": "experiment",
+    "lab": "Bartolomei Lab",
+    "exposure": "Control Diet",
+    "dose": "NA",
+    "tissue": "Liver UBERON:0002107",
+    "age_of_mice": 20,
+    "assay_technique": "ATAC-seq (transposase-accessible chromatin, OBI:0002039)",
+    "mouse_gender": "Male",
+    "experiments": [
+      {
+        "mouse": "TGTMS15DP1BV",
+        "biosamples": [
+          {
+            "biosample": "TGTBS81NEIFM",
+            "assays": [
+              {
+                "assay": "TGTASSJLFBG4",
+                "files": [
+                  {
+                    "uuid": "5b1e9f517ed6a31ea991e31a",
+                    "score": 10,
+                    "accession": "TGTFI7I114RO",
+                    "paired_file_uuid": "5b1e9f8e4bdc28b30df48b35",
+                    "paired_file_accession": "TGTFIFWMHJBA",
+                    "submission": "f512c046-8beb-4777-9eeb-9cb7aa1868af",
+                    "status": "PASS"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TGTMSKSAV7OA",
+        "biosamples": [
+          {
+            "biosample": "TGTBS0VU8ZHB",
+            "assays": [
+              {
+                "assay": "TGTASCS173KO",
+                "files": [
+                  {
+                    "uuid": "5b1e9d364bdc284ce9f48b2b",
+                    "score": 10,
+                    "accession": "TGTFIHU0SZJR",
+                    "paired_file_uuid": "5b1e9d717ed6a32efe91e30d",
+                    "paired_file_accession": "TGTFIRBLE9BJ",
+                    "submission": "f512c046-8beb-4777-9eeb-9cb7aa1868af",
+                    "status": "PASS"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TGTMSC4EZWZF",
+        "biosamples": [
+          {
+            "biosample": "TGTBSTABOTE4",
+            "assays": [
+              {
+                "assay": "TGTASHUABI4W",
+                "files": [
+                  {
+                    "uuid": "5b1e9c467ed6a37aa691e309",
+                    "score": 10,
+                    "accession": "TGTFISDULVIQ",
+                    "paired_file_uuid": "5b1e9c824bdc284995f48b29",
+                    "paired_file_accession": "TGTFI1LKCIK2",
+                    "submission": "f512c046-8beb-4777-9eeb-9cb7aa1868af",
+                    "status": "PASS"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TGTMSN0FL88F",
+        "biosamples": [
+          {
+            "biosample": "TGTBSEX4L2A5",
+            "assays": [
+              {
+                "assay": "TGTASV6U2GF8",
+                "files": [
+                  {
+                    "uuid": "5bd8d3ea06a9504e4ea53c1a",
+                    "score": 6,
+                    "accession": "TGTFIL26TFKJ",
+                    "paired_file_uuid": "5bd8d3ea345ff0050db537af",
+                    "paired_file_accession": "TGTFIZQCZ5AT",
+                    "submission": "520f2e68-d522-4b0a-b01a-2dbf9bc5c1c9",
+                    "status": "PASS"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "biosample": "TGTBSVQGRGAB",
+            "assays": [
+              {
+                "assay": "TGTASK3LLUMK",
+                "files": [
+                  {
+                    "uuid": "5bd8d461345ff021bdb537b3",
+                    "score": 10,
+                    "accession": "TGTFI9UIPN1Z",
+                    "paired_file_uuid": "5bd8d4da06a9506d16a53c1f",
+                    "paired_file_accession": "TGTFINPW139N",
+                    "submission": "520f2e68-d522-4b0a-b01a-2dbf9bc5c1c9",
+                    "status": "PASS"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TGTMSBHE0ANJ",
+        "biosamples": [
+          {
+            "biosample": "TGTBSQZNTABK",
+            "assays": [
+              {
+                "assay": "TGTAS5LE2I1V",
+                "files": [
+                  {
+                    "uuid": "5bd8d1ce06a950e6b8a53c04",
+                    "score": 9,
+                    "accession": "TGTFITH20HC3",
+                    "paired_file_uuid": "5bd8d1cd345ff01ac4b5379d",
+                    "paired_file_accession": "TGTFI771ZRV4",
+                    "submission": "520f2e68-d522-4b0a-b01a-2dbf9bc5c1c9",
+                    "status": "PASS"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TGTMS1VBB2AL",
+        "biosamples": [
+          {
+            "biosample": "TGTBS8OO7JQW",
+            "assays": [
+              {
+                "assay": "TGTAST0WGEDJ",
+                "files": [
+                  {
+                    "uuid": "5bd8d28306a9505f6ea53c0e",
+                    "score": 5,
+                    "accession": "TGTFI0M8IIGA",
+                    "paired_file_uuid": "5bd8d2be345ff02abcb537a4",
+                    "paired_file_accession": "TGTFINTI393J",
+                    "submission": "520f2e68-d522-4b0a-b01a-2dbf9bc5c1c9",
+                    "status": "PASS"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "biosample": "TGTBSGSPG4IF",
+            "assays": [
+              {
+                "assay": "TGTASHQTW0IR",
+                "files": [
+                  {
+                    "uuid": "5bd8d2bd06a9505d7da53c0f",
+                    "score": 9,
+                    "accession": "TGTFI8I01LZN",
+                    "paired_file_uuid": "5bd8d2fa345ff07679b537a8",
+                    "paired_file_accession": "TGTFIS8FRM01",
+                    "submission": "520f2e68-d522-4b0a-b01a-2dbf9bc5c1c9",
+                    "status": "PASS"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 6,
+    "title": "ATAC-seq (transposase-accessible chromatin, OBI:0002039) on Liver UBERON:0002107 extracted from 20 Male mice exposed with Control Diet"
+  }

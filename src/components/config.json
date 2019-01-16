@@ -1,0 +1,11 @@
+{
+    "QC_REPORTS_URL": "https://target.wustl.edu/processed/qcreports",
+    "ELASTICSEARCH_API_URL": "https://search-targetdcc-3dlio7dsb2i4woj3cw6q4a4ghq.us-east-1.es.amazonaws.com",
+    "ELASTICSEARCH_FILES_API_URL": "https://search-targetdcc-3dlio7dsb2i4woj3cw6q4a4ghq.us-east-1.es.amazonaws.com",
+    "TARGET_DATA_URL": "https://s3.amazonaws.com/targetdcc-data",
+    "TARGET_COMPOSITE_VIEW_API": "https://api.targetepigenomics.org/rep1",
+    "TARGET_COMPOSITE_VIEW_AWS_API": "https://5dum6c4ytb.execute-api.us-east-1.amazonaws.com/dev/api/targetserver",
+    "COMPOSITE_MONGO_API": "https://5dum6c4ytb.execute-api.us-east-1.amazonaws.com/dev/composite/data",
+    "DATAHUB_MONGO_API": "https://5dum6c4ytb.execute-api.us-east-1.amazonaws.com/dev/datahub",
+    "BROWSER_URL": "https://epigenomegateway.wustl.edu/browser/?genome=mm10&datahub="
+}

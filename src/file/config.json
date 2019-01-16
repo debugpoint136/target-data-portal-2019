@@ -1,0 +1,141 @@
+{
+  "QC_REPORT_URL": "http://targetdcc.s3-website-us-east-1.amazonaws.com",
+  "DATA_PHASE": "PRODUCTION",
+  "PRODUCTION": {
+    "EXPERIMENTS": {
+      "DATA_FILE_LOCATION": "./json/experiments.22aug.json",
+      "DEFAULT": {
+        "rows": ["lab", "exposure_type"],
+        "cols": ["age_of_mice", "tissue", "assay_technique", "mouse_gender"]
+      },
+      "HIDDEN_KEYS": [
+        "experiments",
+        "selected",
+        "data_phase",
+        "project",
+        "count",
+        "fileUUID",
+        "submission",
+        "diet_description",
+        "exposure_life_stage",
+        "filename",
+        "md5sum",
+        "project_summary",
+        "selected",
+        "exposure_dose",
+        "dose",
+        "strand_specificity",
+        "project",
+        "mouse_gender",
+        "QCScore"
+      ]
+    },
+    "FILES": {
+      "DATA_FILE_LOCATION": "./Dec07.parsed.json",
+      "DEFAULT": {
+        "rows": ["Lab", "Exposure"],
+        "cols": ["Assay", "Age"]
+      },
+      "HIDDEN_KEYS": [
+        "qcScore",
+        "mouse_gender",
+        "assay_category",
+        "assay_target",
+        "diet_category",
+        "submitter",
+        "tissue_classification",
+        "exposure_classification",
+        "exposure_type",
+        "run_type",
+        "sample_type",
+        "data_phase",
+        "fileUUID",
+        "diet_description",
+        "exposure_life_stage",
+        "filename",
+        "md5sum",
+        "submission",
+        "project_summary",
+        "selected",
+        "strand_specificity",
+        "exposure_dose",
+        "age_of_mice",
+        "exposure_details",
+        "files",
+        "count",
+        "Read",
+        "assay_accession",
+        "file_accession",
+        "uuid",
+        "Mouse",
+        "paired_file_accession",
+        "paired_file_uuid",
+        "assay"
+      ]
+    }
+  },
+  "PILOT": {
+    "EXPERIMENTS": {
+      "DATA_FILE_LOCATION": "./json/files.export.all.json",
+      "DEFAULT": {
+        "rows": ["treatment"],
+        "cols": ["mouse_age_collection", "biosample", "assay"]
+      },
+      "HIDDEN_KEYS": [
+        "mouse_gender",
+        "filtering_method",
+        "md5sum",
+        "strand_specific",
+        "starting_cell_count",
+        "detergent_added",
+        "filename",
+        "previously_frozen_tissue",
+        "starting_cells",
+        "protocol",
+        "starting_nucleic_acid",
+        "comments",
+        "_id"
+      ]
+    },
+    "FILES": {
+      "DATA_FILE_LOCATION": "./json/005.json",
+      "DEFAULT": {
+        "rows": ["treatment"],
+        "cols": ["mouse_age_collection", "biosample", "assay"]
+      },
+      "HIDDEN_KEYS": [
+        "mouse_gender",
+        "filtering_method",
+        "md5sum",
+        "strand_specific",
+        "starting_cell_count",
+        "detergent_added",
+        "filename",
+        "previously_frozen_tissue",
+        "starting_cells",
+        "protocol",
+        "starting_nucleic_acid",
+        "comments",
+        "_id"
+      ]
+    }
+  },
+  "test": {
+    "treatment": "7% corn oil chow diet with control water",
+    "mouse_gender": "Male",
+    "assay": "ATAC-seq",
+    "filtering_method": "NA",
+    "md5sum": "5012b19e8bc6c2025c592a595bf868dd",
+    "strand_specific": "FALSE",
+    "starting_cell_count": "NA",
+    "detergent_added": "NA",
+    "filename": "103875.PE.R1.fastq.gz",
+    "previously_frozen_tissue": "NA",
+    "starting_cells": "NA",
+    "mouse_age_collection": "NA",
+    "protocol": "ATAC-seq protocol",
+    "biosample": "Liver",
+    "starting_nucleic_acid": "NA",
+    "comments": ""
+  }
+}

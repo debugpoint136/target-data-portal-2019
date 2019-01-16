@@ -1,0 +1,331 @@
+.facetUi {
+    color: #2a3f5f;
+    font-family: Verdana;
+    border-collapse: collapse;
+}
+.facetUi select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+.facetUi td.facetOutput {
+    vertical-align: top;
+}
+
+table.facetTable {
+    font-size: 8pt;
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 3px;
+    margin-left: 3px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+table.facetTable thead tr th,
+table.facetTable tbody tr th {
+    background-color: #ebf0f8;
+    border: 1px solid #c8d4e3;
+    font-size: 8pt;
+    padding: 5px;
+}
+
+table.facetTable .facetColLabel {
+    text-align: center;
+}
+table.facetTable .facetTotalLabel {
+    text-align: right;
+}
+
+table.facetTable tbody tr td {
+    color: #2a3f5f;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #c8d4e3;
+    vertical-align: top;
+    text-align: right;
+}
+
+.facetTotal,
+.facetGrandTotal {
+    font-weight: bold;
+}
+
+.facetRowOrder,
+.facetColOrder {
+    cursor: pointer;
+    width: 15px;
+    margin-left: 5px;
+    display: inline-block;
+    user-select: none;
+    text-decoration: none !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+.facetAxisContainer,
+.facetVals {
+    border: 1px solid #a2b1c6;
+    background: #f2f5fa;
+    padding: 5px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.facetRenderers {
+    padding-left: 5px;
+    user-select: none;
+}
+
+.facetDropdown {
+    display: none;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    margin: 3px;
+}
+
+.facetDropdownIcon {
+    float: right;
+    color: #a2b1c6;
+}
+.facetDropdownCurrent {
+    text-align: left;
+    border: 1px solid #a2b1c6;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    width: 210px;
+    box-sizing: border-box;
+    background: white;
+}
+
+.facetDropdownCurrentOpen {
+    border-radius: 4px 4px 0 0;
+}
+
+.facetDropdownMenu {
+    background: white;
+    position: absolute;
+    width: 100%;
+    margin-top: -1px;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid #a2b1c6;
+    border-top: 1px solid #dfe8f3;
+    box-sizing: border-box;
+}
+
+.facetDropdownValue {
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: left;
+}
+.facetDropdownActiveValue {
+    background: #ebf0f8;
+}
+
+.facetVals {
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+    padding-bottom: 12px;
+}
+
+.facetRows {
+    height: 35px;
+}
+
+.facetAxisContainer li {
+    padding: 8px 6px;
+    list-style-type: none;
+    cursor: move;
+}
+.facetAxisContainer li.facetPlaceholder {
+    -webkit-border-radius: 5px;
+    padding: 3px 15px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px dashed #a2b1c6;
+}
+.facetAxisContainer li.facetPlaceholder span.facetAttr {
+    display: none;
+}
+
+.facetAxisContainer li span.facetAttr {
+    -webkit-text-size-adjust: 100%;
+    background: #dfe8f3;
+    border: 1px solid #3c68f8;
+    font-size: 1ch;
+    font-weight: bold;
+    padding: 2px 5px;
+    white-space: nowrap;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+.facetUnused {
+    background: #c8d4e3;
+    padding: 20px 5px;
+}
+
+.facetTriangle {
+    cursor: pointer;
+    color: #506784;
+    display: none;
+}
+
+.facetHorizList li {
+    display: inline-block;
+}
+.facetVertList {
+    vertical-align: top;
+}
+
+.facetFilteredAttribute {
+    font-style: italic;
+}
+
+.sortable-chosen .facetFilterBox {
+    display: none !important;
+}
+
+.facetCloseX {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.facetDragHandle {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 18px;
+    cursor: move;
+    color: #a2b1c6;
+}
+
+.facetButton {
+    color: #506784;
+    border-radius: 5px;
+    padding: 3px 6px;
+    background: #f2f5fa;
+    border: 1px solid;
+    border-color: #c8d4e3;
+    font-size: 14px;
+    margin: 3px;
+    transition: 0.34s all cubic-bezier(0.19, 1, 0.22, 1);
+    text-decoration: none !important;
+}
+
+.facetButton:hover {
+    background: #e2e8f0;
+    border-color: #a2b1c6;
+}
+
+.facetButton:active {
+    background: #d1dae6;
+}
+
+.facetFilterBox input {
+    border: 1px solid #c8d4e3;
+    border-radius: 5px;
+    color: #506784;
+    padding: 0 3px;
+    font-size: 14px;
+}
+
+.facetFilterBox input:focus {
+    border-color: #119dff;
+    outline: none;
+}
+
+.facetFilterBox {
+    z-index: 100;
+    width: 300px;
+    border: 1px solid #506784;
+    background-color: #fff;
+    /* position: absolute; */
+    text-align: center;
+    user-select: none;
+    min-height: 100px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+.facetFilterBox h4 {
+    margin: 15px;
+}
+.facetFilterBox p {
+    margin: 10px auto;
+}
+.facetFilterBox button {
+    color: #2a3f5f;
+}
+.facetFilterBox input[type='text'] {
+    width: 230px;
+    color: #2a3f5f;
+    margin-bottom: 5px;
+}
+
+.facetCheckContainer {
+    text-align: left;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow-y: scroll;
+    width: 100%;
+    max-height: 30vh;
+    border-top: 1px solid #dfe8f3;
+}
+
+.facetCheckContainer p {
+    margin: 0;
+    margin-bottom: 1px;
+    padding: 3px;
+    cursor: default;
+}
+
+.facetCheckContainer p.selected {
+    background: #ebf0f8;
+}
+
+.facetOnly {
+    display: none;
+    width: 35px;
+    float: left;
+    font-size: 12px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.facetOnlySpacer {
+    display: block;
+    width: 35px;
+    float: left;
+}
+
+.facetCheckContainer p:hover .facetOnly {
+    display: block;
+}
+.facetCheckContainer p:hover .facetOnlySpacer {
+    display: none;
+}
+
+.facetRendererArea {
+    padding: 5px;
+}

@@ -1,0 +1,27 @@
+{
+  "experiments": [
+    {
+      "mouse": "TRGTMSE000497",
+      "biosamples": [
+        {
+          "biosample": "TRGTSMP0001650",
+          "assays": [
+            {
+              "assay": "TRGTASY000893",
+              "files": [
+                {
+                  "accession": "TRGTFF0001361",
+                  "uuid": "5b1e9dae4bdc2885fef48b2f"
+                },
+                {
+                  "accession": "TRGTFF0001360",
+                  "uuid": "5b1e9dad4bdc28b6fef48b2e"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

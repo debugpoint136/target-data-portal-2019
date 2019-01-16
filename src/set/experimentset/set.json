@@ -1,0 +1,1571 @@
+[
+  {
+    "_id": "60095651-4d5c-4781-9871-31dd8a840027",
+    "_index": "experiment",
+    "lab": "Dana Dolinoy",
+    "project": "TRGTBPR0004",
+    "exposure_type": "Lead",
+    "dose": "16ppm lead acetate",
+    "tissue": "Liver",
+    "age_of_mice": "21.7 weeks",
+    "assay_technique": "ATAC-seq",
+    "mouse_gender": "Female",
+    "experiments": [
+      {
+        "mouse": "TRGTMSE00041",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000489",
+            "assays": [
+              {
+                "assay": "TRGTASY00023",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001473",
+                    "uuid": "5b75b3aadbb5043b45b01763",
+                    "filename": "Sample_113478.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001472",
+                    "uuid": "5b75b36e0331b90c8eafd282",
+                    "filename": "Sample_113478.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00081",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000498",
+            "assays": [
+              {
+                "assay": "TRGTASY00039",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001489",
+                    "uuid": "5b75b8969e0913a1daf625d0",
+                    "filename": "Sample_113491.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001488",
+                    "uuid": "5b75b85adbb5040465b01771",
+                    "filename": "Sample_113491.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00016",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000482",
+            "assays": [
+              {
+                "assay": "TRGTASY0009",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001459",
+                    "uuid": "5b75bc910331b97165afd2a4",
+                    "filename": "Sample_113501.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001458",
+                    "uuid": "5b75bc569e0913104bf625e2",
+                    "filename": "Sample_113501.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00010",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000481",
+            "assays": [
+              {
+                "assay": "TRGTASY0007",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001457",
+                    "uuid": "5b75b85a9e09138350f625ce",
+                    "filename": "Sample_113490.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001456",
+                    "uuid": "5b75b81d9e09136ff4f625cc",
+                    "filename": "Sample_113490.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00033",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000487",
+            "assays": [
+              {
+                "assay": "TRGTASY00019",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001469",
+                    "uuid": "5b75b7e29e09132161f625ca",
+                    "filename": "Sample_113489.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001468",
+                    "uuid": "5b75b7a6dbb504dd97b0176e",
+                    "filename": "Sample_113489.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000109",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000506",
+            "assays": [
+              {
+                "assay": "TRGTASY00055",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001505",
+                    "uuid": "5b75b3e60331b9753eafd284",
+                    "filename": "Sample_113479.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001504",
+                    "uuid": "5b75b3aadbb5047704b01764",
+                    "filename": "Sample_113479.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 6,
+    "title": "ATAC-seq on Liver extracted from 21.7 weeks Female mice exposed with Lead"
+  },
+  {
+    "_id": "b0f6d419-3fea-410b-a0e1-bfdd8395d7bc",
+    "_index": "experiment",
+    "lab": "Marisa Bartolomei",
+    "project": "TRGTBPR0002",
+    "exposure_type": "Endocrine-disrupting chemical",
+    "dose": "10 UG/KGBW/DAY",
+    "tissue": "Liver",
+    "age_of_mice": "5 months",
+    "assay_technique": "ATAC-seq",
+    "mouse_gender": "Female",
+    "experiments": [
+      {
+        "mouse": "TRGTMSE000488",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001667",
+            "assays": [
+              {
+                "assay": "TRGTASY000907",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001367",
+                    "uuid": "5b1e9e9d7ed6a315f191e313",
+                    "filename": "TGT092.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001366",
+                    "uuid": "5b1e9e617ed6a316c391e312",
+                    "filename": "TGT092.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000276",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001616",
+            "assays": [
+              {
+                "assay": "TRGTASY000856",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001349",
+                    "uuid": "5b1e9bce4bdc2818aff48b26",
+                    "filename": "TGT027.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001348",
+                    "uuid": "5b1e9b927ed6a3586191e307",
+                    "filename": "TGT027.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 2,
+    "title": "ATAC-seq on Liver extracted from 5 months Female mice exposed with Endocrine-disrupting chemical"
+  },
+  {
+    "_id": "83dbbf84-94f2-45a1-8323-359266129545",
+    "_index": "experiment",
+    "lab": "Dana Dolinoy",
+    "project": "TRGTBPR0004",
+    "exposure_type": "Control",
+    "dose": "Control",
+    "tissue": "Liver",
+    "age_of_mice": "21.7 weeks",
+    "assay_technique": "ATAC-seq",
+    "mouse_gender": "Male",
+    "experiments": [
+      {
+        "mouse": "TRGTMSE0005",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000480",
+            "assays": [
+              {
+                "assay": "TRGTASY0005",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001455",
+                    "uuid": "5b75ba399e09131b6ff625d8",
+                    "filename": "Sample_113495.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001454",
+                    "uuid": "5b75b9fedbb5046d44b0177e",
+                    "filename": "Sample_113495.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00089",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000501",
+            "assays": [
+              {
+                "assay": "TRGTASY00045",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001495",
+                    "uuid": "5b75b18e9e09137f6bf625c2",
+                    "filename": "Sample_113472.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001494",
+                    "uuid": "5b75b152dbb50417c7b01759",
+                    "filename": "Sample_113472.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00052",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000492",
+            "assays": [
+              {
+                "assay": "TRGTASY000961",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001481",
+                    "uuid": "5b75b5c60331b94a7bafd28e",
+                    "filename": "Sample_113484.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001480",
+                    "uuid": "5b75b5890331b97c0dafd28d",
+                    "filename": "Sample_113484.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000123",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000512",
+            "assays": [
+              {
+                "assay": "TRGTASY00067",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001517",
+                    "uuid": "5b75b1cadbb50400ddb0175a",
+                    "filename": "Sample_113473.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001516",
+                    "uuid": "5b75b1cb9e0913187bf625c3",
+                    "filename": "Sample_113473.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000121",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000511",
+            "assays": [
+              {
+                "assay": "TRGTASY00065",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001515",
+                    "uuid": "5b75b63ddbb5040e82b0176c",
+                    "filename": "Sample_113485.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001514",
+                    "uuid": "5b75b6020331b9e2b3afd290",
+                    "filename": "Sample_113485.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 5,
+    "title": "ATAC-seq on Liver extracted from 21.7 weeks Male Control mice"
+  },
+  {
+    "_id": "ba7d1b05-70ba-4066-ba6b-dbcefbe8d051",
+    "_index": "experiment",
+    "lab": "Marisa Bartolomei",
+    "project": "TRGTBPR0002",
+    "exposure_type": "Endocrine-disrupting chemical",
+    "dose": "10 MG/KGBW/DAY",
+    "tissue": "Liver",
+    "age_of_mice": "5 months",
+    "assay_technique": "ATAC-seq",
+    "mouse_gender": "Female",
+    "experiments": [
+      {
+        "mouse": "TRGTMSE000497",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001650",
+            "assays": [
+              {
+                "assay": "TRGTASY000893",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001361",
+                    "uuid": "5b1e9dae4bdc2885fef48b2f",
+                    "filename": "TGT043.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001360",
+                    "uuid": "5b1e9dad4bdc28b6fef48b2e",
+                    "filename": "TGT043.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 1,
+    "title": "ATAC-seq on Liver extracted from 5 months Female mice exposed with Endocrine-disrupting chemical"
+  },
+  {
+    "_id": "444d1b74-338d-444c-8c82-4e14b0563d2a",
+    "_index": "experiment",
+    "lab": "Marisa Bartolomei",
+    "project": "TRGTBPR0002",
+    "exposure_type": "Endocrine-disrupting chemical",
+    "dose": "10 MG/KGBW/DAY",
+    "tissue": "Liver",
+    "age_of_mice": "5 months",
+    "assay_technique": "ATAC-seq",
+    "mouse_gender": "Male",
+    "experiments": [
+      {
+        "mouse": "TRGTMSE000288",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001646",
+            "assays": [
+              {
+                "assay": "TRGTASY000885",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001357",
+                    "uuid": "5b1e9d364bdc287f02f48b2c",
+                    "filename": "TGT039.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001356",
+                    "uuid": "5b1e9cf94bdc282b37f48b2a",
+                    "filename": "TGT039.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000502",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001664",
+            "assays": [
+              {
+                "assay": "TRGTASY000903",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001365",
+                    "uuid": "5b1e9e614bdc2849cbf48b32",
+                    "filename": "TGT090.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001364",
+                    "uuid": "5b1e9e267ed6a3338a91e310",
+                    "filename": "TGT090.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000498",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001658",
+            "assays": [
+              {
+                "assay": "TRGTASY000897",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001363",
+                    "uuid": "5b1e9e267ed6a3045791e311",
+                    "filename": "TGT044.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001362",
+                    "uuid": "5b1e9de97ed6a3018791e30f",
+                    "filename": "TGT044.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000279",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001623",
+            "assays": [
+              {
+                "assay": "TRGTASY000863",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001375",
+                    "uuid": "5b1e9fca7ed6a33f2491e31c",
+                    "filename": "TGT30L.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001374",
+                    "uuid": "5b1e9fca4bdc28aa0bf48b37",
+                    "filename": "TGT30L.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 4,
+    "title": "ATAC-seq on Liver extracted from 5 months Male mice exposed with Endocrine-disrupting chemical"
+  },
+  {
+    "_id": "d6281de8-5927-400c-a632-59a8d938493b",
+    "_index": "experiment",
+    "lab": "Dana Dolinoy",
+    "project": "TRGTBPR0004",
+    "exposure_type": "DEHP",
+    "dose": "25mg DEHP/kg",
+    "tissue": "Liver",
+    "age_of_mice": "21.7 weeks",
+    "assay_technique": "ATAC-seq",
+    "mouse_gender": "Female",
+    "experiments": [
+      {
+        "mouse": "TRGTMSE000104",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000504",
+            "assays": [
+              {
+                "assay": "TRGTASY00051",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001501",
+                    "uuid": "5b75b6f20331b963b4afd297",
+                    "filename": "Sample_113487.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001500",
+                    "uuid": "5b75b6b60331b93449afd295",
+                    "filename": "Sample_113487.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00068",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000495",
+            "assays": [
+              {
+                "assay": "TRGTASY00033",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001483",
+                    "uuid": "5b75b241dbb5044517b0175c",
+                    "filename": "Sample_113474.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001482",
+                    "uuid": "5b75b205dbb5049bfbb0175b",
+                    "filename": "Sample_113474.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00076",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000497",
+            "assays": [
+              {
+                "assay": "TRGTASY00037",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001487",
+                    "uuid": "5b75bba20331b9aa80afd29c",
+                    "filename": "Sample_113498.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001486",
+                    "uuid": "5b75bb66dbb504f96ab01787",
+                    "filename": "Sample_113498.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00097",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000502",
+            "assays": [
+              {
+                "assay": "TRGTASY00047",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001497",
+                    "uuid": "5b75baed9e0913864ff625da",
+                    "filename": "Sample_113496.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001496",
+                    "uuid": "5b75ba76dbb504640fb0177f",
+                    "filename": "Sample_113496.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00024",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000484",
+            "assays": [
+              {
+                "assay": "TRGTASY00013",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001463",
+                    "uuid": "5b75bb669e09133d63f625dd",
+                    "filename": "Sample_113497.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001462",
+                    "uuid": "5b75bb29dbb5047565b01786",
+                    "filename": "Sample_113497.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 5,
+    "title": "ATAC-seq on Liver extracted from 21.7 weeks Female mice exposed with DEHP"
+  },
+  {
+    "_id": "9e510e98-f786-4170-989d-c419800e2b45",
+    "_index": "experiment",
+    "lab": "Dana Dolinoy",
+    "project": "TRGTBPR0004",
+    "exposure_type": "DEHP",
+    "dose": "25mg DEHP/kg",
+    "tissue": "Liver",
+    "age_of_mice": "21.7 weeks",
+    "assay_technique": "ATAC-seq",
+    "mouse_gender": "Male",
+    "experiments": [
+      {
+        "mouse": "TRGTMSE00098",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000503",
+            "assays": [
+              {
+                "assay": "TRGTASY00049",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001499",
+                    "uuid": "5b75bc569e0913df1ef625e3",
+                    "filename": "Sample_113500.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001498",
+                    "uuid": "5b75bc1a9e09131f89f625e1",
+                    "filename": "Sample_113500.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000105",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000505",
+            "assays": [
+              {
+                "assay": "TRGTASY00053",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001503",
+                    "uuid": "5b75b331dbb5040113b01762",
+                    "filename": "Sample_113477.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001502",
+                    "uuid": "5b75b331dbb5040a2db01761",
+                    "filename": "Sample_113477.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00030",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000486",
+            "assays": [
+              {
+                "assay": "TRGTASY00017",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001467",
+                    "uuid": "5b75b7a59e0913b737f625c9",
+                    "filename": "Sample_113488.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001466",
+                    "uuid": "5b75b72e0331b938b9afd299",
+                    "filename": "Sample_113488.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000116",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000509",
+            "assays": [
+              {
+                "assay": "TRGTASY00061",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001511",
+                    "uuid": "5b75bbde9e0913455ff625de",
+                    "filename": "Sample_113499.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001510",
+                    "uuid": "5b75bba10331b962f6afd29b",
+                    "filename": "Sample_113499.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000114",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000508",
+            "assays": [
+              {
+                "assay": "TRGTASY00059",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001509",
+                    "uuid": "5b75b2b9dbb504269eb0175e",
+                    "filename": "Sample_113475.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001508",
+                    "uuid": "5b75b27edbb5046176b0175d",
+                    "filename": "Sample_113475.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00073",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000496",
+            "assays": [
+              {
+                "assay": "TRGTASY00035",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001485",
+                    "uuid": "5b75b2f69e0913a4f2f625c5",
+                    "filename": "Sample_113476.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001484",
+                    "uuid": "5b75b2f6dbb504086bb01760",
+                    "filename": "Sample_113476.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00025",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000485",
+            "assays": [
+              {
+                "assay": "TRGTASY00015",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001465",
+                    "uuid": "5b75b6b50331b90dfaafd294",
+                    "filename": "Sample_113486.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001464",
+                    "uuid": "5b75b67adbb5042d23b0176d",
+                    "filename": "Sample_113486.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 7,
+    "title": "ATAC-seq on Liver extracted from 21.7 weeks Male mice exposed with DEHP"
+  },
+  {
+    "_id": "eb093593-b79d-4f83-aa6d-fed0a919a71d",
+    "_index": "experiment",
+    "lab": "Dana Dolinoy",
+    "project": "TRGTBPR0004",
+    "exposure_type": "Control",
+    "dose": "Control",
+    "tissue": "Liver",
+    "age_of_mice": "21.7 weeks",
+    "assay_technique": "ATAC-seq",
+    "mouse_gender": "Female",
+    "experiments": [
+      {
+        "mouse": "TRGTMSE00059",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000493",
+            "assays": [
+              {
+                "assay": "TRGTASY00029",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001479",
+                    "uuid": "5b75b5110331b9362dafd28a",
+                    "filename": "Sample_113482.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001478",
+                    "uuid": "5b75b4d5dbb504d0a1b01768",
+                    "filename": "Sample_113482.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000120",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000510",
+            "assays": [
+              {
+                "assay": "TRGTASY00063",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001513",
+                    "uuid": "5b75b94a9e09136220f625d4",
+                    "filename": "Sample_113493.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001512",
+                    "uuid": "5b75b94adbb5043fd0b01777",
+                    "filename": "Sample_113493.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000132",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000513",
+            "assays": [
+              {
+                "assay": "TRGTASY00069",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001519",
+                    "uuid": "5b75b54e0331b94ec7afd28b",
+                    "filename": "Sample_113483.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001518",
+                    "uuid": "5b75b54ddbb504ea0fb01769",
+                    "filename": "Sample_113483.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE0004",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000479",
+            "assays": [
+              {
+                "assay": "TRGTASY0003",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001453",
+                    "uuid": "5b75b0dadbb5048fe6b01757",
+                    "filename": "Sample_113470.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001452",
+                    "uuid": "5b75b0a0dbb5042334b01756",
+                    "filename": "Sample_113470.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00088",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000500",
+            "assays": [
+              {
+                "assay": "TRGTASY00043",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001493",
+                    "uuid": "5b75b152dbb504f936b01758",
+                    "filename": "Sample_113471.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001492",
+                    "uuid": "5b75b1169e09138f07f625c1",
+                    "filename": "Sample_113471.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000133",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000514",
+            "assays": [
+              {
+                "assay": "TRGTASY00071",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001521",
+                    "uuid": "5b75b9c19e09137d6df625d5",
+                    "filename": "Sample_113494.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001520",
+                    "uuid": "5b75b986dbb5046396b01779",
+                    "filename": "Sample_113494.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 6,
+    "title": "ATAC-seq on Liver extracted from 21.7 weeks Female Control mice"
+  },
+  {
+    "_id": "f8113ecd-7578-4750-a03e-c3ada75b5596",
+    "_index": "experiment",
+    "lab": "Marisa Bartolomei",
+    "project": "TRGTBPR0002",
+    "exposure_type": "Endocrine-disrupting chemical",
+    "dose": "0 MG/KGBW/DAY",
+    "tissue": "Liver",
+    "age_of_mice": "5 months",
+    "assay_technique": "ATAC-seq",
+    "mouse_gender": "Male",
+    "experiments": [
+      {
+        "mouse": "TRGTMSE000286",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001639",
+            "assays": [
+              {
+                "assay": "TRGTASY000878",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001353",
+                    "uuid": "5b1e9c824bdc284995f48b29",
+                    "filename": "TGT037.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001352",
+                    "uuid": "5b1e9c467ed6a37aa691e309",
+                    "filename": "TGT037.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000289",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001649",
+            "assays": [
+              {
+                "assay": "TRGTASY000888",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001359",
+                    "uuid": "5b1e9d717ed6a32efe91e30d",
+                    "filename": "TGT040.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001358",
+                    "uuid": "5b1e9d364bdc284ce9f48b2b",
+                    "filename": "TGT040.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000482",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001682",
+            "assays": [
+              {
+                "assay": "TRGTASY000922",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001373",
+                    "uuid": "5b1e9f8e4bdc28b30df48b35",
+                    "filename": "TGT106.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001372",
+                    "uuid": "5b1e9f517ed6a31ea991e31a",
+                    "filename": "TGT106.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 3,
+    "title": "ATAC-seq on Liver extracted from 5 months Male mice exposed with Endocrine-disrupting chemical"
+  },
+  {
+    "_id": "74808c3c-1076-415e-a006-e89c56f244a4",
+    "_index": "experiment",
+    "lab": "Dana Dolinoy",
+    "project": "TRGTBPR0004",
+    "exposure_type": "Lead",
+    "dose": "16ppm lead acetate",
+    "tissue": "Liver",
+    "age_of_mice": "21.7 weeks",
+    "assay_technique": "ATAC-seq",
+    "mouse_gender": "Male",
+    "experiments": [
+      {
+        "mouse": "TRGTMSE00034",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000488",
+            "assays": [
+              {
+                "assay": "TRGTASY00021",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001471",
+                    "uuid": "5b75b45ddbb504cb17b01766",
+                    "filename": "Sample_113480.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001470",
+                    "uuid": "5b75b4210331b95368afd285",
+                    "filename": "Sample_113480.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00082",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000499",
+            "assays": [
+              {
+                "assay": "TRGTASY00041",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001491",
+                    "uuid": "5b75b90ddbb5041d64b01774",
+                    "filename": "Sample_113492.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001490",
+                    "uuid": "5b75b8d2dbb5042bf3b01773",
+                    "filename": "Sample_113492.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00017",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000483",
+            "assays": [
+              {
+                "assay": "TRGTASY00011",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001461",
+                    "uuid": "5b75bd460331b934d8afd2ae",
+                    "filename": "Sample_113503.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001460",
+                    "uuid": "5b75bd0a0331b96609afd2ac",
+                    "filename": "Sample_113503.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000110",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000507",
+            "assays": [
+              {
+                "assay": "TRGTASY00057",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001507",
+                    "uuid": "5b75b49adbb504221fb01767",
+                    "filename": "Sample_113481.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001506",
+                    "uuid": "5b75b45e0331b96e27afd287",
+                    "filename": "Sample_113481.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00048",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000491",
+            "assays": [
+              {
+                "assay": "TRGTASY00027",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001477",
+                    "uuid": "5b75bcce0331b9dea2afd2a7",
+                    "filename": "Sample_113502.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001476",
+                    "uuid": "5b75bcce0331b938f7afd2a8",
+                    "filename": "Sample_113502.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE00042",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP000490",
+            "assays": [
+              {
+                "assay": "TRGTASY00025",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001475",
+                    "uuid": "5b75bd829e09138b21f625e4",
+                    "filename": "Sample_113504.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001474",
+                    "uuid": "5b75bd820331b94174afd2b3",
+                    "filename": "Sample_113504.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 6,
+    "title": "ATAC-seq on Liver extracted from 21.7 weeks Male mice exposed with Lead"
+  },
+  {
+    "_id": "0d0510a8-0cb6-4fbd-af20-bdec8b4cd0f2",
+    "_index": "experiment",
+    "lab": "Marisa Bartolomei",
+    "project": "TRGTBPR0002",
+    "exposure_type": "Endocrine-disrupting chemical",
+    "dose": "0 MG/KGBW/DAY",
+    "tissue": "Liver",
+    "age_of_mice": "5 months",
+    "assay_technique": "ATAC-seq",
+    "mouse_gender": "Female",
+    "experiments": [
+      {
+        "mouse": "TRGTMSE000479",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001674",
+            "assays": [
+              {
+                "assay": "TRGTASY000915",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001371",
+                    "uuid": "5b1e9f167ed6a3327d91e318",
+                    "filename": "TGT098.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001370",
+                    "uuid": "5b1e9f157ed6a34c4191e317",
+                    "filename": "TGT098.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000284",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001636",
+            "assays": [
+              {
+                "assay": "TRGTASY000875",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001379",
+                    "uuid": "5b1ea07d7ed6a3fbb791e31e",
+                    "filename": "TGT35L.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001378",
+                    "uuid": "5b1ea0414bdc28998df48b3c",
+                    "filename": "TGT35L.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000282",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001631",
+            "assays": [
+              {
+                "assay": "TRGTASY000870",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001377",
+                    "uuid": "5b1ea0064bdc286a9bf48b3a",
+                    "filename": "TGT33L.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001376",
+                    "uuid": "5b1ea0054bdc28c060f48b39",
+                    "filename": "TGT33L.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 3,
+    "title": "ATAC-seq on Liver extracted from 5 months Female mice exposed with Endocrine-disrupting chemical"
+  },
+  {
+    "_id": "793d73a7-fbf6-438f-a9d5-3d989e8bcf22",
+    "_index": "experiment",
+    "lab": "Marisa Bartolomei",
+    "project": "TRGTBPR0002",
+    "exposure_type": "Endocrine-disrupting chemical",
+    "dose": "10 UG/KGBW/DAY",
+    "tissue": "Liver",
+    "age_of_mice": "5 months",
+    "assay_technique": "ATAC-seq",
+    "mouse_gender": "Male",
+    "experiments": [
+      {
+        "mouse": "TRGTMSE000281",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001629",
+            "assays": [
+              {
+                "assay": "TRGTASY000868",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001351",
+                    "uuid": "5b1e9c097ed6a3664a91e308",
+                    "filename": "TGT032.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001350",
+                    "uuid": "5b1e9c094bdc28d019f48b27",
+                    "filename": "TGT032.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000287",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001642",
+            "assays": [
+              {
+                "assay": "TRGTASY000881",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001355",
+                    "uuid": "5b1e9cbe7ed6a39c1491e30b",
+                    "filename": "TGT038.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001354",
+                    "uuid": "5b1e9cbd7ed6a349c691e30a",
+                    "filename": "TGT038.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mouse": "TRGTMSE000491",
+        "biosamples": [
+          {
+            "biosample": "TRGTSMP0001671",
+            "assays": [
+              {
+                "assay": "TRGTASY000910",
+                "files": [
+                  {
+                    "accession": "TRGTFF0001369",
+                    "uuid": "5b1e9eda7ed6a39d6491e316",
+                    "filename": "TGT094.PE.R2.fastq.gz",
+                    "pair": "reverse"
+                  },
+                  {
+                    "accession": "TRGTFF0001368",
+                    "uuid": "5b1e9ed97ed6a375c891e315",
+                    "filename": "TGT094.PE.R1.fastq.gz",
+                    "pair": "forward"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 3,
+    "title": "ATAC-seq on Liver extracted from 5 months Male mice exposed with Endocrine-disrupting chemical"
+  }
+]

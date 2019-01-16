@@ -1,0 +1,13 @@
+{
+  "insertion_size": "Insertion Size",
+  "density": "Density",
+  "peak_length": "Peak Length",
+  "peak_length_distribution": "Peak Length",
+  "sequence_depth": "Sequence Depth",
+  "percentage_of_peak_region_recaptured" : "Peak region recaptured (%age)",
+  "peaks_number": "Peaks number",
+  "total_reads": "Total Reads",
+  "expected_distinction": "Expected Distinction",
+  "lower_0.95_confidnece_interval": "CI: Lower 0.95",
+  "upper_0.95_confidnece_interval": "CI: Upper 0.95"
+}

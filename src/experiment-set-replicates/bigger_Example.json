@@ -1,0 +1,155 @@
+{
+  "_id": "1q2eGGgB5qj7UjEOU_y4",
+  "lab": "Zhibin Lab",
+  "exposure": "Control Drinking Water CHEBI:15377",
+  "dose": "0ppb",
+  "tissue": "Liver UBERON:0002107",
+  "age_of_mice": 20,
+  "assay_technique": "RNA-seq (OBI:0001271)",
+  "mouse_gender": "Female",
+  "experiments": [
+    {
+      "mouse": "TGTMSMDX78KU",
+      "biosamples": [
+        {
+          "biosample": "TGTBSMU33WVZ",
+          "assays": [
+            {
+              "assay": "TGTASVG5AR02",
+              "files": [
+                {
+                  "uuid": "5aa748c64b830d29e965204e",
+                  "score": 3,
+                  "accession": "TGTFIU2E1SBR",
+                  "paired_file_uuid": "5aa748c6c07a34299272240e",
+                  "paired_file_accession": "TGTFIKZBIDHV",
+                  "submission": "fc066b44-9b0c-43aa-8114-f5c2c7066554",
+                  "status": "PASS"
+                }
+              ]
+            },
+            {
+              "assay": "TGTASTEKGUQF",
+              "files": [
+                {
+                  "uuid": "5bce61b282b0fa87a4a42847",
+                  "score": 3,
+                  "accession": "TGTFIDD0FX06",
+                  "paired_file_uuid": "5bce61ed2e6ad70833d6bcec",
+                  "paired_file_accession": "TGTFITCXGAP0",
+                  "submission": "581cfd4f-0d8e-4011-8204-f3f32274642d",
+                  "status": "PASS"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mouse": "TGTMSLRN368M",
+      "biosamples": [
+        {
+          "biosample": "TGTBS5WE5RXB",
+          "assays": [
+            {
+              "assay": "TGTASTEKGUQF",
+              "files": [
+                {
+                  "uuid": "5bce61b282b0fa87a4a42847",
+                  "score": 3,
+                  "accession": "TGTFIDD0FX06",
+                  "paired_file_uuid": "5bce61ed2e6ad70833d6bcec",
+                  "paired_file_accession": "TGTFITCXGAP0",
+                  "submission": "581cfd4f-0d8e-4011-8204-f3f32274642d",
+                  "status": "PASS"
+                }
+              ]
+            }
+          ]
+        },
+        {
+            "biosample": "TGTBSU5P1SP4",
+            "assays": [
+              {
+                "assay": "TGTAS7ZUAM63",
+                "files": [
+                  {
+                    "uuid": "5aa7484e4b830d5f3365204a",
+                    "score": 3,
+                    "accession": "TGTFI6I2W57L",
+                    "paired_file_uuid": "5aa74889c07a34a22a722407",
+                    "paired_file_accession": "TGTFIJEN9BMK",
+                    "submission": "fc066b44-9b0c-43aa-8114-f5c2c7066554",
+                    "status": "PASS"
+                  }
+                ]
+              },
+              {
+                "assay": "TGTASTEKGUQF",
+                "files": [
+                  {
+                    "uuid": "5bce61b282b0fa87a4a42847",
+                    "score": 3,
+                    "accession": "TGTFIDD0FX06",
+                    "paired_file_uuid": "5bce61ed2e6ad70833d6bcec",
+                    "paired_file_accession": "TGTFITCXGAP0",
+                    "submission": "581cfd4f-0d8e-4011-8204-f3f32274642d",
+                    "status": "PASS"
+                  }
+                ]
+              }
+            ]
+          }
+      ]
+    },
+    {
+      "mouse": "TGTMS7PB55V1",
+      "biosamples": [
+        {
+          "biosample": "TGTBSCOSGB7M",
+          "assays": [
+            {
+              "assay": "TGTASXQVV5XG",
+              "files": [
+                {
+                  "uuid": "5aa7484e4b830d1c07652049",
+                  "score": 3,
+                  "accession": "TGTFI2GORPM3",
+                  "paired_file_uuid": "5aa7484ec07a342ed6722406",
+                  "paired_file_accession": "TGTFI8LNE30D",
+                  "submission": "fc066b44-9b0c-43aa-8114-f5c2c7066554",
+                  "status": "PASS"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mouse": "TGTMSQUFVZUL",
+      "biosamples": [
+        {
+          "biosample": "TGTBSHMKTJ5A",
+          "assays": [
+            {
+              "assay": "TGTAS0MIFKFT",
+              "files": [
+                {
+                  "uuid": "5bce61ee82b0fa2d5ea42849",
+                  "score": 3,
+                  "accession": "TGTFIARNPK8C",
+                  "paired_file_uuid": "5bce622b82b0faa292a4284b",
+                  "paired_file_accession": "TGTFI4ZMQJW4",
+                  "submission": "581cfd4f-0d8e-4011-8204-f3f32274642d",
+                  "status": "PASS"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
