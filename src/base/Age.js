@@ -17,7 +17,7 @@ const Age = () => {
         // placeholder="Select assay"
         react={{
             or: [
-                "Tissue", "Exposure", "Lab", "Search", "Experiment", "Sex"
+                "Assay", "Tissue", "Exposure", "Lab", "Search", "Experiment", "Sex"
             ]
         }}
         // showFilter={true}

@@ -3,8 +3,8 @@ import Mouse from './Mouse';
 import {Icon, Table} from 'semantic-ui-react';
 import { calcItemRows, getSum } from './utils';
 import { Biosample, File, QCstatus, Assay } from './Common';
-
-import uuid from 'uuid';
+import _ from 'lodash';
+// import uuid from 'uuid';
 // const RESULT = require('./intact.example.json');
 // console.log(RESULT);
 
@@ -12,7 +12,7 @@ class ExperimentTable extends Component {
     state = {}
 
     componentDidMount = () => {
-        const resultID = this.props.result[0]._id;
+        const resultID = this.props.experiment_set_id;
         this.setState({ resultId: resultID });
         localStorage.setItem(resultID, JSON.stringify(this.props.result));
     }
@@ -86,12 +86,46 @@ class ExperimentTable extends Component {
         return allRows;
     }
 
+    renderFlatExps = (exp) => {
+        const { mouseRowSpan, biosampleRowSpan, assayRowSpan,
+            mouse, biosample, assay, uuid, accession, paired_file_accession, status } = exp;
+
+        const allRows = [];
+            allRows.push(
+                <Table.Row key={`${mouse}:${biosample}:${assay}`}>
+                    { (exp.hasOwnProperty('mouseRowSpan')) ?
+                    <Table.Cell rowSpan={mouseRowSpan} >
+                        <Mouse id={this.state.resultId} mouse={mouse}/>
+                    </Table.Cell> : null }
+                    { (exp.hasOwnProperty('biosampleRowSpan')) ?
+                    <Table.Cell rowSpan={biosampleRowSpan}>
+                        <Biosample biosample={biosample}/>
+                    </Table.Cell> : null }
+                    { (exp.hasOwnProperty('assayRowSpan')) ?
+                    <Table.Cell rowSpan={assayRowSpan}>
+                        <Assay assay={assay}/>
+                    </Table.Cell> : null }
+                    <Table.Cell>
+                        <File data={{uuid, accession, paired_file_accession}} />
+                    </Table.Cell> 
+                    <Table.Cell>
+                        <QCstatus data={{uuid, status}}/>
+                    </Table.Cell>
+                </Table.Row>
+            )
+
+        return allRows;
+    }
+
     render() {
         const {result} = this.props; // uncomment after test
+        const experimentRows = getSorted(result);
+        console.log(experimentRows);
+
         if (result.length === 0) { // uncomment after test
             return <h3>Not Found</h3> // uncomment after test
         }
-        const bioReplicates = result[0].experiments; // just one mouse // uncomment after test
+        // const bioReplicates = result[0].experiments; // just one mouse // uncomment after test
         // const bioReplicates = RESULT.experiments; // TEST DATA
         return (
 
@@ -110,8 +144,8 @@ class ExperimentTable extends Component {
                 </Table.Header>
 
                 <Table.Body>
-                {bioReplicates.map((bioRep, mouseIndex) => {
-                        return this.renderCols(bioRep)
+                {experimentRows.map((exp, mouseIndex) => {
+                        return this.renderFlatExps(exp)
                     })}
                 </Table.Body>
             </Table>
@@ -122,3 +156,21 @@ class ExperimentTable extends Component {
 
 export default ExperimentTable
 
+function getSorted(arr) {
+    const cleanedUpArr = convertElemToNumbers(arr);
+    return _.sortBy(cleanedUpArr, ['br','bstr','astr','sr'])
+}
+
+function convertElemToNumbers(arr) {
+    return arr.map(elem => {
+        const arrClone = {...elem};
+        const { br, bstr, astr, sr } = elem;
+        arrClone.br = Number.parseInt(br, 10);
+        arrClone.bstr = Number.parseInt(bstr, 10);
+        arrClone.astr = Number.parseInt(astr, 10);
+        arrClone.sr = Number.parseInt(sr, 10);
+    
+        return arrClone;
+    })
+    
+}

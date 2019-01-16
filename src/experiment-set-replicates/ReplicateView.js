@@ -12,8 +12,9 @@ class ReplicateView extends Component {
     
     onAllData = (results, streamResults, loadMoreData) => {
         if (results.length > 0) {
+            // console.log(results);
             cache.put(this.props.id, results, 60000);
-            return <ReplicateDetails result={results}/>
+            return <ReplicateDetails result={results} experiment_set_id={this.props.id}/>
         } else {
             return null;
         }
@@ -23,7 +24,7 @@ class ReplicateView extends Component {
         const ID = this.props.id;
         const cachePowder = cache.get(ID);
         if (cachePowder) {
-            return <ReplicateDetails result={cachePowder}/>
+            return <ReplicateDetails result={cachePowder} experiment_set_id={this.props.id}/>
         }
         
         return (
@@ -36,7 +37,7 @@ class ReplicateView extends Component {
                         function (value, props) {
                             return {
                                 match: {
-                                    _id: ID
+                                    experiment_set: ID
                                 }
                             }
                     }}
@@ -47,7 +48,7 @@ class ReplicateView extends Component {
                     dataField="age_of_mice"
                     title="ReactiveList"
                     showResultStats={false}
-                    size={1}
+                    size={20}
                     onAllData={this.onAllData}
                     react={{
                     and: ["ExperimentSetSensor"]

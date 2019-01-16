@@ -12,29 +12,22 @@ class SetView extends Component {
         <div className="sdf">
 
         <ReactiveList
-            componentId="experiment_set"
-            dataField="age_of_mice"
-            title="ReactiveList"
-            // showResultStats={false}
+            componentId="ExperimentSet"
+            dataField="experiment"
+            title="ReactiveListSet"
+            // showResultStats={true}
             size={5400}
             onAllData={this.onAllData}
             react={{
-            and: [
-                "age_list",
-                "tissue_list",
-                "assay_list",
-                "exposure_list",
-                "lab_list",
-                "search",
-                "BookSensor"
-            ]
+                and: ["Age", "Assay", "Tissue", "Exposure", "Lab", "Search", "Sex"]
         }}/>
         </div>
         );
     }
     onAllData(results, streamResults, loadMoreData) {
         if (results.length > 0) {
-            return <ExperimentSet results={results}/>
+            // return <ExperimentSet results={results}/>
+            return <p>Cool</p>
         } else {
             return null;
         }

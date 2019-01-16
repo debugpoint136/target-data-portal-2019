@@ -18,9 +18,9 @@ class ReplicateDetails extends Component {
                     <div className="text-3xl text-uppercase font-extrabold font-sans p-4">Replicates - Experiment Set :</div>
                     <div className="mb-4 p-4 w-auto"><InformationBanner result={this.props.result}/></div>
                     {/* <div className="m-4 bg-white w-auto"><DetailsContainer result={this.props.result}/></div> */}
-                    <div className="m-4 bg-white w-auto"><ExperimentTable result={this.props.result}/></div>
+                    <div className="m-4 bg-white w-auto"><ExperimentTable result={this.props.result} experiment_set_id={this.props.experiment_set_id}/></div>
                     {/* // Just rotate the below on result[0].experiments */}
-                    <Button content={visible ? 'Hide Processed files' : 'Show Processed files'} onClick={this.toggleVisibility} />
+                    {/* <Button content={visible ? 'Hide Processed files' : 'Show Processed files'} onClick={this.toggleVisibility} />
                     <Divider hidden />
                     <Transition visible={visible} animation='scale' duration={500}>
                         <div className="mt-8">
@@ -32,7 +32,7 @@ class ReplicateDetails extends Component {
                         }
                         </ProcessedFilesScaffoldAll>
                         </div>
-                    </Transition>
+                    </Transition> */}
                     <div className="footer"></div>
                 </div>
             </Container>

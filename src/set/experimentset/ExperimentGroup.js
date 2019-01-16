@@ -27,22 +27,22 @@ const TISSUESimg = {
 }
 
 const ExperimentGroup = (props) => {
-    const { count, assay_technique, age_of_mice, mouse_gender, exposure, lab, tissue, title } = props.result;
+    const { _id, Count, Age, Assay, Tissue, Exposure, Lab, Dose, Sex } = props.result;
     return (
-        <Link to={`/experiment-set-replicates/${props.result._id}`}>
+        <Link to={`/experiment-set-replicates/${_id}`}>
         <div className="m-4 transition-normal hover:brighter hover:translate-y-1 hover:shadow-lg hover:border-indigo">
             <div className="h-64 w-64 p-4 bg-white shadow">
-                <DisplayMice count={count} gender={mouse_gender} age={age_of_mice}/>
-                <div className="text-xs font-bold font-sans text-orange mt-2">{assay_technique}</div>
-                <div className="text-xs font-hairline text-grey flex mr-2">{tissue}
-                    <Image className='' src={'/'+TISSUESimg[tissue]} height="23" width="23" />
+                <DisplayMice Count={Count} Sex={Sex} Age={Age}/>
+                <div className="text-xs font-bold font-sans text-orange mt-2">{Assay}</div>
+                <div className="text-xs font-hairline text-grey flex mr-2">{Tissue}
+                    <Image className='' src={'/'+TISSUESimg[Tissue]} height="23" width="23" />
                 </div>
                 <div className="flex ">
                     <div className="text-xs font-hairline font-mono text-teal-dark m-2 w-2/3">
-                        {exposure}
+                        {Exposure}
                     </div>
                     <div className="text-xs font-bold font-sans text-blue-dark m-2 w-1/3">{
-                        lab}
+                        Lab}
                     </div>
                 </div>
             </div>
@@ -54,16 +54,16 @@ const ExperimentGroup = (props) => {
 export default ExperimentGroup;
 
 const DisplayMice = (props) => {
-
-    return <div className="flex">
-        {
-            [...Array(props.count)].map((e, i) => {
-            return <div key={i} className={`flex-col ${(props.gender === 'Male'? 'text-blue' : 'text-pink')}`}>
-                        <Icon name={(props.gender === 'Male'? 'man' : 'woman')}/>
-                        <Image key={i} src='/mouse.png' height="12" width="23" />
-                    </div>
-            })
-        }
-        <div className="mx-2 font-thin text-xs italic text-grey-dark">{props.age} weeks</div>
+    const { Count, Sex, Age} = props;
+    return <div> 
+            <div className="flex">
+                {
+                    _.times(Count, (i) => <div key={i} className={`flex-col ${(Sex === 'Male'? 'text-blue' : 'text-pink')}`}>
+                                <Icon name={(Sex === 'Male'? 'man' : 'woman')}/>
+                                <Image key={i} src='/mouse.png' height="12" width="23" />
+                            </div>)
+                }
+            </div>
+            <div className="mx-2 font-thin text-xs italic text-grey-dark">{Age}</div>
         </div>
 }
