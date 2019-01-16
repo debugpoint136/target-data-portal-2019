@@ -88,10 +88,12 @@ class ExperimentTable extends Component {
 
     renderFlatExps = (exp) => {
         const { mouseRowSpan, biosampleRowSpan, assayRowSpan,
-            mouse, biosample, assay, uuid, accession, paired_file_accession, status } = exp;
+            mouse, biosample, assay, uuid, accession, paired_file_accession, status, sr } = exp;
 
         const allRows = [];
+            if (Number.parseInt(sr, 10) === 1) {
             allRows.push(
+                
                 <Table.Row key={`${mouse}:${biosample}:${assay}`}>
                     { (exp.hasOwnProperty('mouseRowSpan')) ?
                     <Table.Cell rowSpan={mouseRowSpan} >
@@ -105,14 +107,30 @@ class ExperimentTable extends Component {
                     <Table.Cell rowSpan={assayRowSpan}>
                         <Assay assay={assay}/>
                     </Table.Cell> : null }
+                    { (Number.parseInt(sr, 10) === 1) ?
                     <Table.Cell>
                         <File data={{uuid, accession, paired_file_accession}} />
-                    </Table.Cell> 
+                    </Table.Cell> : null }
+                    { (Number.parseInt(sr, 10) === 1) ?
                     <Table.Cell>
                         <QCstatus data={{uuid, status}}/>
-                    </Table.Cell>
+                    </Table.Cell> : null }
                 </Table.Row>
-            )
+            )}
+
+            console.log(Number.parseInt(sr, 10));
+            if (Number.parseInt(sr, 10) > 1) {
+                allRows.push(
+                    <Table.Row key={`${mouse}:${biosample}:${assay}-${sr}`}>
+                        <Table.Cell>
+                            <File data={{uuid, accession, paired_file_accession}} />
+                        </Table.Cell> 
+                        <Table.Cell>
+                            <QCstatus data={{uuid, status}}/>
+                        </Table.Cell>
+                    </Table.Row>
+                )
+            }
 
         return allRows;
     }

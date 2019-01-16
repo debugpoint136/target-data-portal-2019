@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Icon, Table} from 'semantic-ui-react';
 import { fetchProcessedFileStats, getPipelineOutDirOnly } from './utils';
-const COLORS = ['orange', 'pink', 'purple', 'teal', 'green', 'red', 'blue'];
+const COLORS = ['orange', 'pink', 'purple', 'teal', 'green', 'red', 'blue', 'yellow', 'grey', 'indigo', 'orange', 'pink', 'purple', 'teal'];
 class ProcessedFilesTable extends Component {
     state = { rowsData: [], outDir: null, index: null }
 

@@ -100,6 +100,7 @@ class ExperimentDetails extends Component {
                 </Table.Row>
             )
 
+
         return allRows;
     }
 
