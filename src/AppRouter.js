@@ -12,6 +12,7 @@ import FileMain from './file/FileMain';
 import Experiment from './experiment-set-replicates/Experiment';
 // import Footer from './components/common/Footer';
 import Set from './set';
+// import SetView from './set/SetView';
 import ExperimentReplicates from './experiment-set-replicates';
 const AppRouter = () => (
     <BrowserRouter>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {ReactiveList} from "@appbaseio/reactivesearch";
-// import Table from '../components/pivottable';
+import Table from '../components/pivottable';
 import SetCards from '../set/SetCards';
 
 class Results extends React.Component {
@@ -22,8 +22,8 @@ class Results extends React.Component {
   }
   onAllData(results, streamResults, loadMoreData) {
     if (results.length > 0) {
-      // return <Table data={results}/>
-      return <SetCards data={results}/>
+      return <Table data={results}/>
+      // return <SetCards data={results}/>
     } else {
       return null;
     }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Button, Image, Modal, Icon } from 'semantic-ui-react'
 import ExperimentList from './ExperimentList';
+import * as d3 from 'd3';
 import _ from 'lodash';
 import BrowserView from '../../file/BrowserView';
 const fileDownload = require('js-file-download')
@@ -16,7 +17,25 @@ const inlineStyle = {
 class ExperimentSet extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {mice_groups: []}
+    }
+    componentDidMount() {
+        var nested_data = d3.nest()
+            .key(function(d) { return d.experiment_set; })
+            .key(function(d) { return d.mouse; })
+            .entries(this.props.results);
+        
+        const mice_groups = nested_data.map(mice_grp => {
+
+            const { Age, Assay, Tissue, Exposure, Lab, Dose, Sex } = mice_grp.values[0].values[0];
+            return { 
+                _id: mice_grp.key,
+                Count: mice_grp.values.length,
+                Age, Assay, Tissue, Exposure, Lab, Dose, Sex
+            }
+        });
+
+        this.setState({ mice_groups});
     }
     render() {
         if (this.props.results.length === 0) {
@@ -25,7 +44,7 @@ class ExperimentSet extends Component {
         return (
             <div className="m-4 p-8">                
                 <div className="flex">
-                    <div className="w-1/4">
+                    {/* <div className="w-1/4">
                             <div className="m-8">
                                 <Modal
                                     trigger={<Button className="m-8" basic color='purple' icon='question' content='Replication Strategy'/>}
@@ -54,9 +73,10 @@ class ExperimentSet extends Component {
                                     <Icon name=''/><Icon name='download'/>
                                 </Button>
                             </div>
-                    </div>
+                    </div> */}
                     <div className="w-4/5">
-                        <ExperimentList results={this.props.results} />
+                        {/* <ExperimentList results={this.props.results} /> */}
+                        <ExperimentList results={this.state.mice_groups} />
                     </div>
                 </div>
             </div>

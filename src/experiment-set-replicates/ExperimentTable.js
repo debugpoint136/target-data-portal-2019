@@ -107,18 +107,16 @@ class ExperimentTable extends Component {
                     <Table.Cell rowSpan={assayRowSpan}>
                         <Assay assay={assay}/>
                     </Table.Cell> : null }
-                    { (Number.parseInt(sr, 10) === 1) ?
+                    
                     <Table.Cell>
                         <File data={{uuid, accession, paired_file_accession}} />
-                    </Table.Cell> : null }
-                    { (Number.parseInt(sr, 10) === 1) ?
+                    </Table.Cell> 
                     <Table.Cell>
                         <QCstatus data={{uuid, status}}/>
-                    </Table.Cell> : null }
+                    </Table.Cell> 
                 </Table.Row>
             )}
 
-            console.log(Number.parseInt(sr, 10));
             if (Number.parseInt(sr, 10) > 1) {
                 allRows.push(
                     <Table.Row key={`${mouse}:${biosample}:${assay}-${sr}`}>

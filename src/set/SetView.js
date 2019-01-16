@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {ReactiveList} from "@appbaseio/reactivesearch";
 import ExperimentSet from './experimentset/ExperimentSet';
+// import ExperimentList from './experimentset/ExperimentList';
 
 class SetView extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class SetView extends Component {
         return (
         <div className="sdf">
 
-        <ReactiveList
+        {/* <ReactiveList
             componentId="ExperimentSet"
             dataField="experiment"
             title="ReactiveListSet"
@@ -20,6 +21,15 @@ class SetView extends Component {
             onAllData={this.onAllData}
             react={{
                 and: ["Age", "Assay", "Tissue", "Exposure", "Lab", "Search", "Sex"]
+        }}/> */}
+        <ReactiveList
+            componentId="ExperimentSet"
+            dataField="experiment"
+            title="ReactiveList"
+            size={5400}
+            onAllData={this.onAllData}
+            react={{
+            and: ["Age", "Assay", "Tissue", "Exposure", "Lab", "Search", "Sex"]
         }}/>
         </div>
         );
@@ -27,7 +37,8 @@ class SetView extends Component {
     onAllData(results, streamResults, loadMoreData) {
         if (results.length > 0) {
             // return <ExperimentSet results={results}/>
-            return <p>Cool</p>
+            return <ExperimentSet results={results}/>
+            // return <p>Cool</p>
         } else {
             return null;
         }

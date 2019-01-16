@@ -27,11 +27,12 @@ const TISSUESimg = {
 }
 
 const ExperimentGroup = (props) => {
-    const { _id, Count, Age, Assay, Tissue, Exposure, Lab, Dose, Sex } = props.result;
+    const { _id, Count, Age, Assay, Tissue, Exposure, Lab, Dose, Sex, experiment_set } = props.result;
+
     return (
         <Link to={`/experiment-set-replicates/${_id}`}>
         <div className="m-4 transition-normal hover:brighter hover:translate-y-1 hover:shadow-lg hover:border-indigo">
-            <div className="h-64 w-64 p-4 bg-white shadow">
+            <div className="h-48 w-64 p-4 bg-white shadow">
                 <DisplayMice Count={Count} Sex={Sex} Age={Age}/>
                 <div className="text-xs font-bold font-sans text-orange mt-2">{Assay}</div>
                 <div className="text-xs font-hairline text-grey flex mr-2">{Tissue}

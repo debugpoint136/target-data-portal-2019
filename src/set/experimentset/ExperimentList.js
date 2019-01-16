@@ -29,6 +29,7 @@ class ExperimentList extends Component {
         return (
             <div>
                 <div className="flex justify-center">
+                    
                     {/* <div
                         className="px-8 py-4 w-1/5 bg-grey-lighter flex justify-center">
                         <div className="flex-col">
@@ -38,6 +39,7 @@ class ExperimentList extends Component {
                     </div> */}
                     <div
                         className="mb-4 px-8 py-4 w-4/5 bg-grey-lighter items-center justify-center">
+                        <div className="m-4 p-4 text-2xl font-sans text-center text-blue-dark">Mice Groups</div>
                         { (this.props.results.length > 0) ?  
                         <div className="flex-wrap flex">
                             {/* <div className="h-16 mb-4 w-full p-4 bg-grey-darker text-white text-center">

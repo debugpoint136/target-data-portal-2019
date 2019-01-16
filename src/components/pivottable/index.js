@@ -160,12 +160,19 @@ function constructCellRedirectLink(list) {
   Object
     .keys(list)
     .forEach(item => {
-      if (correctNAMES[item] === "age_list") {
-        tmp.push(`${correctNAMES[item]}=[${list[item]},${list[item]}]`);
-      } else if (correctNAMES[item]) {
-        tmp.push(`${correctNAMES[item]}=["${list[item]}"]`);
+      if ([item] === "age_list") {
+        tmp.push(`${[item]}=[${list[item]},${list[item]}]`);
+      } else if ([item]) {
+        tmp.push(`${[item]}=["${list[item]}"]`);
       }
     });
+    // .forEach(item => {
+    //   if (correctNAMES[item] === "age_list") {
+    //     tmp.push(`${correctNAMES[item]}=[${list[item]},${list[item]}]`);
+    //   } else if (correctNAMES[item]) {
+    //     tmp.push(`${correctNAMES[item]}=["${list[item]}"]`);
+    //   }
+    // });
   let listSpreadConcat = "/set/?" + tmp.join('&');
   const params = getSearchStringFromURL();
   // if (params['search']) {
