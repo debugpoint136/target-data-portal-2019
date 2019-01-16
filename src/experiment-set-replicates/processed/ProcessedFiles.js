@@ -4,26 +4,27 @@ import ProcessedFilesTable from './ProcessedFilesTable';
 
 class ProcessedFiles extends Component {
     state = {}
-    renderCols = (input, replicateIndex) => {
-        const { assays } = input;
-        
-        const allRows = assays.map((as, asIndex) => {
-                const { assay, files } = as;
+    renderCols = (exp, replicateIndex) => {
+        const { biosampleRowSpan, assayRowSpan,
+            mouse, biosample, assay, Assay, uuid, accession, paired_file_accession, status, submission } = exp;
 
-                if ( this.props.assay.split(' ')[0] === 'ATAC-seq') {
-                    return <ProcessedFilesTable key={files[0].uuid} index={replicateIndex + 1} file={files[0]} assay={'ATAC-seq'} bioRepIndex={this.props.bioRepIndex}/>
-                } else if ( this.props.assay.split(' ')[0] === 'RNA-seq' ) {
-                    return <ProcessedFilesTable key={files[0].uuid} index={replicateIndex + 1} file={files[0]} assay={'RNA-seq'} bioRepIndex={this.props.bioRepIndex}/>
-                } else {
-                    return <p>Unsupported assay type found</p>
-                }
-            });
-        return allRows;
+        if ( Assay === 'ATAC-seq') {
+            return <ProcessedFilesTable key={uuid} index={replicateIndex + 1} 
+                        file={{uuid, accession, paired_file_accession, status, submission}} 
+                        assay={'ATAC-seq'} bioRepIndex={this.props.bioRepIndex}/>
+        } else if ( Assay === 'RNA-seq' ) {
+            return <ProcessedFilesTable key={uuid} index={replicateIndex + 1} 
+                        file={{uuid, accession, paired_file_accession, status, submission}} 
+                        assay={'RNA-seq'} bioRepIndex={this.props.bioRepIndex}/>
+        } else {
+            return <p>Unsupported assay type found</p>
+        }
+            
     }
     render() {
         return (
             <Table.Body>
-                { this.props.result[0].biosamples.map((bioRep, replicateIndex) => {
+                { this.props.result.map((bioRep, replicateIndex) => {
                     return this.renderCols(bioRep, replicateIndex)
                 })}
             </Table.Body>

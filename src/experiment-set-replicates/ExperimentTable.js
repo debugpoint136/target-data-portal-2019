@@ -18,73 +18,73 @@ class ExperimentTable extends Component {
     }
     
 
-    renderCols = (bioRep) => {
-        const { mouse, biosamples } = bioRep;
-        const assaysList = calcItemRows(biosamples, 'assays');
-        const mouseRowSpan = assaysList.reduce(getSum);
-        const allRows = [];
-        biosamples.forEach((sam, samIndex) => {
-            const { biosample, assays } = sam;
-            assays.forEach((as, asIndex) => {
-                const { assay, files } = as;
-                if (samIndex === 0 && asIndex === 0) {
-                    allRows.push(
-                        <Table.Row key={`${mouse}:${biosample}:${assay}`}>
-                            <Table.Cell rowSpan={mouseRowSpan} >
-                                <Mouse id={this.state.resultId} mouse={mouse}/>
-                            </Table.Cell> 
-                            <Table.Cell>
-                                <Biosample biosample={biosample}/>
-                            </Table.Cell> 
-                            <Table.Cell>
-                                <Assay assay={assay}/>
-                            </Table.Cell> 
-                            <Table.Cell>
-                                <File data={files[0]} />
-                            </Table.Cell> 
-                            <Table.Cell>
-                                <QCstatus data={files[0]}/>
-                            </Table.Cell>
-                        </Table.Row>
-                    )
-                } else if (!biosampleRowNum && biosampleRowNum === samIndex) { // dont add this biosample for the 2nd time
-                    allRows.push(
-                        <Table.Row key={`${mouse}:${biosample}:${assay}`}>
-                            <Table.Cell>
-                                <Assay assay={assay}/>
-                            </Table.Cell> 
-                            <Table.Cell>
-                                <File data={files[0]} />
-                            </Table.Cell> 
-                            <Table.Cell>
-                                <QCstatus data={files[0]}/>
-                            </Table.Cell>
-                        </Table.Row>
-                    )
-                } else {
-                    allRows.push(
-                        <Table.Row key={`${mouse}:${biosample}:${assay}`}>
-                            <Table.Cell>
-                                <Biosample biosample={biosample}/>
-                            </Table.Cell> 
-                            <Table.Cell>
-                                <Assay assay={assay}/>
-                            </Table.Cell> 
-                            <Table.Cell>
-                                <File data={files[0]} />
-                            </Table.Cell> 
-                            <Table.Cell>
-                                <QCstatus data={files[0]}/>
-                            </Table.Cell>
-                        </Table.Row>
-                    )
-                }
-                const biosampleRowNum = samIndex; // this is to see if this biosample has already been added
-            });
-        });
+    // renderCols = (bioRep) => {
+    //     const { mouse, biosamples } = bioRep;
+    //     const assaysList = calcItemRows(biosamples, 'assays');
+    //     const mouseRowSpan = assaysList.reduce(getSum);
+    //     const allRows = [];
+    //     biosamples.forEach((sam, samIndex) => {
+    //         const { biosample, assays } = sam;
+    //         assays.forEach((as, asIndex) => {
+    //             const { assay, files } = as;
+    //             if (samIndex === 0 && asIndex === 0) {
+    //                 allRows.push(
+    //                     <Table.Row key={`${mouse}:${biosample}:${assay}`}>
+    //                         <Table.Cell rowSpan={mouseRowSpan} >
+    //                             <Mouse id={this.state.resultId} mouse={mouse}/>
+    //                         </Table.Cell> 
+    //                         <Table.Cell>
+    //                             <Biosample biosample={biosample}/>
+    //                         </Table.Cell> 
+    //                         <Table.Cell>
+    //                             <Assay assay={assay}/>
+    //                         </Table.Cell> 
+    //                         <Table.Cell>
+    //                             <File data={files[0]} />
+    //                         </Table.Cell> 
+    //                         <Table.Cell>
+    //                             <QCstatus data={files[0]}/>
+    //                         </Table.Cell>
+    //                     </Table.Row>
+    //                 )
+    //             } else if (!biosampleRowNum && biosampleRowNum === samIndex) { // dont add this biosample for the 2nd time
+    //                 allRows.push(
+    //                     <Table.Row key={`${mouse}:${biosample}:${assay}`}>
+    //                         <Table.Cell>
+    //                             <Assay assay={assay}/>
+    //                         </Table.Cell> 
+    //                         <Table.Cell>
+    //                             <File data={files[0]} />
+    //                         </Table.Cell> 
+    //                         <Table.Cell>
+    //                             <QCstatus data={files[0]}/>
+    //                         </Table.Cell>
+    //                     </Table.Row>
+    //                 )
+    //             } else {
+    //                 allRows.push(
+    //                     <Table.Row key={`${mouse}:${biosample}:${assay}`}>
+    //                         <Table.Cell>
+    //                             <Biosample biosample={biosample}/>
+    //                         </Table.Cell> 
+    //                         <Table.Cell>
+    //                             <Assay assay={assay}/>
+    //                         </Table.Cell> 
+    //                         <Table.Cell>
+    //                             <File data={files[0]} />
+    //                         </Table.Cell> 
+    //                         <Table.Cell>
+    //                             <QCstatus data={files[0]}/>
+    //                         </Table.Cell>
+    //                     </Table.Row>
+    //                 )
+    //             }
+    //             const biosampleRowNum = samIndex; // this is to see if this biosample has already been added
+    //         });
+    //     });
 
-        return allRows;
-    }
+    //     return allRows;
+    // }
 
     renderFlatExps = (exp) => {
         const { mouseRowSpan, biosampleRowSpan, assayRowSpan,
@@ -120,7 +120,6 @@ class ExperimentTable extends Component {
     render() {
         const {result} = this.props; // uncomment after test
         const experimentRows = getSorted(result);
-        console.log(experimentRows);
 
         if (result.length === 0) { // uncomment after test
             return <h3>Not Found</h3> // uncomment after test

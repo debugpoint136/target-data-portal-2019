@@ -8,6 +8,7 @@ class InformationBanner extends Component {
             return <h3>Not Found</h3>
         }
         const data = result[0];
+        const { Age, Sex, Assay, Tissue, Exposure, Dose, Lab } = data;
         return (
             <div className="hidden px-6 md:px-0 mt-4 md:flex flex-wrap order-1 md:-order-1 md:shadow-md js-tab-pane">
             <div className="p-4 px-6 w-full md:w-1/2 rounded md:rounded-r-none bg-white shadow-md md:shadow-none">
@@ -22,9 +23,9 @@ class InformationBanner extends Component {
                     </thead>
                     <tbody className="p-2 leading-loose text-sm">
                         <tr className="border-b">
-                            <td className="py-2">{data.assay_technique}</td>
-                            <td className="py-2 text-center">{data.tissue}</td>
-                            <td className="py-2 text-right">{data.exposure}</td>
+                            <td className="py-2">{Assay}</td>
+                            <td className="py-2 text-center">{Tissue}</td>
+                            <td className="py-2 text-right">{Exposure}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -33,16 +34,22 @@ class InformationBanner extends Component {
                 <div className="flex">
                     <div className="w-1/2">
                         <p className="text-indigo text-sm p-2">Dose</p>
-                        <p className="font-medium text-sm pl-2">{data.dose}</p>
+                        <p className="font-medium text-sm pl-2">{Dose}</p>
                     </div>
                     <div className="w-1/2">
                         <p className="text-indigo text-sm p-2">Age of mice</p>
-                        <p className="font-medium text-sm pl-2">{data.age_of_mice} {" weeks"}</p>
+                        <p className="font-medium text-sm pl-2">{Age}</p>
                     </div>
                 </div>
-                <div className="pt-6">
+                <div className="flex">
+                <div className="pt-6 w-1/2">
                     <p className="text-indigo text-sm p-2">Mice gender</p>
-                    <p className="font-medium text-sm pl-2 leading-normal">{data.mouse_gender}</p>
+                    <p className="font-medium text-sm pl-2 leading-normal">{Sex}</p>
+                </div>
+                <div className="pt-6 w-1/2">
+                    <p className="text-indigo text-sm p-2">Lab</p>
+                    <p className="font-medium text-sm pl-2 leading-normal">{Lab}</p>
+                </div>
                 </div>
             </div>
         </div>
