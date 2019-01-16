@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Container} from 'semantic-ui-react'
+import {Container, Label} from 'semantic-ui-react'
 import InformationBanner from './InformationBanner';
 import ExperimentTable from './ExperimentTable';
 import ExperimentDetails from './ExperimentDetails';
@@ -38,7 +38,8 @@ class Experiment extends Component {
             <div className="p-4 h-screen">
                 <div className="flex">
                     <div className="text-3xl text-uppercase font-extrabold font-sans p-4">Experiment : </div>
-                    <div className="text-3xl text-uppercase font-thin font-sans p-4">{this.props.match.params.id.split('-TGT')[0]}</div>
+                    <div className="text-3xl text-uppercase font-thin font-sans p-4 mr-8">{this.state.data[0].experiment}</div>
+                    <div className="text-md text-uppercase font-hairline text-indigo font-mono p-4 mr-8">Mouse: {this.state.data[0].mouse}</div>
                 </div>
                 <div className="mb-4 p-4 w-auto"><InformationBanner result={this.state.data}/></div>
                 {/* <div className="m-4 bg-white w-auto"><DetailsContainer result={this.props.result}/></div> */}
@@ -56,17 +57,4 @@ class Experiment extends Component {
 }
 
 export default Experiment;
-
-function sanitize(info) {
-    const { assay } = info;
-
-    if (assay === "RNA-seq (OBI:0001271)") {
-        return 'RNA-seq';
-    } else if (assay === 'ATAC-seq (transposase-accessible chromatin, OBI:0002039)') {
-        return 'ATAC-seq';
-    } else {
-        return assay;
-    }
-
-}
 

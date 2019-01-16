@@ -48,12 +48,12 @@ class ATACseqQCreport extends Component {
                             </div>
                         </div>
                     </div>
-                    <GraphCard
+                    {/* <GraphCard
                         header='Mapping Distribution'
                         subtitle='Standards based on useful single ends, Good: 40,000,000, Acceptable: 25,000,000'
                         size='medium'>
                         <MappingSummary data={this.props.data}/>
-                    </GraphCard>
+                    </GraphCard> */}
                     <GraphCard header='Mapping Distribution' subtitle='Autosome (percentage)' size='medium'>
                         <MappingDistributionAutosome data={this.props.data}/>
                     </GraphCard>
@@ -169,12 +169,12 @@ class ATACseqQCreport extends Component {
                             <YieldDistribution data={this.props.data} show={'CI: Upper 0.95'}/>
                         </GraphCard>
 
-                        <GraphCard
+                        {/* <GraphCard
                             header='Library Complexity'
                             subtitle='Percentage of PCR duplicates'
                             size='small'>
                             <LibraryComplexity data={this.props.data}/>
-                        </GraphCard>
+                        </GraphCard> */}
                     </div>
                 </div>
                 {/* <EmbeddedBrowser/> */}

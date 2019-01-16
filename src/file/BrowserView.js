@@ -182,7 +182,7 @@ function getDatahubBodyUnit(file,mode) {
         "${Sex}"
         ],
         "type": "${datahubType}",
-        "name": "${file_accession}"
+        "name": "${uuid}"
     }`
 
     return datahubBodyUnit;
@@ -207,9 +207,9 @@ const FormMetadata = () => (
 )
 
 function getPipelineOutDir(obj) {
-    const { Assay, Submission, uuid } = obj;
+    const { Assay, submission, uuid } = obj;
     const assay = Assay.split(' ')[0]; // Just extract ATAC-seq or RNA-seq
-    const outDir = `${WEB_DIR}/${assay}/${Submission}/${uuid}`;
+    const outDir = `${WEB_DIR}/${assay}/${submission}/${uuid}`;
     if (assay === 'ATAC-seq') {
         return `${outDir}/${uuid}.bigWig`;
     } else if (assay === 'RNA-seq') {

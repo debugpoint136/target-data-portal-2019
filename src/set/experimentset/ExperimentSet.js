@@ -44,7 +44,7 @@ class ExperimentSet extends Component {
         return (
             <div className="m-4 p-8">                
                 <div className="flex">
-                    {/* <div className="w-1/4">
+                    <div className="w-1/4">
                             <div className="m-8">
                                 <Modal
                                     trigger={<Button className="m-8" basic color='purple' icon='question' content='Replication Strategy'/>}
@@ -63,17 +63,18 @@ class ExperimentSet extends Component {
                                     <Modal.Header>Open visualization browser</Modal.Header>
                                     <Modal.Content>
                                         <Modal.Description>
-                                            <BrowserView data={getAllFilesForThisSet(this.props.results)}/>
+                                            {/* <BrowserView data={getAllFilesForThisSet(this.props.results)}/> */}
+                                            <BrowserView data={this.props.results}/>
                                         </Modal.Description>
                                     </Modal.Content>
                                 </Modal>
                             </div> 
                             <div className="m-8">
-                                <Button size='tiny' color='purple' onClick={() => fileDownload(generateMetadataContent(getAllFilesForThisSet(this.props.results)), `${Date.now()}-metadata.csv`)}>Download metadata
+                                <Button size='tiny' color='purple' onClick={() => fileDownload(generateMetadataContent(this.props.results), `${Date.now()}-metadata.csv`)}>Download metadata
                                     <Icon name=''/><Icon name='download'/>
                                 </Button>
                             </div>
-                    </div> */}
+                    </div> 
                     <div className="w-4/5">
                         {/* <ExperimentList results={this.props.results} /> */}
                         <ExperimentList results={this.state.mice_groups} />

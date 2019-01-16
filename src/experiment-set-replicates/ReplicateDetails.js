@@ -15,7 +15,10 @@ class ReplicateDetails extends Component {
         return (
             <Container>
                 <div className="p-4 h-screen">
-                    <div className="text-3xl text-uppercase font-extrabold font-sans p-4">Replicates - Experiment Set :</div>
+                    <div className="flex">
+                        <div className="text-3xl text-uppercase font-extrabold font-sans p-4">Experiment Set : </div>
+                        <div className="text-3xl text-uppercase font-thin font-sans p-4">{this.props.experiment_set_id}</div>
+                    </div>
                     <div className="mb-4 p-4 w-auto"><InformationBanner result={this.props.result}/></div>
                     {/* <div className="m-4 bg-white w-auto"><DetailsContainer result={this.props.result}/></div> */}
                     <div className="m-4 bg-white w-auto"><ExperimentTable result={this.props.result} experiment_set_id={this.props.experiment_set_id}/></div>

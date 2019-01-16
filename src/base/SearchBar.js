@@ -4,7 +4,7 @@ import {DataSearch} from "@appbaseio/reactivesearch";
 const SearchBar = () => {
     return (<DataSearch
         componentId="Search"
-        dataField={["mouse", "accession", "status"]}
+        dataField={["mouse", "accession", "status", "biosample", "assay", "Exposure", "Assay", "Tissue", "Age"]}
         categoryField="title"
         className="search-bar"
         queryFormat="and" //only results matching both “bat” and “man” will be returned

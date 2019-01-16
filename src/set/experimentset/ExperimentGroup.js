@@ -23,7 +23,7 @@ const TISSUESimg = {
     'Blood - leukocytes': 'blood.png',
     'Heart UBERON:0000948': 'heart.png',
     'heart': 'heart.png',
-    'Heart': 'Heart.png'
+    'Heart': 'heart.png'
 }
 
 const ExperimentGroup = (props) => {

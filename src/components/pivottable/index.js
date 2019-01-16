@@ -178,7 +178,7 @@ function constructCellRedirectLink(list) {
   // if (params['search']) {
   if (Object.keys(params).length > 0) {
     Object.keys(params).forEach(additionalParam => {
-      listSpreadConcat = encodeURI(listSpreadConcat) + '&' + additionalParam + '=' + params[additionalParam] ;
+      listSpreadConcat = listSpreadConcat + '&' + additionalParam + '=' + params[additionalParam] ;
     })
   }
   // console.log(listSpreadConcat);
