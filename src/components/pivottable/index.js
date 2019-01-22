@@ -160,6 +160,7 @@ function constructCellRedirectLink(list) {
   Object
     .keys(list)
     .forEach(item => {
+      console.log(item)
       if ([item] === "age_list") {
         tmp.push(`${[item]}=[${list[item]},${list[item]}]`);
       } else if ([item]) {

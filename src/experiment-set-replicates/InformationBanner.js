@@ -37,7 +37,7 @@ class InformationBanner extends Component {
                         <p className="font-medium text-sm pl-2">{Dose}</p>
                     </div>
                     <div className="w-1/2">
-                        <p className="text-indigo text-sm p-2">Age of mice</p>
+                        <p className="text-indigo text-sm p-2">Mice - Life stage</p>
                         <p className="font-medium text-sm pl-2">{Age}</p>
                     </div>
                 </div>

@@ -4,6 +4,7 @@ import {ReactiveBase} from "@appbaseio/reactivesearch";
 import 'semantic-ui-css/semantic.min.css';
 import Tissues from '../base/Tissues';
 import Age from '../base/Age';
+import Sex from '../base/Sex';
 import Assays from '../base/Assays';
 import Exposures from '../base/Exposures';
 import Labs from '../base/Labs';
@@ -45,6 +46,7 @@ class Set extends Component {
                             </div>
                             <Exposures/>
                             <Labs/>
+                            <Sex/>
                         </div>
                         </div>
                         <SetView/>
