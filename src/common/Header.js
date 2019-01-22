@@ -16,6 +16,7 @@ const Header = () => {
                 </div>
                 {/* <a className='m-8' href="https://dcc.targetepigenomics.org/">Files View</a> */}
                 <Link className="rounded m-8 p-4 text-white text-sm" to='/files'>Files</Link>
+                <a className="rounded m-8 p-4 text-white text-sm" target='_blank' href="https://bit.ly/2Rp9Oat">Tutorial</a>
         </div>
     )
 }
