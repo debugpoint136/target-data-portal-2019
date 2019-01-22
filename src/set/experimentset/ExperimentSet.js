@@ -117,11 +117,15 @@ function getAllFilesForThisSet (set) {
     return flattenedList;
 }
 
+const greyListed = ['_id','_index', 'br', 'bstr', 'astr', 'sr', 'biosampleRowSpan', 'assayRowSpan', 'mouseRowSpan'];
 function generateMetadataContent(data) {
-    const header = Object.keys(data[0]);
-    let result = header + "\r\n";;
+    const headerRaw = Object.keys(data[0]);
+    const headerGreyListedIndex = greyListed.map(item => headerRaw.findIndex(d => d === item));
+    const header = headerRaw.filter(item => greyListed.indexOf(item) === -1);
+    let result = header + "\r\n";
 
     data.forEach(rowArray => {
+        greyListed.forEach(toDelete => delete rowArray[toDelete]);
         let rowContent = cleanComma(Object.values(rowArray));
         let row = rowContent.join(",");
         result += row + "\r\n";
