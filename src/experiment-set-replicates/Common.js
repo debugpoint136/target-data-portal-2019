@@ -24,6 +24,7 @@ export const File = (props) => {
     return ( 
         <FileEntry key={uuid} name={uuid} >
             <FileAccession>{accession}</FileAccession>
+            <FileSubText>File UUID: {uuid}</FileSubText>
             <FileText>Paired file: {paired_file_accession}</FileText>
         </FileEntry>
     );
@@ -57,7 +58,15 @@ export const FileAccession = ({children}) => {
 export const FileText = ({children}) => {
     return (
         <div
-            className="text-grey-dark text-xs font-hairline">
+            className="text-grey-darker text-xs font-hairline">
+            {children}
+        </div>
+    );
+}
+export const FileSubText = ({children}) => {
+    return (
+        <div
+            className="text-grey text-xs font-mono font-hairline">
             {children}
         </div>
     );
