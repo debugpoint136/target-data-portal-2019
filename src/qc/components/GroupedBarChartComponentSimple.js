@@ -9,7 +9,7 @@ const GroupedBarChartComponentSimple = (props) => {
         indexBy="Dataset"
         margin={{
         "top": 10,
-        "right": 220,
+        "right": 250,
         "bottom": 75,
         "left": 60
     }}
@@ -42,7 +42,7 @@ const GroupedBarChartComponentSimple = (props) => {
         "tickCount": 3,
         "legend": "",
         "legendPosition": "center",
-        "legendOffset": -40
+        "legendOffset": -70
     }}
         labelSkipWidth={12}
         labelSkipHeight={12}

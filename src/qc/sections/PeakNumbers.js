@@ -49,7 +49,7 @@ function formatData(data) {
 
 const DATA = [
     {
-        "Dataset": "201712 5-FAM Lung ATAC-seq",
+        "Dataset": ".",
         // "Reads under peaks": 28446521,
         "Peaks in promoter regions": 18373,
         "Peaks in non-promoter regions": 102326

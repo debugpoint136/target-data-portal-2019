@@ -46,6 +46,7 @@ class ATACseqQCreport extends Component {
                                 <div className="mr-4">STATUS</div>
                                 <span role="img" aria-label="status">{getFinalScore(this.props.data).status}</span>
                             </div>
+                            <a className="p-8" href="https://github.com/Zhang-lab/ATAC-seq_QC_analysis/blob/master/README.md" target="_blank">Pipeline documentation</a>
                         </div>
                     </div>
                     {/* <GraphCard
@@ -54,7 +55,12 @@ class ATACseqQCreport extends Component {
                         size='medium'>
                         <MappingSummary data={this.props.data}/>
                     </GraphCard> */}
-                    <GraphCard header='Mapping Distribution' subtitle='Autosome (percentage)' size='medium'>
+                    <GraphCard header='Mapping Distribution' subtitle={
+                        `% Uniquely Mapped Reads chrM: ${this.props.data["mapping_distribution"]["percentage_of_uniquely_mapped_reads_in_chrM"]}` + " | " +
+                        `% Non redundant Uniquely Mapped Reads chrX: ${this.props.data["mapping_distribution"]["percentage_of_non-redundant_uniquely_mapped_reads_in_chrX"]}` + " | " +
+                        `% Non redundant Uniquely Mapped Reads chrY: ${this.props.data["mapping_distribution"]["percentage_of_non-redundant_uniquely_mapped_reads_in_chrY"]}
+                        `
+                    } size='medium'>
                         <MappingDistributionAutosome data={this.props.data}/>
                     </GraphCard>
 
@@ -64,19 +70,19 @@ class ATACseqQCreport extends Component {
                         gridTemplateColumns: '1fr 1fr',
                         gridAutoFlow: 'dense'
                     }}>
-                        <GraphCard header='Non Autosome mapping' 
+                        {/* <GraphCard header='Non Autosome mapping' 
                             subtitle='  '
                             size='small'>
                             <GroupedBarChartComponentSimple 
                                 data={[
-                                    {"Dataset": "201712 5-FAM Lung ATAC-seq", 
+                                    {"Dataset": ".", 
                                         "% of uniquely mapped reads in chrM": this.props.data["mapping_distribution"]["percentage_of_uniquely_mapped_reads_in_chrM"],
                                         "% of uniquely mapped reads in chrX": this.props.data["mapping_distribution"]["percentage_of_non-redundant_uniquely_mapped_reads_in_chrX"],
                                         "% of uniquely mapped reads in chrY": this.props.data["mapping_distribution"]["percentage_of_non-redundant_uniquely_mapped_reads_in_chrY"]}
                                 ]} 
                                 keys={["% of uniquely mapped reads in chrM", "% of uniquely mapped reads in chrX", "% of uniquely mapped reads in chrY"]} 
                                 />
-                        </GraphCard>
+                        </GraphCard> */}
 
                         <GraphCard header='Insert Size Distribution' size='small'>
                             <InsertionSizeDistribution data={this.props.data}/>
@@ -98,7 +104,7 @@ class ATACseqQCreport extends Component {
                             size='small'>
                             <ReadsUnderPeaksPerc 
                                 data={[
-                                    {"Dataset": "201712 5-FAM Lung ATAC-seq", 
+                                    {"Dataset": ".", 
                                     "% of reads under peaks": this.props.data["peak_analysis"]["reads_percentage_under_peaks"]
                                     }
                                 ]} 
@@ -112,7 +118,7 @@ class ATACseqQCreport extends Component {
                             size='small'>
                             <ReadsUnderPeaksPerc 
                                 data={[
-                                    {"Dataset": "201712 5-FAM Lung ATAC-seq", "% Background RPKM > 0.3777": this.props.data["enrichment"]["percentage_of_background_RPKM_larger_than_0.3777"]}
+                                    {"Dataset": ".", "% Background RPKM > 0.3777": this.props.data["enrichment"]["percentage_of_background_RPKM_larger_than_0.3777"]}
                                 ]} 
                                 keys={["% Background RPKM > 0.3777"]} 
                                 maxValue={0.3}
@@ -136,7 +142,7 @@ class ATACseqQCreport extends Component {
                             size='small'>
                             <ReadsUnderPeaksPerc 
                                 data={[
-                                    {"Dataset": "201712 5-FAM Lung ATAC-seq", "Subsampled 10M": this.props.data["enrichment"]["subsampled_10M_enrichment_score"]}
+                                    {"Dataset": ".", "Subsampled 10M": this.props.data["enrichment"]["subsampled_10M_enrichment_score"]}
                                 ]} 
                                 keys={["Subsampled 10M"]} 
                                 maxValue={20}

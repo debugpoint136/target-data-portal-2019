@@ -2,6 +2,7 @@ import React from 'react';
 import TableRenderers from './TableRenderers';
 import PivotTableUI from './PivotTableUI';
 import './pivottable.css';
+
 import { timingSafeEqual } from 'crypto';
 
 export default class PivotTableUIWrapper extends React.PureComponent {

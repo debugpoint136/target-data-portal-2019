@@ -42,5 +42,6 @@ function formatData(data, key) {
     });
     formattedData.push(tmp);
 
+    // console.log(JSON.stringify(formattedData));
     return formattedData;
 }

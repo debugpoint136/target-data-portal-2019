@@ -1,5 +1,5 @@
 import React from 'react';
-import LineChartComponent from '../components/LineChartComponent';
+import LineChartBasic from '../components/LineChartBasic';
 import SANITIZED_LABELS from './sanitized_labels.json';
 
 const InsertionSizeDistribution = (props) => {
@@ -8,7 +8,7 @@ const InsertionSizeDistribution = (props) => {
     } else {
         const formattedData = formatData(props.data);
         return (
-            <LineChartComponent data={formattedData}/>
+            <LineChartBasic data={formattedData}/>
         );
     }
 }
@@ -26,8 +26,8 @@ function formatData(data) {
     tmp.data = [];
     INSERTION_SIZE.forEach((d, i) => {
         if (i % 50 === 0) {
-            const insertion_size_val = parseFloat(d).toFixed(2);
-            tmp.data.push({x: insertion_size_val, y: DENSITY[i]});
+            const insertion_size_val = Number.parseFloat(d.toFixed(2)) ;
+            tmp.data.push({x: insertion_size_val, y: Number.parseFloat(DENSITY[i].toFixed(2))});
         }
     });
     formattedData.push(tmp);

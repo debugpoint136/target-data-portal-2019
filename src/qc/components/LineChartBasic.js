@@ -2,9 +2,9 @@ import React from 'react';
 import {ResponsiveLine} from '@nivo/line';
 import * as d3 from 'd3';
 
-const LineChartComponent = (props) => {
-    const bottomTickValues = getBottomTickValues(props.data);
-    console.log(bottomTickValues);
+const LineChartBasic= (props) => {
+    // const bottomTickValues = getBottomTickValues(props.data);
+    // console.log(bottomTickValues);
 
     return <ResponsiveLine
         data={props.data}
@@ -25,13 +25,13 @@ const LineChartComponent = (props) => {
             "orient": "bottom",
             "tickSize": 0,
             "tickPadding": 10,
-            "tickValues": bottomTickValues,
+            // "tickValues": bottomTickValues,
             // "tickValues": [0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500],
             // "tickCount": 11,
             "tickRotation": -45,
-            // "legend": props.yAxisLabel,
-            // "legendOffset": 46,
-            // "legendPosition": "center"
+            "legend": props.xAxisLabel,
+            "legendOffset": 46,
+            "legendPosition": "center"
         }}
         axisLeft={{
             "orient": "left",
@@ -39,8 +39,8 @@ const LineChartComponent = (props) => {
             "tickPadding": 5,
             "tickRotation": 0,
             "tickCount": 5,
-            "legend": props.xAxisLabel,
-            "legendOffset": -60,
+            "legend": props.yAxisLabel,
+            "legendOffset": -30,
             "legendPosition": "center"
         }}
         // dotSize={2}
@@ -80,7 +80,7 @@ const LineChartComponent = (props) => {
     ]}/>
 }
 
-export default LineChartComponent;
+export default LineChartBasic;
 
 function split(min, max, parts) {
     const difference = max - min;

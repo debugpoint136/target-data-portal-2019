@@ -1,5 +1,5 @@
 import React from 'react';
-import LineChartComponent from '../components/LineChartComponent';
+import LineChartBasic from '../components/LineChartBasic';
 import SANITIZED_LABELS from './sanitized_labels.json';
 
 const PeaksLengthDistribution = (props) => {
@@ -8,7 +8,7 @@ const PeaksLengthDistribution = (props) => {
     } else {
         const formattedData = formatData(props.data);
         return (
-            <LineChartComponent data={formattedData}/>
+            <LineChartBasic data={formattedData}/>
         );
     }
 }
@@ -27,11 +27,12 @@ function formatData(data) {
     
     PEAK_LENGTH.forEach((d, i) => {
         if (i % 50 === 0) {
-            const peak_length_val = parseFloat(d).toFixed(2);
-            tmp.data.push({x: peak_length_val, y: DENSITY[i]});
+            const peak_length_val = parseFloat(d.toFixed(2));
+            tmp.data.push({x: peak_length_val, y: parseFloat(DENSITY[i].toFixed(2))});
         }
     });
     formattedData.push(tmp);
+    console.log(formattedData);
 
     return formattedData;
 }

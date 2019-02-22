@@ -85,7 +85,7 @@ export default GroupedBarChartComponent;
 
 const DATA = [
     {
-        "Dataset": "201712 5-FAM Lung ATAC-seq",
+        "Dataset": ".",
         "Before Alignment": 0.612,
         "After Alignment": 0.581
     }

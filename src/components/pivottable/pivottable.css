@@ -25,26 +25,73 @@ table.pvtTable {
 }
 table.pvtTable thead tr th,
 table.pvtTable tbody tr th {
-    background-color: #ebf0f8;
+    /* background-color: #ebf0f8; */
     border: 1px solid #c8d4e3;
-    font-size: 8pt;
+    /* font-size: 8pt; */
     padding: 5px;
+    min-width: 50px;
+    max-width: 50px;
 }
 
 table.pvtTable .pvtColLabel {
     text-align: center;
+    /* height: 80px; */
+    /* min-width: 100px; */
+    /* background-color: #3cffc1; */
 }
+
+/* dpuru */
+
+table.pvtTable .pvtRowLabel {
+    text-align: center;
+    width: auto;
+    /* height: 80px; */
+    min-width: 100px !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* background-color: #3cffc1; */
+}
+
+table.pvtTable .pvtColLabelLast {
+    text-align: left;
+    /* height: 50px; */
+    /* min-height: 120px; */
+    transform: rotate(-90deg);
+    transform-origin: center center;
+    /* background-color: #d1dae6; */
+    /* padding-top: 30px; */
+    /* padding-bottom: 30px; */
+    /* height: 100px; */
+    width: 100px;
+}
+
+.rotate {
+    text-align: center;
+    transform: rotate(-60deg);
+    transform-origin: center center;
+    width: auto !important;
+}
+
+.rotate90 {
+    text-align: center;
+    transform: rotate(-90deg);
+    transform-origin: center center;
+    width: auto !important;
+}
+/* end */
 table.pvtTable .pvtTotalLabel {
     text-align: right;
 }
 
 table.pvtTable tbody tr td {
-    color: #2a3f5f;
+    color: #34435a;
     padding: 5px;
     background-color: #fff;
     border: 1px solid #c8d4e3;
-    vertical-align: top;
-    text-align: right;
+    vertical-align: center;
+    text-align: center;
+    /* width: 100px; */
+    font-size: 1.075rem; /* dpuru */
 }
 
 .pvtTotal,
@@ -136,6 +183,25 @@ table.pvtTable tbody tr td {
     padding-bottom: 12px;
 }
 
+/* dpuru */
+.pvtVal {
+    /* min-width: 100px;
+    min-height: 200px; */
+    text-align: center;
+    vertical-align: center;
+}
+
+.pvtNoValue {
+    background: #c2c4c5;
+    cursor: auto;
+} 
+
+#style-7 {
+    max-width: 800px;
+    max-height: 800px;
+}
+ 
+/* end */
 .pvtRows {
     height: 35px;
 }

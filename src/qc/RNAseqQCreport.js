@@ -45,6 +45,7 @@ class RNAseqQCreport extends Component {
                                 <div className="mr-4">STATUS</div>
                                 <span role="img" aria-label="status">{getFinalScoreRNAseq(this.props.data).status}</span>
                             </div>
+                            <a className="p-8" href="https://github.com/Zhang-lab/RNA-seq_QC_analysis/blob/master/README.md" target="_blank">Pipeline documentation</a>
                         </div>
                         </div>
                     </div>

@@ -11,6 +11,7 @@ const Information = (props) => {
         date,
         bash_script_MD5
     } = getInformation(props.data);
+    console.log(props.data);
     return (
         <div className="">
             <div className="flex justify-between">

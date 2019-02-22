@@ -194,6 +194,7 @@ module.exports = {
 
   fonts: {
     'sans': [
+      'Lato',
       'Roboto',
       'system-ui',
       'BlinkMacSystemFont',
