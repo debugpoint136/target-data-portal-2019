@@ -7,15 +7,15 @@ import { withRouter } from 'react-router';
 // let addColor = { background: '#61D19E', text: "#FFFFFF" }; let removeColor =
 // { background: '#b2346d', text: "#FFFFFF" };
 const DEFAULT = {
-  rows: ['Tissue'],
-  cols: ['Assay'],
+  rows: ['Lab','Assay'],
+  cols: ['Tissue', 'Age'],
   data: []
 }
 const HIDDEN_KEYS = [
   '_id',
   '_index',
   'count',
-  'dose',
+  'Dose',
   'experiments',
   'project',
   'title',
@@ -160,7 +160,6 @@ function constructCellRedirectLink(list) {
   Object
     .keys(list)
     .forEach(item => {
-      console.log(item)
       if ([item] === "age_list") {
         tmp.push(`${[item]}=[${list[item]},${list[item]}]`);
       } else if ([item]) {

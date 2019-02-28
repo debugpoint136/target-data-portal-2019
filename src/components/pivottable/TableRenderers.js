@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {PivotData} from './Utilities';
 import { root } from 'postcss';
+let rootRowLabel = null;
+let rowCnt = 0;
 
 // const COLORS = [
 //   ['red-darker', 'red-dark', 'red', 'red-light', 'red-lighter', 'red-lightest'],
@@ -9,7 +11,7 @@ import { root } from 'postcss';
 //   ['green-darker', 'green-dark', 'green', 'green-light', 'green-lighter', 'green-lightest']
 // ];
 
-const COLORS = ['orange', 'teal','pink', 'blue', 'green', 'purple','indigo', 'yellow', 'red', 'blue', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red', 'blue', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red'];
+const COLORS = ['orange', 'teal','pink', 'blue', 'green', 'purple','indigo', 'yellow', 'red', 'blue', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red', 'blue', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red', 'blue', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red', 'blue', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red', 'blue', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red', 'blue', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red', 'blue', 'orange', 'teal','pink', 'green', 'purple','indigo', 'yellow', 'red'];
 // helper function for setting row/col-span in pivotTableRenderer
 const spanSize = function (arr, i, j) {
   let x;
@@ -199,35 +201,38 @@ function makeRenderer(opts = {}) {
           </thead>
 
           <tbody>
-            {rowKeys
+            {
+              rowKeys
               .map(function (rowKey, i) {
+                    
                 const totalAggregator = pivotData.getAggregator(rowKey, []);
-                let rootRowLabel = null;
-                let rowCnt = 0;
                 return (
                   <tr key={`rowKeyRow${i}`}>
                     {rowKey
                       .map(function (txt, j) {
                         // dpuru start
+                        if (rowCnt > 25) {
+                          rowCnt = 0;
+                        };
                         if (!rootRowLabel) {
                           rootRowLabel = rowKey[0];
                         } else if (rootRowLabel !== rowKey[0]) {
                           rootRowLabel = rowKey[0];
                           rowCnt++;
                         }
-
+                        
                         let rowClassNameStr = `pvtRowLabel`;
 
                         if (rowAttrs.length !== 1 && rowKey[j] === rootRowLabel) {
-                          rowClassNameStr = `pvtRowLabel p-8 bg-${COLORS[rowCnt+5]}-light text-lg font-sans text-grey-darkest`;
+                          rowClassNameStr = `pvtRowLabel p-8 bg-${COLORS[rowCnt+7]}-light text-lg font-sans text-grey-darkest`;
                         } else if (rowAttrs.length > 3) {
                           rowClassNameStr = `pvtRowLabel bg-grey-lighter text-lg font-sans text-grey-darker`;
                         } else {
-                          rowClassNameStr = `pvtRowLabel bg-${COLORS[rowCnt+5]}-lighter italic font-thin text-base font-sans text-grey-darkest shadow`;
+                          rowClassNameStr = `pvtRowLabel bg-${COLORS[rowCnt+7]}-lighter italic font-thin text-base font-sans text-grey-darkest shadow`;
                         }
 
                         if (rowAttrs.length > 1 && rowAttrs.length - 1 === j) {
-                          rowClassNameStr = `pvtRowLabel bg-${COLORS[rowCnt+5]}-lightest shadow italic font-thin text-md font-sans text-grey-darkest`;
+                          rowClassNameStr = `pvtRowLabel bg-${COLORS[rowCnt+7]}-lightest shadow italic font-thin text-md font-sans text-grey-darkest`;
                         }
                         // dpuru end
                         const x = spanSize(rowKeys, i, j);
@@ -242,7 +247,7 @@ function makeRenderer(opts = {}) {
                             colSpan={j === rowAttrs.length - 1 && colAttrs.length !== 0
                             ? 2
                             : 1}>
-                            {((rowAttrs.length !== 1 && rowKey[j] === rootRowLabel)) ? <div className="rotate90">{txt}</div>: txt}
+                            {((rowAttrs.length !== 1 && rowKey[j] === rootRowLabel && x > 3)) ? <div className="rotate90">{txt}</div>: txt}
                           </th>
                         );
                       })}

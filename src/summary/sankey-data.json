@@ -1,0 +1,128 @@
+{
+    "nodes": [
+      {
+        "id": "John",
+        "color": "hsl(302, 70%, 50%)"
+      },
+      {
+        "id": "Raoul",
+        "color": "hsl(50, 70%, 50%)"
+      },
+      {
+        "id": "Jane",
+        "color": "hsl(88, 70%, 50%)"
+      },
+      {
+        "id": "Marcel",
+        "color": "hsl(248, 70%, 50%)"
+      },
+      {
+        "id": "Ibrahim",
+        "color": "hsl(331, 70%, 50%)"
+      },
+      {
+        "id": "Junko",
+        "color": "hsl(213, 70%, 50%)"
+      },
+      {
+        "id": "Lyu",
+        "color": "hsl(143, 70%, 50%)"
+      },
+      {
+        "id": "André",
+        "color": "hsl(233, 70%, 50%)"
+      },
+      {
+        "id": "Maki",
+        "color": "hsl(14, 70%, 50%)"
+      },
+      {
+        "id": "Véronique",
+        "color": "hsl(263, 70%, 50%)"
+      },
+      {
+        "id": "Thibeau",
+        "color": "hsl(238, 70%, 50%)"
+      },
+      {
+        "id": "Josiane",
+        "color": "hsl(227, 70%, 50%)"
+      },
+      {
+        "id": "Raphaël",
+        "color": "hsl(143, 70%, 50%)"
+      }
+    ],
+    "links": [
+      {
+        "source": "Ibrahim",
+        "target": "Marcel",
+        "value": 118
+      },
+      {
+        "source": "Marcel",
+        "target": "Raoul",
+        "value": 66
+      },
+      {
+        "source": "André",
+        "target": "Thibeau",
+        "value": 95
+      },
+      {
+        "source": "André",
+        "target": "Jane",
+        "value": 90
+      },
+      {
+        "source": "Lyu",
+        "target": "Junko",
+        "value": 100
+      },
+      {
+        "source": "Maki",
+        "target": "Ibrahim",
+        "value": 174
+      },
+      {
+        "source": "John",
+        "target": "Junko",
+        "value": 104
+      },
+      {
+        "source": "Josiane",
+        "target": "Marcel",
+        "value": 164
+      },
+      {
+        "source": "Raoul",
+        "target": "André",
+        "value": 164
+      },
+      {
+        "source": "Raoul",
+        "target": "Raphaël",
+        "value": 23
+      },
+      {
+        "source": "Thibeau",
+        "target": "Jane",
+        "value": 47
+      },
+      {
+        "source": "Véronique",
+        "target": "Josiane",
+        "value": 142
+      },
+      {
+        "source": "Junko",
+        "target": "Raoul",
+        "value": 161
+      },
+      {
+        "source": "Junko",
+        "target": "Maki",
+        "value": 127
+      }
+    ]
+  }

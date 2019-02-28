@@ -1,0 +1,56 @@
+{
+    "nodes": [
+      {
+        "id": "BiswalLab",
+        "color": "hsl(302, 70%, 50%)"
+      },
+      {
+        "id": "MutluLab",
+        "color": "hsl(50, 70%, 50%)"
+      },
+      {
+        "id": "ATAC-seq",
+        "color": "hsl(248, 70%, 50%)"
+      },
+      {
+        "id": "RNA-seq",
+        "color": "hsl(331, 70%, 50%)"
+      },
+      {
+        "id": "Liver",
+        "color": "hsl(213, 70%, 50%)"
+      }
+    ],
+    "links": [
+        {
+          "source": "BiswalLab",
+          "target": "ATAC-seq",
+          "value": 24
+        },
+        {
+          "source": "MutluLab",
+          "target": "ATAC-seq",
+          "value": 23
+        },
+        {
+          "source": "BiswalLab",
+          "target": "RNA-seq",
+          "value": 72
+        },
+        {
+          "source": "MutluLab",
+          "target": "RNA-seq",
+          "value": 118
+        },
+        {
+          "source": "ATAC-seq",
+          "target": "Liver",
+          "value": 24
+        },
+        {
+          "source": "RNA-seq",
+          "target": "Liver",
+          "value": 48
+        }
+    ]
+}

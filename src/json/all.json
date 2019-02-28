@@ -1,0 +1,337 @@
+{
+  "key": "nivo",
+  "children": [
+    {
+      "key": "Aylor Lab",
+      "children": [
+        {
+          "key": "3 weeks",
+          "children": [
+            {
+              "key": "Blood",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 48
+                }
+              ]
+            },
+            {
+              "key": "Liver",
+              "children": [
+                {
+                  "key": "ATAC-seq",
+                  "value": 48
+                },
+                {
+                  "key": "RNA-seq",
+                  "value": 48
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "5 months",
+          "children": [
+            {
+              "key": "Blood",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 48
+                }
+              ]
+            },
+            {
+              "key": "Liver",
+              "children": [
+                {
+                  "key": "ATAC-seq",
+                  "value": 48
+                },
+                {
+                  "key": "RNA-seq",
+                  "value": 48
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Bartolomei Lab",
+      "children": [
+        {
+          "key": "5 months",
+          "children": [
+            {
+              "key": "Blood",
+              "children": [
+                {
+                  "key": "ATAC-seq",
+                  "value": 4
+                },
+                {
+                  "key": "RNA-seq",
+                  "value": 14
+                }
+              ]
+            },
+            {
+              "key": "Liver",
+              "children": [
+                {
+                  "key": "ATAC-seq",
+                  "value": 38
+                },
+                {
+                  "key": "RNA-seq",
+                  "value": 87
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Biswal Lab",
+      "children": [
+        {
+          "key": "3 weeks",
+          "children": [
+            {
+              "key": "Blood",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 24
+                }
+              ]
+            },
+            {
+              "key": "Liver",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "5 months",
+          "children": [
+            {
+              "key": "Liver",
+              "children": [
+                {
+                  "key": "ATAC-seq",
+                  "value": 24
+                },
+                {
+                  "key": "RNA-seq",
+                  "value": 24
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Dolinoy Lab",
+      "children": [
+        {
+          "key": "5 months",
+          "children": [
+            {
+              "key": "Liver",
+              "children": [
+                {
+                  "key": "ATAC-seq",
+                  "value": 35
+                },
+                {
+                  "key": "RNA-seq",
+                  "value": 36
+                },
+                {
+                  "key": "RRBS-Seq",
+                  "value": 35
+                }
+              ]
+            },
+            {
+              "key": "Blood",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 36
+                },
+                {
+                  "key": "RRBS-Seq",
+                  "value": 36
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Mutlu Lab",
+      "children": [
+        {
+          "key": "5 months",
+          "children": [
+            {
+              "key": "Blood",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 23
+                }
+              ]
+            },
+            {
+              "key": "Liver",
+              "children": [
+                {
+                  "key": "ATAC-seq",
+                  "value": 23
+                },
+                {
+                  "key": "RNA-seq",
+                  "value": 23
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "3 weeks",
+          "children": [
+            {
+              "key": "Heart",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 24
+                }
+              ]
+            },
+            {
+              "key": "Liver",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 24
+                }
+              ]
+            },
+            {
+              "key": "Lungs",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 24
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Walker Lab",
+      "children": [
+        {
+          "key": "5 months",
+          "children": [
+            {
+              "key": "Blood",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 24
+                }
+              ]
+            },
+            {
+              "key": "Liver",
+              "children": [
+                {
+                  "key": "ATAC-seq",
+                  "value": 24
+                },
+                {
+                  "key": "RNA-seq",
+                  "value": 52
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "3 weeks",
+          "children": [
+            {
+              "key": "Liver",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 28
+                }
+              ]
+            },
+            {
+              "key": "Blood",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 13
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Zhibin Lab",
+      "children": [
+        {
+          "key": "5 months",
+          "children": [
+            {
+              "key": "Blood",
+              "children": [
+                {
+                  "key": "RNA-seq",
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "key": "Liver",
+              "children": [
+                {
+                  "key": "ATAC-seq",
+                  "value": 14
+                },
+                {
+                  "key": "RNA-seq",
+                  "value": 22
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

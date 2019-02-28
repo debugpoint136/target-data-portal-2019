@@ -12,7 +12,6 @@ import {
   // ResultCard
 } from "@appbaseio/reactivesearch";
 import "./App.css";
-
 import Tissues from './base/Tissues';
 import Age from './base/Age';
 import Sex from './base/Sex';
@@ -21,6 +20,12 @@ import Exposures from './base/Exposures';
 import Labs from './base/Labs';
 import Results from './base/Results';
 import SearchBar from './base/SearchBar';
+import PieChartWidget from './summary/PieChartWidget';
+import SankeyWidget from './summary/SankeyWidget';
+import SunburstWidget from './summary/SunburstWidget';
+import BubbleWidget from './summary/BubbleWidget';
+import ButtonWidget from './components/ButtonWidget';
+
 
 const ESCLUSTER = 'https://search-targetdcc-3dlio7dsb2i4woj3cw6q4a4ghq.us-east-1.es.amazonaws.com/';
 // const ESCLUSTER = 'https://search-dataportal-eado5sdwt6hh6z67rslt5nioby.us-east-1.es.amazonaws.com';
@@ -67,6 +72,13 @@ class App extends Component {
         {/* <div className="m-2 p-2 rounded border-2 border-teal-darker bg-white w-1/5 text-white">
           <Radio toggle label='Show Experiments that pass QC' onChange={this.toggle} checked={this.state.qctoggle}/>
         </div> */}
+        <div className="bubble">
+          <div className="m-8" style={{ height: '400px', width: '600px'}}>
+            <BubbleWidget/>
+          </div>
+        </div>
+
+        <ButtonWidget/>
         <ReactiveBase
           url={ESCLUSTER}
           app={INDEX}

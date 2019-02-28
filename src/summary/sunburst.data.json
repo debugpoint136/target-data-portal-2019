@@ -1,0 +1,421 @@
+{
+    "name": "nivo",
+    "color": "hsl(280, 70%, 50%)",
+    "children": [
+      {
+        "name": "viz",
+        "color": "hsl(283, 70%, 50%)",
+        "children": [
+          {
+            "name": "stack",
+            "color": "hsl(1, 70%, 50%)",
+            "children": [
+              {
+                "name": "chart",
+                "color": "hsl(235, 70%, 50%)",
+                "loc": 109295
+              },
+              {
+                "name": "xAxis",
+                "color": "hsl(257, 70%, 50%)",
+                "loc": 82064
+              },
+              {
+                "name": "yAxis",
+                "color": "hsl(78, 70%, 50%)",
+                "loc": 42206
+              },
+              {
+                "name": "layers",
+                "color": "hsl(87, 70%, 50%)",
+                "loc": 173945
+              }
+            ]
+          },
+          {
+            "name": "pie",
+            "color": "hsl(176, 70%, 50%)",
+            "children": [
+              {
+                "name": "chart",
+                "color": "hsl(324, 70%, 50%)",
+                "children": [
+                  {
+                    "name": "pie",
+                    "color": "hsl(29, 70%, 50%)",
+                    "children": [
+                      {
+                        "name": "outline",
+                        "color": "hsl(141, 70%, 50%)",
+                        "loc": 178415
+                      },
+                      {
+                        "name": "slices",
+                        "color": "hsl(37, 70%, 50%)",
+                        "loc": 10330
+                      },
+                      {
+                        "name": "bbox",
+                        "color": "hsl(156, 70%, 50%)",
+                        "loc": 28120
+                      }
+                    ]
+                  },
+                  {
+                    "name": "donut",
+                    "color": "hsl(121, 70%, 50%)",
+                    "loc": 8866
+                  },
+                  {
+                    "name": "gauge",
+                    "color": "hsl(175, 70%, 50%)",
+                    "loc": 142544
+                  }
+                ]
+              },
+              {
+                "name": "legends",
+                "color": "hsl(193, 70%, 50%)",
+                "loc": 144372
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "colors",
+        "color": "hsl(32, 70%, 50%)",
+        "children": [
+          {
+            "name": "rgb",
+            "color": "hsl(305, 70%, 50%)",
+            "loc": 80207
+          },
+          {
+            "name": "hsl",
+            "color": "hsl(187, 70%, 50%)",
+            "loc": 146684
+          }
+        ]
+      },
+      {
+        "name": "utils",
+        "color": "hsl(318, 70%, 50%)",
+        "children": [
+          {
+            "name": "randomize",
+            "color": "hsl(349, 70%, 50%)",
+            "loc": 158276
+          },
+          {
+            "name": "resetClock",
+            "color": "hsl(48, 70%, 50%)",
+            "loc": 108926
+          },
+          {
+            "name": "noop",
+            "color": "hsl(20, 70%, 50%)",
+            "loc": 131285
+          },
+          {
+            "name": "tick",
+            "color": "hsl(127, 70%, 50%)",
+            "loc": 117664
+          },
+          {
+            "name": "forceGC",
+            "color": "hsl(108, 70%, 50%)",
+            "loc": 95217
+          },
+          {
+            "name": "stackTrace",
+            "color": "hsl(280, 70%, 50%)",
+            "loc": 32341
+          },
+          {
+            "name": "dbg",
+            "color": "hsl(333, 70%, 50%)",
+            "loc": 83829
+          }
+        ]
+      },
+      {
+        "name": "generators",
+        "color": "hsl(225, 70%, 50%)",
+        "children": [
+          {
+            "name": "address",
+            "color": "hsl(235, 70%, 50%)",
+            "loc": 195482
+          },
+          {
+            "name": "city",
+            "color": "hsl(52, 70%, 50%)",
+            "loc": 123159
+          },
+          {
+            "name": "animal",
+            "color": "hsl(350, 70%, 50%)",
+            "loc": 177692
+          },
+          {
+            "name": "movie",
+            "color": "hsl(29, 70%, 50%)",
+            "loc": 64432
+          },
+          {
+            "name": "user",
+            "color": "hsl(343, 70%, 50%)",
+            "loc": 100912
+          }
+        ]
+      },
+      {
+        "name": "set",
+        "color": "hsl(220, 70%, 50%)",
+        "children": [
+          {
+            "name": "clone",
+            "color": "hsl(285, 70%, 50%)",
+            "loc": 122260
+          },
+          {
+            "name": "intersect",
+            "color": "hsl(172, 70%, 50%)",
+            "loc": 17708
+          },
+          {
+            "name": "merge",
+            "color": "hsl(6, 70%, 50%)",
+            "loc": 75422
+          },
+          {
+            "name": "reverse",
+            "color": "hsl(238, 70%, 50%)",
+            "loc": 50688
+          },
+          {
+            "name": "toArray",
+            "color": "hsl(176, 70%, 50%)",
+            "loc": 104307
+          },
+          {
+            "name": "toObject",
+            "color": "hsl(136, 70%, 50%)",
+            "loc": 197566
+          },
+          {
+            "name": "fromCSV",
+            "color": "hsl(4, 70%, 50%)",
+            "loc": 36136
+          },
+          {
+            "name": "slice",
+            "color": "hsl(293, 70%, 50%)",
+            "loc": 136980
+          },
+          {
+            "name": "append",
+            "color": "hsl(104, 70%, 50%)",
+            "loc": 134147
+          },
+          {
+            "name": "prepend",
+            "color": "hsl(171, 70%, 50%)",
+            "loc": 181670
+          },
+          {
+            "name": "shuffle",
+            "color": "hsl(268, 70%, 50%)",
+            "loc": 82238
+          },
+          {
+            "name": "pick",
+            "color": "hsl(121, 70%, 50%)",
+            "loc": 58328
+          },
+          {
+            "name": "plouc",
+            "color": "hsl(328, 70%, 50%)",
+            "loc": 139266
+          }
+        ]
+      },
+      {
+        "name": "text",
+        "color": "hsl(320, 70%, 50%)",
+        "children": [
+          {
+            "name": "trim",
+            "color": "hsl(289, 70%, 50%)",
+            "loc": 206
+          },
+          {
+            "name": "slugify",
+            "color": "hsl(64, 70%, 50%)",
+            "loc": 184245
+          },
+          {
+            "name": "snakeCase",
+            "color": "hsl(136, 70%, 50%)",
+            "loc": 47869
+          },
+          {
+            "name": "camelCase",
+            "color": "hsl(96, 70%, 50%)",
+            "loc": 80207
+          },
+          {
+            "name": "repeat",
+            "color": "hsl(350, 70%, 50%)",
+            "loc": 175135
+          },
+          {
+            "name": "padLeft",
+            "color": "hsl(197, 70%, 50%)",
+            "loc": 124677
+          },
+          {
+            "name": "padRight",
+            "color": "hsl(150, 70%, 50%)",
+            "loc": 150037
+          },
+          {
+            "name": "sanitize",
+            "color": "hsl(292, 70%, 50%)",
+            "loc": 52477
+          },
+          {
+            "name": "ploucify",
+            "color": "hsl(226, 70%, 50%)",
+            "loc": 134009
+          }
+        ]
+      },
+      {
+        "name": "misc",
+        "color": "hsl(165, 70%, 50%)",
+        "children": [
+          {
+            "name": "whatever",
+            "color": "hsl(322, 70%, 50%)",
+            "children": [
+              {
+                "name": "hey",
+                "color": "hsl(156, 70%, 50%)",
+                "loc": 19565
+              },
+              {
+                "name": "WTF",
+                "color": "hsl(180, 70%, 50%)",
+                "loc": 68663
+              },
+              {
+                "name": "lol",
+                "color": "hsl(19, 70%, 50%)",
+                "loc": 194377
+              },
+              {
+                "name": "IMHO",
+                "color": "hsl(235, 70%, 50%)",
+                "loc": 110351
+              }
+            ]
+          },
+          {
+            "name": "other",
+            "color": "hsl(55, 70%, 50%)",
+            "loc": 9674
+          },
+          {
+            "name": "crap",
+            "color": "hsl(110, 70%, 50%)",
+            "children": [
+              {
+                "name": "crapA",
+                "color": "hsl(341, 70%, 50%)",
+                "loc": 128974
+              },
+              {
+                "name": "crapB",
+                "color": "hsl(173, 70%, 50%)",
+                "children": [
+                  {
+                    "name": "crapB1",
+                    "color": "hsl(216, 70%, 50%)",
+                    "loc": 63815
+                  },
+                  {
+                    "name": "crapB2",
+                    "color": "hsl(357, 70%, 50%)",
+                    "loc": 127514
+                  },
+                  {
+                    "name": "crapB3",
+                    "color": "hsl(39, 70%, 50%)",
+                    "loc": 25294
+                  },
+                  {
+                    "name": "crapB4",
+                    "color": "hsl(240, 70%, 50%)",
+                    "loc": 138872
+                  }
+                ]
+              },
+              {
+                "name": "crapC",
+                "color": "hsl(93, 70%, 50%)",
+                "children": [
+                  {
+                    "name": "crapC1",
+                    "color": "hsl(308, 70%, 50%)",
+                    "loc": 16180
+                  },
+                  {
+                    "name": "crapC2",
+                    "color": "hsl(206, 70%, 50%)",
+                    "loc": 159443
+                  },
+                  {
+                    "name": "crapC3",
+                    "color": "hsl(128, 70%, 50%)",
+                    "loc": 55658
+                  },
+                  {
+                    "name": "crapC4",
+                    "color": "hsl(113, 70%, 50%)",
+                    "loc": 145966
+                  },
+                  {
+                    "name": "crapC5",
+                    "color": "hsl(45, 70%, 50%)",
+                    "loc": 22936
+                  },
+                  {
+                    "name": "crapC6",
+                    "color": "hsl(25, 70%, 50%)",
+                    "loc": 76388
+                  },
+                  {
+                    "name": "crapC7",
+                    "color": "hsl(324, 70%, 50%)",
+                    "loc": 89877
+                  },
+                  {
+                    "name": "crapC8",
+                    "color": "hsl(85, 70%, 50%)",
+                    "loc": 137786
+                  },
+                  {
+                    "name": "crapC9",
+                    "color": "hsl(54, 70%, 50%)",
+                    "loc": 150859
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

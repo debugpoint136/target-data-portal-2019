@@ -1,0 +1,356 @@
+{
+  "nodes": [
+    {
+      "id": "MutluLab",
+      "color": "hsl(302, 70%, 50%)"
+    },
+    {
+      "id": "BiswalLab",
+      "color": "hsl(50, 70%, 50%)"
+    },
+    {
+      "id": "BartolomeiLab",
+      "color": "hsl(88, 70%, 50%)"
+    },
+    {
+      "id": "DolinoyLab",
+      "color": "hsl(248, 70%, 50%)"
+    },
+    {
+      "id": "WalkerLab",
+      "color": "hsl(331, 70%, 50%)"
+    },
+    {
+      "id": "ZhibinLab",
+      "color": "hsl(213, 70%, 50%)"
+    },
+    {
+      "id": "AylorLab",
+      "color": "hsl(143, 70%, 50%)"
+    },
+    {
+      "id": "Blood",
+      "color": "hsl(233, 70%, 50%)"
+    },
+    {
+      "id": "Liver",
+      "color": "hsl(14, 70%, 50%)"
+    },
+    {
+      "id": "Heart",
+      "color": "hsl(263, 70%, 50%)"
+    },
+    {
+      "id": "Lungs",
+      "color": "hsl(238, 70%, 50%)"
+    },
+    {
+      "id": "ATAC-seq",
+      "color": "hsl(227, 70%, 50%)"
+    },
+    {
+      "id": "RNA-seq",
+      "color": "hsl(143, 70%, 50%)"
+    },
+    {
+      "id": "3weeks",
+      "color": "hsl(70, 90%, 60%)"
+    },
+    {
+      "id": "5months",
+      "color": "hsl(260, 90%, 80%)"
+    }
+  ],
+  "links": [
+    {
+      "source": "AylorLab",
+      "target": "3weeks",
+      "value": 114
+    },
+    {
+      "source": "AylorLab",
+      "target": "5months",
+      "value": 114
+    },
+    {
+      "source": "AylorLab",
+      "target": "ATAC-seq",
+      "value": 96
+    },
+    {
+      "source": "AylorLab",
+      "target": "RNA-seq",
+      "value": 192
+    },
+    {
+      "source": "AylorLab",
+      "target": "Blood",
+      "value": 96
+    },
+    {
+      "source": "AylorLab",
+      "target": "Liver",
+      "value": 192
+    },
+    {
+      "source": "Blood",
+      "target": "3weeks",
+      "value": 85
+    },
+    {
+      "source": "Heart",
+      "target": "3weeks",
+      "value": 24
+    },
+    {
+      "source": "Lungs",
+      "target": "3weeks",
+      "value": 24
+    },
+    {
+      "source": "Liver",
+      "target": "3weeks",
+      "value": 172
+    },
+    {
+      "source": "Blood",
+      "target": "5months",
+      "value": 195
+    },
+    {
+      "source": "Liver",
+      "target": "5months",
+      "value": 533
+    },
+    {
+      "source": "ATAC-seq",
+      "target": "5months",
+      "value": 210
+    },
+    {
+      "source": "ATAC-seq",
+      "target": "3weeks",
+      "value": 48
+    },
+    {
+      "source": "RNA-seq",
+      "target": "5months",
+      "value": 447
+    },
+    {
+      "source": "RNA-seq",
+      "target": "3weeks",
+      "value": 257
+    },
+    {
+      "source": "Blood",
+      "target": "ATAC-seq",
+      "value": 4
+    },
+    {
+      "source": "Blood",
+      "target": "RNA-seq",
+      "value": 240
+    },
+    {
+      "source": "Liver",
+      "target": "ATAC-seq",
+      "value": 254
+    },
+    {
+      "source": "Liver",
+      "target": "RNA-seq",
+      "value": 416
+    },
+    {
+      "source": "Lungs",
+      "target": "RNA-seq",
+      "value": 24
+    },
+    {
+      "source": "Heart",
+      "target": "RNA-seq",
+      "value": 24
+    },
+    {
+        "source": "BartolomeiLab",
+        "target": "5months",
+        "value": 143
+      },
+      {
+        "source": "BartolomeiLab",
+        "target": "ATAC-seq",
+        "value": 42
+      },
+      {
+        "source": "BartolomeiLab",
+        "target": "RNA-seq",
+        "value": 101
+      },
+      {
+        "source": "BartolomeiLab",
+        "target": "Blood",
+        "value": 18
+      },
+      {
+        "source": "BartolomeiLab",
+        "target": "Liver",
+        "value": 125
+      },
+      {
+        "source": "BiswalLab",
+        "target": "3weeks",
+        "value": 48
+      },
+    {
+        "source": "BiswalLab",
+        "target": "5months",
+        "value": 48
+      },
+      {
+        "source": "BiswalLab",
+        "target": "ATAC-seq",
+        "value": 24
+      },
+      {
+        "source": "BiswalLab",
+        "target": "RNA-seq",
+        "value": 72
+      },
+      {
+        "source": "BiswalLab",
+        "target": "Blood",
+        "value": 24
+      },
+      {
+        "source": "BiswalLab",
+        "target": "Liver",
+        "value": 72
+      },
+      {
+        "source": "DolinoyLab",
+        "target": "5months",
+        "value": 107
+      },
+      {
+        "source": "DolinoyLab",
+        "target": "ATAC-seq",
+        "value": 35
+      },
+      {
+        "source": "DolinoyLab",
+        "target": "RNA-seq",
+        "value": 72
+      },
+      {
+        "source": "DolinoyLab",
+        "target": "Blood",
+        "value": 72
+      },
+      {
+        "source": "DolinoyLab",
+        "target": "Liver",
+        "value": 106
+      },
+      {
+        "source": "MutluLab",
+        "target": "3weeks",
+        "value": 72
+      },
+    {
+        "source": "MutluLab",
+        "target": "5months",
+        "value": 69
+      },
+      {
+        "source": "MutluLab",
+        "target": "ATAC-seq",
+        "value": 23
+      },
+      {
+        "source": "MutluLab",
+        "target": "RNA-seq",
+        "value": 118
+      },
+      {
+        "source": "MutluLab",
+        "target": "Blood",
+        "value": 23
+      },
+      {
+        "source": "MutluLab",
+        "target": "Liver",
+        "value": 70
+      },
+      {
+        "source": "MutluLab",
+        "target": "Heart",
+        "value": 24
+      },
+      {
+        "source": "MutluLab",
+        "target": "Lungs",
+        "value": 24
+      },
+      {
+        "source": "ZhibinLab",
+        "target": "5months",
+        "value": 46
+      },
+      {
+        "source": "ZhibinLab",
+        "target": "ATAC-seq",
+        "value": 14
+      },
+      {
+        "source": "ZhibinLab",
+        "target": "RNA-seq",
+        "value": 32
+      },
+      {
+        "source": "ZhibinLab",
+        "target": "Blood",
+        "value": 10
+      },
+      {
+        "source": "ZhibinLab",
+        "target": "Liver",
+        "value": 36
+      },
+      {
+        "source": "WalkerLab",
+        "target": "3weeks",
+        "value": 41
+      },
+    {
+        "source": "WalkerLab",
+        "target": "5months",
+        "value": 100
+      },
+      {
+        "source": "WalkerLab",
+        "target": "ATAC-seq",
+        "value": 24
+      },
+      {
+        "source": "WalkerLab",
+        "target": "RNA-seq",
+        "value": 117
+      },
+      {
+        "source": "WalkerLab",
+        "target": "Blood",
+        "value": 37
+      },
+      {
+        "source": "WalkerLab",
+        "target": "Liver",
+        "value": 104
+      }
+  ]
+}
+
+
+
+
+

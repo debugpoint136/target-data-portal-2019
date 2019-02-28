@@ -544,7 +544,7 @@ class PivotTableUI extends React.PureComponent {
               basic
             />
           </div>
-        <div className="flex mx-auto">
+        <div className="mx-auto">
         <table className="pvtUi mr-8">   
           <tbody onClick={() => this.setState({openDropdown: false})}>
             <tr>
@@ -556,13 +556,15 @@ class PivotTableUI extends React.PureComponent {
               {colAttrsCell}
             </tr>
             <tr>
-              {rowAttrsCell}
-              
+              <div className="sds">
+                <div className="font-sans text-lg">Left pane attributes</div>
+                {rowAttrsCell}
+              </div>
             </tr>
           </tbody>
         </table>
 
-          <div id="style-7" className="p-8 w-5/6 overflow-scroll  border-2 border-dashed border-teal rounded ">
+          <div id="style-7" className="p-8 overflow-scroll  border-2 border-dashed border-teal rounded ">
             {outputCell}
           </div>
           </div>
