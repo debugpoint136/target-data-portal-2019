@@ -20,11 +20,11 @@ import Exposures from './base/Exposures';
 import Labs from './base/Labs';
 import Results from './base/Results';
 import SearchBar from './base/SearchBar';
-import PieChartWidget from './summary/PieChartWidget';
-import SankeyWidget from './summary/SankeyWidget';
-import SunburstWidget from './summary/SunburstWidget';
-import BubbleWidget from './summary/BubbleWidget';
-import ButtonWidget from './components/ButtonWidget';
+// import PieChartWidget from './summary/PieChartWidget';
+// import SankeyWidget from './summary/SankeyWidget';
+// import SunburstWidget from './summary/SunburstWidget';
+// import BubbleWidget from './summary/BubbleWidget';
+// import ButtonWidget from './components/ButtonWidget';
 
 
 const ESCLUSTER = 'https://search-targetdcc-3dlio7dsb2i4woj3cw6q4a4ghq.us-east-1.es.amazonaws.com/';
