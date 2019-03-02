@@ -72,13 +72,13 @@ class App extends Component {
         {/* <div className="m-2 p-2 rounded border-2 border-teal-darker bg-white w-1/5 text-white">
           <Radio toggle label='Show Experiments that pass QC' onChange={this.toggle} checked={this.state.qctoggle}/>
         </div> */}
-        <div className="bubble">
+        {/* <div className="bubble">
           <div className="m-8" style={{ height: '400px', width: '600px'}}>
-            <BubbleWidget/>
+            <SankeyWidget/>
           </div>
-        </div>
+        </div> */}
 
-        <ButtonWidget/>
+        {/* <ButtonWidget/> */}
         <ReactiveBase
           url={ESCLUSTER}
           app={INDEX}

@@ -32,11 +32,20 @@ export const File = (props) => {
 
 export const QCstatus = (props) => {
     const { uuid, status } = props.data;
-    return ( 
-        <QCEntry key={uuid}>
-            {<a href={`/file/${uuid}`} target="_blank">{status}</a>} {"  "} {showQCstatus(status)}
-        </QCEntry>
-    );
+    if (status) {
+        return ( 
+            <QCEntry key={uuid}>
+                {<a href={`/file/${uuid}`} target="_blank">{status}</a>} {"  "} {showQCstatus(status)}
+            </QCEntry>
+        );
+    } else {
+        return ( 
+            <QCEntry key={uuid}>
+                {<a href={`/file/${uuid}`} target="_blank">QC report</a>} 
+            </QCEntry>
+        );
+    }
+    
 }
 
 export const FileEntry = ({children}) => {

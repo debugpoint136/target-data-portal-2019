@@ -22,6 +22,7 @@ class Results extends React.Component {
   }
   onAllData(results, streamResults, loadMoreData) {
     if (results.length > 0) {
+      // console.log(JSON.stringify(results));
       return <Table data={results}/>
       // return <SetCards data={results}/>
     } else {

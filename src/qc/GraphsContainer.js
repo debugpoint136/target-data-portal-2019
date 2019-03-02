@@ -6,6 +6,7 @@ import ReactToPrint from "react-to-print";
 import {Label, Icon} from 'semantic-ui-react';
 import ATACseqQCreport from './ATACseqQCreport';
 import RNAseqQCreport from './RNAseqQCreport';
+import RRBSseqQCreport from './RRBSseqQCreport';
 
 class GraphsContainer extends Component {
     constructor(props) {
@@ -14,6 +15,7 @@ class GraphsContainer extends Component {
     }
     render() {
         const {type, data} = this.props;
+        console.log(type);
         if (type === undefined || data === undefined) {
             return <h3>Looking for passed data ..</h3>
         }
@@ -29,9 +31,8 @@ class GraphsContainer extends Component {
                 <div ref={el => (this.componentRef = el)}>
                     {(type === 'ATAC-seq')
                         ? <ATACseqQCreport data={data}/>
-                        : (type === 'RNA-seq')
-                            ? <RNAseqQCreport data={data} fileUUID={this.props.fileUUID}/>
-                            : null}
+                        : (type === 'RNA-seq') ? <RNAseqQCreport data={data} fileUUID={this.props.fileUUID}/>
+                        : (type === 'RRBS-seq') ? <RRBSseqQCreport data={data} fileUUID={this.props.fileUUID}/>: null}
                 </div>
             </div>
 

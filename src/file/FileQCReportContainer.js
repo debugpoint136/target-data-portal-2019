@@ -53,11 +53,13 @@ class FileQCReportContainer extends Component {
                 File QC Report - {this.props.match.params.id}
             </div>
             {/* <FileQCReport source={this.state.qcJson}/> */}
+            { (this.state.qcPath.split('/')[4] === 'RRBS-seq') ? null : 
             <div className="mr-8 mt-4 rounded border-2 border-blue p-2 bg-blue-lightest w-36 float-right flex-inline text-blue">
                 <a target="_blank" href={`${this.state.qcPath}/multiqc_report.html `}>MultiQC Report</a>
                 {"  "}
                 <Icon name='external'/>
             </div>
+            }
             <div className="m-4 p-8 bg-grey-lighter">
                 <GraphsContainer data={this.state.qcJson} type={this.state.assay} fileUUID={this.state.qcJSONPath}/>
             </div>

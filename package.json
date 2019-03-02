@@ -28,6 +28,7 @@
     "react-draggable": "^3.0.5",
     "react-json-view": "^1.19.1",
     "react-notify-toast": "^0.5.0",
+    "react-pdf": "^4.0.4",
     "react-responsive-modal": "^3.5.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.5",
