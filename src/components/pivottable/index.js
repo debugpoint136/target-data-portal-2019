@@ -7,7 +7,7 @@ import { withRouter } from 'react-router';
 // let addColor = { background: '#61D19E', text: "#FFFFFF" }; let removeColor =
 // { background: '#b2346d', text: "#FFFFFF" };
 const DEFAULT = {
-  rows: ['Lab','Assay'],
+  rows: ['Exposure','Assay'],
   cols: ['Tissue', 'Age'],
   data: []
 }
@@ -99,11 +99,11 @@ class TableMain extends Component {
       </div>
     }
     return (
-      <div className="App">
+      <div className="">
         <Notifications/>
         {/* <div id="wrapper_1">
           <div id="container_1"> */}
-              <div className="mt-48 mb-4">
+              <div className="mt-48 mb-4 container-resolute">
               </div>
               {/* <div className="ml-48 overflow-scroll h-screen border-2 border-dashed border-teal rounded p-4 flex justify-center"> */}
               <Wrapper

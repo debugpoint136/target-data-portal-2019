@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {ReactiveBase} from "@appbaseio/reactivesearch";
 // import Results from '../base/Results';
-import 'semantic-ui-css/semantic.min.css';
+// import 'semantic-ui-css/semantic.min.css';
 import Tissues from '../base/Tissues';
 import Age from '../base/Age';
 import Sex from '../base/Sex';

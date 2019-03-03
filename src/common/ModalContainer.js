@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-responsive-modal';
-import './modal.css';
+// import './modal.css';
 
 export default class ModalContainer extends React.Component {
 

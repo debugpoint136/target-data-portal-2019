@@ -141,7 +141,7 @@ function makeRenderer(opts = {}) {
                         if (colAttrs.length !== 1 && colKey[j] === rootLabel) { // top most
                           classNameStr = `pvtColLabel bg-${COLORS[cnt]}-light p-8 text-lg font-sans text-grey-darkest`;
                         } else if (colAttrs.length > 3) { // more than 3 attributes?
-                          classNameStr = `pvtColLabel  bg-grey-lighter text-base font-thin font-sans text-grey-darker`;
+                          classNameStr = `pvtColLabel text-xs bg-grey-lighter text-base font-thin font-sans text-grey-darker`;
                         } else {
                           classNameStr = `pvtColLabel  bg-${COLORS[cnt]}-lighter italic font-thin text-base font-sans text-grey-darkest shadow`;
                         }
@@ -163,7 +163,7 @@ function makeRenderer(opts = {}) {
                             rowSpan={j === colAttrs.length - 1 && rowAttrs.length !== 0
                             ? 2
                             : 1}>
-                            {(colAttrs.length > 1 && colAttrs.length - 1 === j) ? <div className="rotate">{colKey[j]}</div> : colKey[j]}
+                            {(colAttrs.length > 1 && colAttrs.length - 1 === j) ? <div className="rotate text-xs">{colKey[j]}</div> : colKey[j]}
                           </th>
                         );
                       })}

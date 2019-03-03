@@ -2,3 +2,107 @@
 @tailwind utilities;
 
 /* Your custom CSS here */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: #149ed4;
+}
+
+.outline-0 {
+  outline: 0;
+}
+
+.container-resolute {
+  max-width: 800px;
+}
+
+.w-left {
+  width: 225px;
+}
+
+.w-right {
+  width: 320px;
+}
+
+.fix-negative-margin {
+  margin-left: -4px;
+}
+
+.border-t-blue-resolute {
+  border-top-color: #149ed4 !important;
+}
+
+.border-t-red {
+  border-top-color: #e3342f !important;
+}
+
+.border-t-yellow {
+  border-top-color: #f2d024 !important;
+}
+
+.table th {
+  border-top: 0;
+}
+
+.table td {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.bg-blue-resolute {
+  background-color: #149ed4;
+}
+
+.bg-blue-resolute-dark {
+  background-color: #0b799e;
+}
+
+.bg-blue-resolute-icon {
+  background-color: #a7b7c7;
+}
+
+.bg-blue-darkest {
+  background-color: #12283a;
+}
+
+.text-blue-resolute {
+  color: #149ed4;
+}
+
+.text-blue-resolute-dark {
+  color: #0b799e;
+}
+
+.text-blue-resolute-icon {
+  color: #a7b7c7;
+}
+
+.border-blue-resolute {
+  border-color: #149ed4;
+}
+
+.border-blue-resolute-dark {
+  border-color: #0b799e;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
