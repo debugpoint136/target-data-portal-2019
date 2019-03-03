@@ -114,7 +114,7 @@ class App extends Component {
             <div className="px-8 container-resolute mx-auto">
               <div className='p-2 flex justify-between mx-auto text-blue'>
               <SelectedFilters showClearAll={true} clearAllLabel="Clear filters" URLParams={true}/>
-              <Button.Group icon>
+              <Button.Group icon basic>
                 <Button>
                   <Icon name='th' />
                 </Button>

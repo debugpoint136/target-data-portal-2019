@@ -1,5 +1,6 @@
 import React from 'react';
 import * as cn from 'classnames';
+import SearchBar from '../base/SearchBar';
 
 const Main = (props) => {
     return (
@@ -10,7 +11,7 @@ const Main = (props) => {
                     Data Portal
                 </div>
             </div>
-            <div className={styles.topBarMiddle}>
+            {/* <div className={styles.topBarMiddle}>
                 <input
                     type="text"
                     className={styles.searchBar}
@@ -24,6 +25,15 @@ const Main = (props) => {
                         height="24"><path
                         className="heroicon-ui"
                         d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/></svg>
+                </div>
+            </div> */}
+
+            <div className={styles.topBarMiddle}>
+                <SearchBar/>
+            </div>
+            <div className='w-right'>
+                <div className='px-8 mx-auto text-center text-sm text-tracking-wide font-mono text-uppercase text-white hover:bg-white hover:text-grey-darker'>
+                    Documentation
                 </div>
             </div>
         </div>

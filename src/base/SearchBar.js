@@ -6,9 +6,9 @@ const SearchBar = () => {
         componentId="Search"
         dataField={["mouse", "accession", "status", "biosample", "assay", "Exposure", "Assay", "Tissue", "Age", "uuid", "Lab"]}
         categoryField="title"
-        className="search-bar"
+        // className="search-bar"
         queryFormat="and" //only results matching both “bat” and “man” will be returned
-        placeholder="Search for experiments..."
+        placeholder="Search by Assay, Tissue, UUID, Lab, or Exposure etc..."
         iconPosition="left"
         autosuggest={true}
         URLParams={true}
