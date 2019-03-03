@@ -139,7 +139,7 @@ function makeRenderer(opts = {}) {
                         let classNameStr = `pvtColLabel  `;
 
                         if (colAttrs.length !== 1 && colKey[j] === rootLabel) { // top most
-                          classNameStr = `pvtColLabel bg-${COLORS[cnt]}-light p-8 text-lg font-sans text-grey-darkest`;
+                          classNameStr = `pvtColLabel bg-${COLORS[cnt]}-light p-8 text-md font-sans text-grey-darkest`;
                         } else if (colAttrs.length > 3) { // more than 3 attributes?
                           classNameStr = `pvtColLabel text-xs bg-grey-lighter text-base font-thin font-sans text-grey-darker`;
                         } else {
@@ -224,9 +224,9 @@ function makeRenderer(opts = {}) {
                         let rowClassNameStr = `pvtRowLabel`;
 
                         if (rowAttrs.length !== 1 && rowKey[j] === rootRowLabel) {
-                          rowClassNameStr = `pvtRowLabel p-8 bg-${COLORS[rowCnt+7]}-light text-lg font-sans text-grey-darkest`;
+                          rowClassNameStr = `pvtRowLabel p-8 bg-${COLORS[rowCnt+7]}-light text-md font-sans text-grey-darkest`;
                         } else if (rowAttrs.length > 3) {
-                          rowClassNameStr = `pvtRowLabel bg-grey-lighter text-lg font-sans text-grey-darker`;
+                          rowClassNameStr = `pvtRowLabel bg-grey-lighter text-md font-sans text-grey-darker`;
                         } else {
                           rowClassNameStr = `pvtRowLabel bg-${COLORS[rowCnt+7]}-lighter italic font-thin text-base font-sans text-grey-darkest shadow`;
                         }

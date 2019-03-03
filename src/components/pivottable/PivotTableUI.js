@@ -532,20 +532,9 @@ class PivotTableUI extends React.PureComponent {
     if (horizUnused) {
       return (
         <div>
-          <div className="text-left">
-          <Popup
-              trigger={<Button circular basic icon='question' size='tiny'/>}
-              content={
-                <div>
-                <div className="mt-4 italic text-grey-darker text-xs">Drag and drop items between x and y pane, and from top pane, to change layout</div>
-                <div className="mt-4 italic text-grey-darker text-xs">For example, drag <strong>Exposure</strong> from top and drop it under Tissue on left pane</div>
-                <div className="mb-8 mt-8 italic text-grey-darker text-xs">Click on cell to see Mice groups</div>
-                </div>}
-              basic
-            />
-          </div>
+          
         <div className="mx-auto">
-        <table className="pvtUi mr-8">   
+        {/* <table className="pvtUi mr-8">   
           <tbody onClick={() => this.setState({openDropdown: false})}>
             <tr>
               {rendererCell}
@@ -562,7 +551,43 @@ class PivotTableUI extends React.PureComponent {
               </div>
             </tr>
           </tbody>
-        </table>
+        </table> */}
+        {/* dpuru */}
+            <div className='flex justify-center items-center mx-auto p-4 rounded'>
+            <div className="text-left"> 
+            <Popup
+                trigger={<Button circular basic icon='question' size='tiny'/>}
+                content={
+                  <div>
+                  <div className="mt-4 italic text-grey-darker text-xs">Drag and drop items between Rows and Columns pane, and from top pane, to change layout</div>
+                  <div className="mt-4 italic text-grey-darker text-xs">For example, drag <strong>Lab</strong> from top and drop it under Exposure on Rows pane</div>
+                  <div className="mb-8 mt-8 italic text-grey-darker text-xs">Click on cell to see experiments that intersect rows and columns</div>
+                  </div>}
+                basic
+              />
+            </div>
+            <div className='flex ml-4'>
+              <div className='p-2'>
+                  <div className='bg-white uppercase text-grey-dark text-xs font-bold tracking-wide p-2'>
+                    rows
+                  </div>
+                  {rowAttrsCell}
+              </div>
+              <div className='p-2'>
+                  <div className='bg-white uppercase text-grey-dark text-xs font-bold tracking-wide p-2'>
+                    Unused attributes
+                  </div>
+                  {unusedAttrsCell}
+              </div>
+              <div className='p-2'>
+                  <div className='bg-white uppercase text-grey-dark text-xs font-bold tracking-wide p-2'>
+                    columns
+                  </div>
+                  {colAttrsCell}
+              </div>
+            </div>
+            </div>
+
             <div className=''>
               <div id="style-7" className="p-8 overflow-scroll  border-2 border-dashed border-teal rounded ">
                 {outputCell}

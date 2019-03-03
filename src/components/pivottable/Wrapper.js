@@ -62,7 +62,7 @@ export default class Wrapper extends React.Component {
             <div>
                 <Button size='tiny' className='' onClick={this.handleTableReset}><Icon name='refresh'/>Reset Axis Labels</Button>
                 <div className="ml-48 h-screen p-4 flex justify-center">
-                        <div className="row text-center mt-8">
+                        <div className="row text-center">
                             <PivotTableUIWrapper {...this.state.pivotState} 
                                 onDataSelect={this.props.onDataSelect}
                                 handleFacetReshape={this.handleFacetReshape}
