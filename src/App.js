@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Radio } from 'semantic-ui-react';
+import { Button, Icon } from 'semantic-ui-react';
 import {
   ReactiveBase,
   // DataSearch, 
@@ -91,17 +91,11 @@ class App extends Component {
           <div className='three-columns flex'>
           <div className={styles.leftSideBar}>
             <ul className={styles.leftSideList}>
-              <ListRow>Dashboard</ListRow>
-              <ListRow>Friendly Form</ListRow>
-              <ListRow>Submissions</ListRow>
-              <ListRowSelected>Properties</ListRowSelected>
-              <ListRow>Contacts</ListRow>
+            <ListRowSelected>Experiment Sets</ListRowSelected>
+              <ListRow>Experiments</ListRow>
+              <ListRow>Files</ListRow>
             </ul>
-            <ul className={styles.leftSideList}>
-              <ListRow>Exports</ListRow>
-              <ListRow>Imports</ListRow>
-            </ul>
-            <ul className={styles.leftSideList}>
+            <ul className='list-reset text-sm border-b-2 border-solid border-grey-light p-4'>
                 <Tissues/>
                 <Assays/>
                 <Exposures/>
@@ -114,10 +108,21 @@ class App extends Component {
 
           <div className="p-2 middle-column w-3/5 flex-1 border-b-2">
             {/* <Breadcrumbs/> */}
-            <SelectedFilters showClearAll={true} clearAllLabel="Clear filters" URLParams={true}/>
+            
 
 
             <div className="px-8 container-resolute mx-auto">
+              <div className='p-2 flex justify-between mx-auto text-blue'>
+              <SelectedFilters showClearAll={true} clearAllLabel="Clear filters" URLParams={true}/>
+              <Button.Group icon>
+                <Button>
+                  <Icon name='th' />
+                </Button>
+                <Button>
+                  <Icon name='list' />
+                </Button>
+              </Button.Group>
+              </div>
               {/* <Header accession='GALDZO2R4I5ZK' status='PASS'/>
               <HeaderSubtitle>123 Main St., Galvenston, TX 77555</HeaderSubtitle>
               <CardDetails/>
@@ -131,24 +136,32 @@ class App extends Component {
 
           <div className="right-sidebar w-right bg-white shadow">
             <div className="flex items-center justify-between p-4 mb-2">
-              <div className="font-semibold text-lg text-grey-darkest">Notes</div>
-              <button className={styles.button}>+ New Note</button>
+              <div className="font-semibold text-lg text-grey-darkest">Recent updates</div>
+              {/* <button className={styles.button}>+ New Note</button> */}
             </div>
 
             <Tabs/>
 
             <Card
-              content='AOA 22228 was made the current AOA for PID GALDZO2R4I5ZK.'
-              by='System'
-              date='April 7, 2018 11:42am'/>
+              content='Bartolomei Lab'
+              id='-LZl9DdpCxAxswFbwF7v'
+              by='Yujie(Ivy) Chen'
+              date='Feb 27, 2019 4:52 PM'/>
             <Card
-              content='The client called and said their fence fell over.'
-              by='Aaron'
-              date='April 15, 2018 9:36am'/>
+              content='Bartolomei Lab'
+              id='-LYmxmgFFGdxsBRwWVDA'
+              by='Yemin Lan'
+              date='Feb 15, 2019 4:01 PM'/>
             <Card
-              content='The client inquired about tree pruning fee.'
-              by='Deepak'
-              date='Fec 15, 2019 8:21am'/>
+              content='Bartolomei Lab'
+              id='-LYbNvwSiLqzQxDZHlkb'
+              by='Yemin Lan'
+              date='Feb 13, 2019 10:05 AM'/>
+            <Card
+              content='Walker Lab'
+              id='-LY42hExwxX6b8aE4m_2'
+              by='Benpeng Miao'
+              date='Feb 6, 2019 5:05 PM'/>
 
           </div>
           </div>
@@ -207,7 +220,7 @@ const ListRowSelected = (props) => {
           className="heroicon-ui"
           d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zM5.68 7.1A7.96 7.96 0 0 0 4.06 11H5a1 1 0 0 1 0 2h-.94a7.95 7.95 0 0 0 1.32 3.5A9.96 9.96 0 0 1 11 14.05V9a1 1 0 0 1 2 0v5.05a9.96 9.96 0 0 1 5.62 2.45 7.95 7.95 0 0 0 1.32-3.5H19a1 1 0 0 1 0-2h.94a7.96 7.96 0 0 0-1.62-3.9l-.66.66a1 1 0 1 1-1.42-1.42l.67-.66A7.96 7.96 0 0 0 13 4.06V5a1 1 0 0 1-2 0v-.94c-1.46.18-2.8.76-3.9 1.62l.66.66a1 1 0 0 1-1.42 1.42l-.66-.67zM6.71 18a7.97 7.97 0 0 0 10.58 0 7.97 7.97 0 0 0-10.58 0z"/></svg>
       </div>
-      <a href='http://' className={styles.leftSideLink}>{props.children}</a>
+      <a href='#' className={styles.leftSideLink}>{props.children}</a>
     </li>
   );
 }
@@ -225,7 +238,7 @@ const ListRow = (props) => {
           className="heroicon-ui"
           d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zM5.68 7.1A7.96 7.96 0 0 0 4.06 11H5a1 1 0 0 1 0 2h-.94a7.95 7.95 0 0 0 1.32 3.5A9.96 9.96 0 0 1 11 14.05V9a1 1 0 0 1 2 0v5.05a9.96 9.96 0 0 1 5.62 2.45 7.95 7.95 0 0 0 1.32-3.5H19a1 1 0 0 1 0-2h.94a7.96 7.96 0 0 0-1.62-3.9l-.66.66a1 1 0 1 1-1.42-1.42l.67-.66A7.96 7.96 0 0 0 13 4.06V5a1 1 0 0 1-2 0v-.94c-1.46.18-2.8.76-3.9 1.62l.66.66a1 1 0 0 1-1.42 1.42l-.66-.67zM6.71 18a7.97 7.97 0 0 0 10.58 0 7.97 7.97 0 0 0-10.58 0z"/></svg>
       </div>
-      <a href='http://' className={styles.leftSideLink}>{props.children}</a>
+      <a href='#' className={styles.leftSideLink}>{props.children}</a>
     </li>
   );
 }
@@ -245,6 +258,7 @@ const Card = (props) => {
           </div>
           <div className="mb-2">
               <div className="text-sm text-grey-darkest leading-normal mb-2">{props.content}</div>
+              <div className="text-xs text-grey-light leading-normal mb-2">{props.id}</div>
               <div className="text-xs text-grey-dark">{props.by} &middot; {props.date}
               </div>
           </div>
@@ -257,9 +271,10 @@ const Tabs = () => {
       <div
           className="flex items-center justify-between text-sm font-semibold border-b border-solid border-grey-light px-4 mb-4">
           <div
-              className="text-grey-darkest border-b-4 border-solid border-blue-resolute pb-4">Notes Only</div>
-          <div className="text-grey-darkest border-b-4 border-solid border-white pb-4">Audits Only</div>
-          <div className="text-grey-darkest border-b-4 border-solid border-white pb-4">Everything</div>
+              className="text-grey-darkest border-b-4 border-solid border-blue-resolute pb-4">Metadata</div>
+          <div className="text-grey-darkest border-b-4 border-solid border-white pb-4">Submissions</div>
+          <div className="text-grey-darkest border-b-4 border-solid border-white pb-4">Audits</div>
+
       </div>
   );
 }
@@ -329,7 +344,7 @@ const styles = {
   searchIcon: cn(`absolute pin-t flex items-center py-4 px-3 text-grey-darker`),
   container: cn(`bg-white container my-8 mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden font-sans`),
   leftSideBar: cn(`left-sidebar w-left border-r-2 border-solid border-grey-light min-h-screen pt-4`),
-  leftSideList: cn(`px-4 list-reset text-sm border-b-2 border-solid border-grey-light`),
+  leftSideList: cn(`list-reset text-sm border-b-2 border-solid border-grey-light`),
   leftSideListRow: cn(`flex items-center py-2 pl-4 my-1`),
   leftSideListIcon: cn(`pr-2 text-blue-resolute-icon`),
   leftSideListLink: cn(`text-grey-darker hover:text-black`),

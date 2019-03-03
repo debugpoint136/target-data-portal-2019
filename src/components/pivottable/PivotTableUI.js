@@ -589,7 +589,7 @@ class PivotTableUI extends React.PureComponent {
             </div>
 
             <div className=''>
-              <div id="style-7" className="p-8 overflow-scroll  border-2 border-dashed border-teal rounded ">
+              <div id="style-7" className="p-8 overflow-scroll  border-2 rounded ">
                 {outputCell}
               </div>
             </div>
