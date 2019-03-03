@@ -563,10 +563,11 @@ class PivotTableUI extends React.PureComponent {
             </tr>
           </tbody>
         </table>
-
-          <div id="style-7" className="p-8 overflow-scroll  border-2 border-dashed border-teal rounded ">
-            {outputCell}
-          </div>
+            <div className=''>
+              <div id="style-7" className="p-8 overflow-scroll  border-2 border-dashed border-teal rounded ">
+                {outputCell}
+              </div>
+            </div>
           </div>
         </div>
       );

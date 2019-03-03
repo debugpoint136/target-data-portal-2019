@@ -6,6 +6,9 @@ const Main = (props) => {
         <div className={styles.topBar}>
             <div className={styles.logo}>
                 <img src="/TaRGET_logo.png" alt="logo" height="36" width="72"/>
+                <div className="flex justify-center items-center pl-2 uppercase text-white tracking-wide font-bold text-sm">
+                    Data Portal
+                </div>
             </div>
             <div className={styles.topBarMiddle}>
                 <input
@@ -32,7 +35,7 @@ export default Main;
 const styles = {
     page: cn(`bg-grey-lighter font-sans antialiased text-grey-darkest`),
     topBar: cn(`flex items-center py-4 bg-blue-resolute`),
-    logo: cn(`pl-4 w-left`),
+    logo: cn(`pl-4 w-left flex`),
     topBarMiddle: cn(`w-full pr-4 flex-1 relative`),
     searchBar: cn(`w-full py-4 px-4 pl-10 text-sm bg-grey-lighter border border-solid border-blue-resolute-dark outline-0`),
     searchIcon: cn(`absolute pin-t flex items-center py-4 px-3 text-grey-darker`),

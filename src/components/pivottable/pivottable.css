@@ -395,3 +395,14 @@ table.pvtTable tbody tr td {
 .pvtRendererArea {
     padding: 5px;
 }
+
+
+.pvtRowLabel {
+    position: sticky;
+    left: 0;
+}
+
+.pvtColLabel {
+    position: sticky;
+    top: 0;
+}

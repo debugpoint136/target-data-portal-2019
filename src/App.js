@@ -36,7 +36,7 @@ const INDEX = 'experimentset';
 
 const THEME_CONFIG = {
   typography: {
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif',
+    fontFamily: '"Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif',
     fontSize: "18px"
   },
   colors: {
@@ -112,8 +112,10 @@ class App extends Component {
 
           </div>
 
-          <div className="middle-column w-3/5 flex-1">
-            <Breadcrumbs/>
+          <div className="p-2 middle-column w-3/5 flex-1 border-b-2">
+            {/* <Breadcrumbs/> */}
+            <SelectedFilters showClearAll={true} clearAllLabel="Clear filters" URLParams={true}/>
+
 
             <div className="px-8 container-resolute mx-auto">
               {/* <Header accession='GALDZO2R4I5ZK' status='PASS'/>
@@ -122,10 +124,9 @@ class App extends Component {
               <CardFlags/>
               <CardAOAS/>
               <CardCancel/> */}
-              <SelectedFilters showClearAll={true} clearAllLabel="Clear filters" URLParams={true}/>
               <Results/>
             </div>
-          </div>
+            </div>
 
 
           <div className="right-sidebar w-right bg-white shadow">
@@ -328,7 +329,7 @@ const styles = {
   searchIcon: cn(`absolute pin-t flex items-center py-4 px-3 text-grey-darker`),
   container: cn(`bg-white container my-8 mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden font-sans`),
   leftSideBar: cn(`left-sidebar w-left border-r-2 border-solid border-grey-light min-h-screen pt-4`),
-  leftSideList: cn(`list-reset text-sm border-b-2 border-solid border-grey-light`),
+  leftSideList: cn(`px-4 list-reset text-sm border-b-2 border-solid border-grey-light`),
   leftSideListRow: cn(`flex items-center py-2 pl-4 my-1`),
   leftSideListIcon: cn(`pr-2 text-blue-resolute-icon`),
   leftSideListLink: cn(`text-grey-darker hover:text-black`),
