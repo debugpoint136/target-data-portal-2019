@@ -26,6 +26,8 @@ class SetView extends Component {
             componentId="ExperimentSet"
             dataField="experiment"
             title="ReactiveList"
+            loader="Loading Results.."
+            showResultStats={false}
             size={5400}
             onAllData={this.onAllData}
             react={{

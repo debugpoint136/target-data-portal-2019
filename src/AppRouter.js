@@ -4,6 +4,7 @@ import {
     // Link, NavLink
 } from 'react-router-dom';
 import App from './App'
+// import Main from './Main';
 import NotFoundPage from './common/NotFound';
 import Header from './common/Header';
 // import Layout from './components/common/Layout';
@@ -13,11 +14,12 @@ import Experiment from './experiment-set-replicates/Experiment';
 // import Footer from './components/common/Footer';
 import Set from './set';
 // import SetView from './set/SetView';
+// import Main from './main/index';
 import ExperimentReplicates from './experiment-set-replicates';
 const AppRouter = () => (
     <BrowserRouter>
-        <div>
-            {/* <Header/> */}
+        <div className="bg-grey-lighter font-sans antialiased text-grey-darkest">
+            {/* <Main/> */}
             {/* <Layout> */}
                 <Switch>
                     <Route path="/" component={App} exact={true}/>

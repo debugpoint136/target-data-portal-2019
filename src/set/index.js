@@ -26,7 +26,7 @@ class Set extends Component {
             <div className="test">
                 <ReactiveBase url={ESCLUSTER} app={INDEX}>
                     <div className="hidden">
-                        <SearchBar/>
+                        {/* <SearchBar/> */}
                         <div
                             className={this.state.isClicked
                             ? "left-bar-optional"

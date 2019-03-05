@@ -29,7 +29,30 @@ const HIDDEN_KEYS = [
   'astr',
   'sr',
   'uuid', 'score', 'accession', 'paired_file_uuid', 'paired_file_accession', 'submission', 'status',
-  'biosampleRowSpan', 'assayRowSpan', 'mouseRowSpan', 'biosample', 'mouse', 'assay'
+  'biosampleRowSpan', 'assayRowSpan', 'mouseRowSpan', 'biosample', 'mouse', 'assay',
+  "mouse_animal_weight_sac",
+    "mouse_life_stage_collection",
+    "treatment_exposure_age_last",
+    "mouse_fasted",
+    "treatment_exposure_life_stage",
+    "treatment_exposure_specific",
+    "treatment_exposure_paradigm",
+    "mouse_age_precise",
+    "treatment_exposure_age_first",
+    "mouse_internal_id",
+    "mouse_liver_tumors",
+    "treatment_exposure_category",
+    "mouse_fasted_hours",
+    "mouse_perfusion",
+    "mouse_strain",
+    "mouse_tumor_organs",
+    "biosample_specific_tissue",
+    "biosample_collection_protocol_url",
+    "assay_strand_specificity",
+    "assay_starting_nucleic_acid",
+    "assay_category",
+    "assay_protocol_url"
+ 
 ]
 
 // "experiment": "TGTEXP0JLOO0K",

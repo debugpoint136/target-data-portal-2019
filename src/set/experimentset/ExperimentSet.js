@@ -4,6 +4,9 @@ import ExperimentList from './ExperimentList';
 import * as d3 from 'd3';
 import _ from 'lodash';
 import BrowserView from '../../file/BrowserView';
+import Header from '../../main/Header';
+import Card from '../../main/Card';
+import * as cn from 'classnames';
 const fileDownload = require('js-file-download')
 
 const inlineStyle = {
@@ -42,10 +45,13 @@ class ExperimentSet extends Component {
             return <p>Looking up ...</p>
         }
         return (
-            <div className="m-4 p-8">                
-                <div className="flex">
-                    <div className="w-1/4">
-                            <div className="m-8">
+
+            <div>
+                <Header/>
+                <div className='three-columns flex'>
+                    <div className={styles.leftSideBar}>
+                        <ul className={styles.leftSideList}>
+                            <div className={styles.leftSideListRow}>
                                 <Modal
                                     trigger={<Button className="m-8" basic color='purple' icon='question' content='Replication Strategy'/>}
                                     style={inlineStyle.modal} size='large'>
@@ -54,9 +60,10 @@ class ExperimentSet extends Component {
                                         <Image size='massive' src='/replication_strategy.png' />
                                     </Modal.Content>
                                 </Modal>
-                            </div> 
-                        
-                            <div className="m-8">
+                            </div>
+                        </ul>
+                        <ul className={styles.leftSideList}>
+                            <div className={styles.leftSideListRow}>
                                 <Modal
                                     trigger={<Button className="m-8" basic color='pink' icon='external' content='View in Browser'/>}
                                     style={inlineStyle.modal} size='large'>
@@ -68,24 +75,72 @@ class ExperimentSet extends Component {
                                         </Modal.Description>
                                     </Modal.Content>
                                 </Modal>
-                            </div> 
-                            <div className="m-8">
+                            </div>
+                            <div className={styles.leftSideListRow}>
                                 <Button size='tiny' color='purple' onClick={() => fileDownload(generateMetadataContent(this.props.results), `${Date.now()}-metadata.csv`)}>Download metadata
                                     <Icon name=''/><Icon name='download'/>
                                 </Button>
                             </div>
-                    </div> 
-                    <div className="w-4/5">
-                        {/* <ExperimentList results={this.props.results} /> */}
+                        </ul>
+                    </div>
+                    <div className="p-2 middle-column w-3/5 flex-1 border-b-2">
                         <ExperimentList results={this.state.mice_groups} />
                     </div>
+                    <div className="right-sidebar w-right bg-white shadow">
+                        <div className="flex items-center justify-between p-4 mb-2">
+                            <div className="font-semibold text-lg text-grey-darkest">Common attributes</div>
+                        </div>
+                        <Card 
+                        content={this.props.results[0].mouse_strain}
+                        id="Mouse Strain"
+                        />
+                        </div>
+                    </div>
                 </div>
-            </div>
+                // <div className="flex">
+                //     <div className="w-1/4">
+                //             <div className="m-8">
+                //                 <Modal
+                //                     trigger={<Button className="m-8" basic color='purple' icon='question' content='Replication Strategy'/>}
+                //                     style={inlineStyle.modal} size='large'>
+                //                     <Modal.Header>Replication Strategy</Modal.Header>
+                //                     <Modal.Content>
+                //                         <Image size='massive' src='/replication_strategy.png' />
+                //                     </Modal.Content>
+                //                 </Modal>
+                //             </div> 
+                        
+                //             <div className="m-8">
+                //                 <Modal
+                //                     trigger={<Button className="m-8" basic color='pink' icon='external' content='View in Browser'/>}
+                //                     style={inlineStyle.modal} size='large'>
+                //                     <Modal.Header>Open visualization browser</Modal.Header>
+                //                     <Modal.Content>
+                //                         <Modal.Description>
+                //                             {/* <BrowserView data={getAllFilesForThisSet(this.props.results)}/> */}
+                //                             <BrowserView data={this.props.results}/>
+                //                         </Modal.Description>
+                //                     </Modal.Content>
+                //                 </Modal>
+                //             </div> 
+                //             <div className="m-8">
+                //                 <Button size='tiny' color='purple' onClick={() => fileDownload(generateMetadataContent(this.props.results), `${Date.now()}-metadata.csv`)}>Download metadata
+                //                     <Icon name=''/><Icon name='download'/>
+                //                 </Button>
+                //             </div>
+                //     </div> 
+                //     <div className="w-4/5">
+                //         {/* <ExperimentList results={this.props.results} /> */}
+                //         <ExperimentList results={this.state.mice_groups} />
+                //     </div>
+                // </div>
         );
     }
 }
 
 export default ExperimentSet;
+
+
 
 function getAllFilesForThisSet (set) {
     const aoa = set.map(repl => {
@@ -105,7 +160,6 @@ function getAllFilesForThisSet (set) {
                         file.Dose = dose;
                         file.file_accession = file.accession;
                         file.Submission = file.submission;
-
                         return file;
                     })
                 })
@@ -141,4 +195,22 @@ function cleanComma(row) {
             return r;
         }
     });
+}
+
+const styles = {
+    page: cn(`bg-grey-lighter font-sans antialiased text-grey-darkest`),
+    topBar: cn(`flex items-center py-4 bg-blue-resolute`),
+    logo: cn(`pl-4 w-left`),
+    topBarMiddle: cn(`w-full pr-4 flex-1 relative`),
+    searchBar: cn(`w-full py-4 px-4 pl-10 text-sm bg-grey-lighter border border-solid border-blue-resolute-dark outline-0`),
+    searchIcon: cn(`absolute pin-t flex items-center py-4 px-3 text-grey-darker`),
+    container: cn(`bg-white container my-8 mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden font-sans`),
+    leftSideBar: cn(`left-sidebar w-left border-r-2 border-solid border-grey-light min-h-screen pt-4`),
+    leftSideList: cn(`list-reset text-sm border-b-2 border-solid border-grey-light my-8`),
+    leftSideListRow: cn(`py-2 pl-4 my-8`),
+    leftSideListIcon: cn(`pr-2 text-blue-resolute-icon`),
+    leftSideListLink: cn(`text-grey-darker hover:text-black`),
+    selectedItem: cn(`flex items-center py-1 pl-2 bg-white border-l-8 border-blue-resolute`),
+    selectedItemIcon: cn(`pr-2 text-blue-resolute fix-negative-margin`),
+    button: cn(`bg-white uppercase text-grey-darkest text-xs font-bold tracking-wide rounded border border-solid border-grey-light px-3 py-2 hover:text-white hover:bg-grey-darkest`)
 }
