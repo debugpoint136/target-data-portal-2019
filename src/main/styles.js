@@ -15,5 +15,6 @@ export const styles = {
     leftSideListLink: cn(`text-grey-darker hover:text-black`),
     selectedItem: cn(`flex items-center py-1 pl-2 bg-white border-l-8 border-blue-resolute`),
     selectedItemIcon: cn(`pr-2 text-blue-resolute fix-negative-margin`),
-    button: cn(`bg-white uppercase text-grey-darkest text-xs font-bold tracking-wide rounded border border-solid border-grey-light px-3 py-2 hover:text-white hover:bg-grey-darkest`)
+    button: cn(`bg-white uppercase text-grey-darkest text-xs font-bold tracking-wide rounded border border-solid border-grey-light px-3 py-2 hover:text-white hover:bg-grey-darkest`),
+    input: cn(`w-full text-base bg-grey-lightest text-grey-darkest outline-0 rounded px-3 py-3`)
 }

@@ -4,7 +4,8 @@ import {Table} from 'semantic-ui-react';
 class ProcessedFilesScaffold extends Component {
     state = {  }
     render() { 
-        return ( 
+        return (
+            <div className='border border-grey-light border-solid border-t-4 border-t-blue-resolute rounded m-4 bg-white w-auto'>
             <Table structured>
                 <Table.Header>
                     <Table.Row className="text-blue font-semibold text-sm font-sans">
@@ -22,6 +23,7 @@ class ProcessedFilesScaffold extends Component {
                 </Table.Header>
                 {this.props.children}
             </Table>
+            </div>
         );
     }
 }

@@ -12,17 +12,16 @@ const RRBSseqQCReport = (props) => {
             <Container>
                 <div className="m-2 p-2">
                     <div className="flex justify-center">
-                        <h2
-                            className="mt-2 mb-8 max-w-md bg-grey-darker border-2 rounded p-4 text-white text-center">RRBS-seq QC Report</h2>
+                        {/* <h2 className="mt-2 mb-8 max-w-md bg-grey-darker border-2 rounded p-4 text-white text-center">RRBS-seq QC Report</h2> */}
                     </div>
                     <div className="flex w-4/5">
                         <GraphCard header='Information' size='medium'>
                             <Information data={props.data}/>
                         </GraphCard>
-                        <div className='flex-col justify-between'>
+                        {/* <div className='flex-col justify-between'>
                             <div className="font-sans text-grey text-center mt-4">Overall Score not available for RRBS-seq</div>
                             <a className="p-8" href="https://github.com/Zhang-lab/WGBS_analysis" target="_blank">Pipeline documentation</a> 
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 

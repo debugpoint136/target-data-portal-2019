@@ -26,7 +26,12 @@ class SetView extends Component {
             componentId="ExperimentSet"
             dataField="experiment"
             title="ReactiveList"
-            loader="Loading Results.."
+            loader={<img
+                style={{margin: '20px auto', display: 'block'}}
+                width="24"
+                height="24"
+                src="https://i.pinimg.com/originals/3e/f0/e6/3ef0e69f3c889c1307330c36a501eb12.gif"
+            />}
             showResultStats={false}
             size={5400}
             onAllData={this.onAllData}

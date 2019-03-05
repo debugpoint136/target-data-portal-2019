@@ -15,14 +15,16 @@ export default class PivotTableUIWrapper extends React.PureComponent {
     }
 
     handleCellClick = (cell) => {
-        let keys = Object.keys(cell)
-        var index = keys.indexOf('count');
-        if (index > -1) {
-            keys.splice(index, 1);
+        if (cell.count) {
+            let keys = Object.keys(cell)
+            var index = keys.indexOf('count');
+            if (index > -1) {
+                keys.splice(index, 1);
+            }
+            let selected = getFiltered(this.props.data, cell, keys)
+            this.setState({selectedData: selected})
+            this.props.onDataSelect(cell)
         }
-        let selected = getFiltered(this.props.data, cell, keys)
-        this.setState({selectedData: selected})
-        this.props.onDataSelect(cell)
     }
 
     componentWillReceiveProps(nextProps) {

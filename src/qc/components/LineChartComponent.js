@@ -4,8 +4,7 @@ import * as d3 from 'd3';
 
 const LineChartComponent = (props) => {
     const bottomTickValues = getBottomTickValues(props.data);
-    console.log(bottomTickValues);
-
+    
     return <ResponsiveLine
         data={props.data}
         margin={{

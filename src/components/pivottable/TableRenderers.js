@@ -257,11 +257,13 @@ function makeRenderer(opts = {}) {
 
                         // let selectionStateCSS  = (aggregator.hasOwnProperty('selectedCount')) ? (aggregator.selectedCount.selected.length === 0 ? '' : 'pvtValSelected') : ''
                         // className={"pvtVal " + (aggregator.selectedCount.selected.length === 0 ? '' : 'pvtValSelected')}
-                        let selectionStateCSS = aggregator.value() ? "pvtValue text-3xl font-mono text-grey-darker" : "pvtNoValue bg-grey-lighter";
+                        let selectionStateCSS = aggregator.value() ? 
+                        "pvtValue text-3xl font-mono text-grey-darker cursor-pointer hover:shadow hover:bg-red-lighter" 
+                        : "pvtNoValue bg-grey-lighter cursor-not-allowed";
                         
                         return (
                           <td
-                            className={`pvtVal ${selectionStateCSS}`}
+                            className={`pvtVal ${selectionStateCSS} `}
                             key={`pvtVal${i}-${j}`}
                             style={valueCellColors(rowKey, colKey, aggregator.value())}
                             onClick={() => {

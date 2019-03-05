@@ -143,7 +143,7 @@ class ExperimentTable extends Component {
         // const bioReplicates = result[0].experiments; // just one mouse // uncomment after test
         // const bioReplicates = RESULT.experiments; // TEST DATA
         return (
-
+            <div className='border border-grey-light border-solid border-t-4 border-t-yellow rounded'>
             <Table structured>
                 <Table.Header>
                     <Table.Row className="text-center text-blue font-semibold text-sm font-sans">
@@ -164,6 +164,7 @@ class ExperimentTable extends Component {
                     })}
                 </Table.Body>
             </Table>
+        </div>
         );
     }
 }

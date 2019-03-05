@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 // import ReactJson from 'react-json-view';
 import GraphsContainer from '../qc/GraphsContainer';
+import { getScoreGeneric } from '../qc/qcutils';
 import { Icon } from 'semantic-ui-react';
 // import FileQCReport from './FileQCReport';
 // const QCREPORT_WEB_DIR = 'https://target.wustl.edu/files/ATAC-seq/b3bd19ff-8fee-4d6d-9056-d8d1f7e9c4b6/5b1987badd88b278190a6c36/';
@@ -17,6 +18,7 @@ class FileQCReportContainer extends Component {
         super(props);
         this.state = {
             qcJson: null,
+            qcStatus: null,
             qcPath: undefined,
             assay: undefined
         }
@@ -39,7 +41,9 @@ class FileQCReportContainer extends Component {
                 }
             })
             .then(res => {
-                this.setState({ qcJson: normalizeRootKey(res.data) });
+                const qcJson = normalizeRootKey(res.data);
+                const qcStatus = getScoreGeneric(this.state.assay, qcJson)
+                this.setState({ qcJson, qcStatus });
             })
             .catch(err => console.log(err))
     }
@@ -48,26 +52,13 @@ class FileQCReportContainer extends Component {
             return <h3>Looking up...</h3>
         }
         return (
-            <div className="test">
-            <div className="m-4 p-4 bg-orange-light text-center text-xl">
-                File QC Report - {this.props.match.params.id}
-            </div>
-            {/* <FileQCReport source={this.state.qcJson}/> */}
-            { (this.state.qcPath.split('/')[4] === 'RRBS-seq') ? null : 
-            <div className="mr-8 mt-4 rounded border-2 border-blue p-2 bg-blue-lightest w-36 float-right flex-inline text-blue">
-                <a target="_blank" href={`${this.state.qcPath}/multiqc_report.html `}>MultiQC Report</a>
-                {"  "}
-                <Icon name='external'/>
-            </div>
-            }
-            <div className="m-4 p-8 bg-grey-lighter">
-                <GraphsContainer data={this.state.qcJson} type={this.state.assay} fileUUID={this.state.qcJSONPath}/>
-            </div>
-            {/* <div className="m-4 p-4 bg-green-lightest">
-                <h4>Raw QC report JSON</h4>
-                <ReactJson src={this.state.qcJson} />
-            </div> */}
-            </div>
+            <GraphsContainer 
+                data={this.state.qcJson} 
+                qcStatus={this.state.qcStatus}
+                id={this.props.match.params.id}
+                type={this.state.assay} 
+                multiQC={`${this.state.qcPath}/multiqc_report.html`}
+                fileUUID={this.state.qcJSONPath}/>
         );
     }
 }

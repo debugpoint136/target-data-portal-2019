@@ -24,30 +24,13 @@ class RNAseqQCreport extends Component {
         } 
         return (
             <div className="test">
-                <h3>RNAseq QC report</h3>
                 <Container>
                     <div className="m-2 p-2">
                         <div className="flex justify-center">
-                            <h2
-                                className="mt-2 mb-8 max-w-md bg-grey-darker border-2 rounded p-4 text-white text-center">RNA-seq QC Report</h2>
                         </div>
-                        <div className="flex w-4/5">
-                            <GraphCard header='Information' size='medium'>
-                                <Information data={this.props.data}/>
-                            </GraphCard>
-                            <div className="flex-col justify-between w-full" style={{ width: '120px', height: '400px'}}>
-                            <div className="font-sans text-grey text-center mt-4">Overall Score</div>
-                            {(getFinalScoreRNAseq(this.props.data))?
-                                <div className="m-4 p-8 border-b-2 text-5xl text-center font-sans font-extrabold">{getFinalScoreRNAseq(this.props.data).score}</div>
-                                : <div className="text grey-dark font-hairline font-sans">Score not available</div>
-                            }
-                            <div className="flex justify-between p-4 m-2 text-3xl text-grey-dark text-center font-sans font-extrabold">
-                                <div className="mr-4">STATUS</div>
-                                <span role="img" aria-label="status">{getFinalScoreRNAseq(this.props.data).status}</span>
-                            </div>
-                            <a className="p-8" href="https://github.com/Zhang-lab/RNA-seq_QC_analysis/blob/master/README.md" target="_blank">Pipeline documentation</a>
-                        </div>
-                        </div>
+                        <GraphCard header='Information' size='medium'>
+                            <Information data={this.props.data}/>
+                        </GraphCard>
                     </div>
                     <div style={{
                         display: 'grid',

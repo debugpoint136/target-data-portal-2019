@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {styles} from './styles';
 const TopBanner = (props) => {
     const { Assay, Tissue, Exposure, Dose, Age, Sex, Lab,
         treatment_exposure_category,
@@ -15,7 +15,7 @@ const TopBanner = (props) => {
                     </p>
 
                     <p className="text-grey text-xs leading-normal mb-4">
-                        If you need to update the details, you may do so on by contacting DCC Admin
+                        {/* If you need to update the details, you may do so on by contacting DCC Admin */}
                         {/* <a href="http://"></a>. */}
                     </p>
 
@@ -29,7 +29,7 @@ const TopBanner = (props) => {
                                 type="text"
                                 value={Assay}
                                 readOnly
-                                className="w-full text-base bg-grey-lightest  border border-solid border-grey-light text-grey-darkest outline-0 rounded px-3 py-3"/>
+                                className={styles.input}/>
                         </div>
                         <div className="w-1/2">
                             <label
@@ -40,9 +40,9 @@ const TopBanner = (props) => {
                                 type="text"
                                 readOnly
                                 value={Tissue}
-                                className="w-full text-base bg-grey-lightest border border-solid border-grey-light text-grey-darkest outline-0 rounded px-3 py-3"/>
+                                className={styles.input}/>
                         </div>
-                        <div className="w-full mb-6">
+                        <div className="w-1/3 mb-6">
                             <label
                                 htmlFor="protest_address"
                                 className="block text-grey-darkest text-base mb-2">Exposure</label>
@@ -51,9 +51,9 @@ const TopBanner = (props) => {
                                 type="text"
                                 readOnly
                                 value={Exposure}
-                                className="w-full text-base bg-grey-lightest  border border-solid border-grey-light text-grey-darkest outline-0 rounded px-3 py-3"/>
+                                className={styles.input}/>
                         </div>
-                        <div className="w-full mb-6">
+                        <div className="w-2/3 pl-4 mb-6">
                             <label
                                 htmlFor="cad_mailing_address"
                                 className="block text-grey-darkest text-base mb-2">Dose</label>
@@ -62,7 +62,7 @@ const TopBanner = (props) => {
                                 type="text"
                                 readOnly
                                 value={Dose}
-                                className="w-full text-base bg-grey-lightest  border border-solid border-grey-light text-grey-darkest outline-0 rounded px-3 py-3"/>
+                                className={styles.input}/>
                         </div>
                         <div className="w-1/3 mb-6">
                             <label htmlFor="fee_rate" className="block text-grey-darkest text-base mb-2">Gender</label>
@@ -71,7 +71,7 @@ const TopBanner = (props) => {
                                 type="text"
                                 value={Sex}
                                 readOnly
-                                className="w-full text-base bg-grey-lightest border border-solid border-grey-light text-grey-darkest outline-0 rounded px-3 py-3"/>
+                                className={styles.input}/>
                         </div>
                         <div className="w-1/3 mb-6 pl-4">
                             <label htmlFor="start_year" className="block text-grey-darkest text-base mb-2">Age</label>
@@ -80,7 +80,7 @@ const TopBanner = (props) => {
                                 type="text"
                                 value={Age}
                                 readOnly
-                                className="w-full text-base bg-grey-lightest border border-solid border-grey-light text-grey-darkest outline-0 rounded px-3 py-3"/>
+                                className={styles.input}/>
                         </div>
                         <div className="w-1/3 mb-6 pl-4">
                             <label
@@ -91,7 +91,7 @@ const TopBanner = (props) => {
                                 type="text"
                                 value={Lab}
                                 readOnly
-                                className="w-full text-base bg-grey-lightest  border border-solid border-grey-light text-grey-darkest outline-0 rounded px-3 py-3"/>
+                                className={styles.input}/>
                         </div>
                     </div>
                 </div>

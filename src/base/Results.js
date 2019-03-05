@@ -19,6 +19,12 @@ class Results extends React.Component {
       componentId="Experiment"
       dataField="experiment"
       title="ReactiveList"
+      loader={<img
+          style={{margin: '20px auto', display: 'block'}}
+          width="24"
+          height="24"
+          src="https://i.pinimg.com/originals/3e/f0/e6/3ef0e69f3c889c1307330c36a501eb12.gif"
+      />}
       size={5000}
       pagination={false}
       onAllData={this.onAllData}

@@ -5,6 +5,7 @@ class ProcessedFilesScaffoldAll extends Component {
     state = {  }
     render() { 
         return ( 
+            <div className='border border-grey-light border-solid border-t-4 border-t-red rounded'>
             <Table structured>
                 <Table.Header>
                     <Table.Row className="text-blue font-semibold text-sm font-sans">
@@ -23,6 +24,7 @@ class ProcessedFilesScaffoldAll extends Component {
                 </Table.Header>
                 {this.props.children}
             </Table>
+            </div>
         );
     }
 }

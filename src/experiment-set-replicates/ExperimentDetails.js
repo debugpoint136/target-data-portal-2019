@@ -107,7 +107,7 @@ class ExperimentDetails extends Component {
     render() {
         // const { entry, mouse, info } = this.props.result;
         return (
-            <div className="sdfs">
+            <div className="border border-grey-light border-solid border-t-4 border-t-yellow rounded">
                 <Table structured>
                 <Table.Header>
                     <Table.Row className="text-center text-blue font-semibold text-sm font-sans">
