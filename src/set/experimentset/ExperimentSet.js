@@ -8,6 +8,7 @@ import Header from '../../main/Header';
 import Card from '../../main/Card';
 import * as cn from 'classnames';
 import {generateMetadataContent} from '../../helpers';
+import AccessionHeading from '../../main/AccessionHeading';
 const fileDownload = require('js-file-download')
 
 const inlineStyle = {
@@ -85,7 +86,10 @@ class ExperimentSet extends Component {
                         </ul>
                     </div>
                     <div className="p-2 middle-column w-3/5 flex-1 border-b-2">
-                        <ExperimentList results={this.state.mice_groups} />
+                        <div className="px-8 container-resolute mx-auto">
+                            {/* <AccessionHeading accession='something' status='Experiment Set' iconName='database'/> */}
+                            <ExperimentList results={this.state.mice_groups} />
+                        </div>
                     </div>
                     <div className="right-sidebar w-right bg-white shadow">
                         <div className="flex items-center justify-between p-4 mb-2">

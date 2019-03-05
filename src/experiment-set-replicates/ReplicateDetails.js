@@ -9,6 +9,7 @@ import BrowserView from '../file/BrowserView';
 import Header from '../main/Header';
 import Card from '../main/Card';
 import {generateMetadataContent} from '../helpers';
+import AccessionHeading from '../main/AccessionHeading';
 
 const fileDownload = require('js-file-download')
 
@@ -67,12 +68,9 @@ class ReplicateDetails extends Component {
                             </div>
                         </ul>*/}
                     </div>
-                    <div className="p-2 middle-column w-3/5 flex-1 border-b-2">
-                    <div className="p-4 h-screen">
-                        <div className="flex">
-                            <div className="text-3xl text-uppercase font-extrabold font-sans p-4">Experiment Set : </div>
-                            <div className="text-3xl text-uppercase font-thin font-sans p-4">{this.props.experiment_set_id}</div>
-                        </div>
+                    <div className="p-2 middle-column w-3/5 flex-1">
+                    <div className="px-8 container mx-auto">
+                        <AccessionHeading accession={this.props.experiment_set_id} status='Experiment Set' iconName='database'/>
                         <div className="mb-4 p-4 w-auto"><InformationBanner result={this.props.result}/></div>
                         {/* <div className="m-4 bg-white w-auto"><DetailsContainer result={this.props.result}/></div> */}
                         <Transition visible={!visible} animation='scale' duration={500}>
@@ -98,7 +96,7 @@ class ReplicateDetails extends Component {
                             <div className="font-semibold text-lg text-grey-darkest">Common attributes</div>
                         </div>
                         <Card 
-                        content='Something'
+                        content={this.props.result[0].mouse_strain}
                         id="Mouse Strain"
                         />
                         </div>
