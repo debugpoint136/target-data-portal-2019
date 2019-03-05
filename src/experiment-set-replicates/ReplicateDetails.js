@@ -10,7 +10,6 @@ import Header from '../main/Header';
 import Card from '../main/Card';
 import {generateMetadataContent} from '../helpers';
 import AccessionHeading from '../main/AccessionHeading';
-
 const fileDownload = require('js-file-download')
 
 const inlineStyle = {
