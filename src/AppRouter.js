@@ -6,7 +6,7 @@ import {
 import App from './App'
 // import Main from './Main';
 import NotFoundPage from './common/NotFound';
-import Header from './common/Header';
+// import Header from './common/Header';
 // import Layout from './components/common/Layout';
 import FileQCReportContainer from './file/FileQCReportContainer';
 // import FileMain from './file/FileMain';

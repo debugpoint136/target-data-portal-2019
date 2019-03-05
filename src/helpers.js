@@ -18,3 +18,32 @@ export function flatterArrayOfArrays(incoming) {
 
     return flattened;
 }
+
+
+const greyListed = ['_id','_index', 'br', 'bstr', 'astr', 'sr', 'biosampleRowSpan', 'assayRowSpan', 'mouseRowSpan'];
+export function generateMetadataContent(data) {
+    const headerRaw = Object.keys(data[0]);
+    const headerGreyListedIndex = greyListed.map(item => headerRaw.findIndex(d => d === item));
+    const header = headerRaw.filter(item => greyListed.indexOf(item) === -1);
+    let result = header + "\r\n";
+
+    data.forEach(rowArray => {
+        greyListed.forEach(toDelete => delete rowArray[toDelete]);
+        let rowContent = cleanComma(Object.values(rowArray));
+        let row = rowContent.join(",");
+        result += row + "\r\n";
+    });
+    return result;
+}
+
+
+
+function cleanComma(row) {
+    return row.map(r => {
+        if (typeof(r) === 'string') {
+            return r.replace(/,/g, "_")
+        } else {
+            return r;
+        }
+    });
+}

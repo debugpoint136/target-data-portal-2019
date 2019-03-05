@@ -7,6 +7,7 @@ import BrowserView from '../../file/BrowserView';
 import Header from '../../main/Header';
 import Card from '../../main/Card';
 import * as cn from 'classnames';
+import {generateMetadataContent} from '../../helpers';
 const fileDownload = require('js-file-download')
 
 const inlineStyle = {
@@ -171,31 +172,7 @@ function getAllFilesForThisSet (set) {
     return flattenedList;
 }
 
-const greyListed = ['_id','_index', 'br', 'bstr', 'astr', 'sr', 'biosampleRowSpan', 'assayRowSpan', 'mouseRowSpan'];
-function generateMetadataContent(data) {
-    const headerRaw = Object.keys(data[0]);
-    const headerGreyListedIndex = greyListed.map(item => headerRaw.findIndex(d => d === item));
-    const header = headerRaw.filter(item => greyListed.indexOf(item) === -1);
-    let result = header + "\r\n";
 
-    data.forEach(rowArray => {
-        greyListed.forEach(toDelete => delete rowArray[toDelete]);
-        let rowContent = cleanComma(Object.values(rowArray));
-        let row = rowContent.join(",");
-        result += row + "\r\n";
-    });
-    return result;
-}
-
-function cleanComma(row) {
-    return row.map(r => {
-        if (typeof(r) === 'string') {
-            return r.replace(/,/g, "_")
-        } else {
-            return r;
-        }
-    });
-}
 
 const styles = {
     page: cn(`bg-grey-lighter font-sans antialiased text-grey-darkest`),

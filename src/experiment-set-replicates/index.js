@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {ReactiveBase} from "@appbaseio/reactivesearch";
 import ReplicateView from './ReplicateView';
+import Main from '../main/index';
 
 const ESCLUSTER = 'https://search-targetdcc-3dlio7dsb2i4woj3cw6q4a4ghq.us-east-1.es.amazonaws.com/';
 // const INDEX = 'experiment';
@@ -14,7 +15,7 @@ class Set extends Component {
     }
     render() {
         return (
-            <div className='bg-grey-lighter'>
+            <div>
                 <ReactiveBase url={ESCLUSTER} app={INDEX}>
                     <div className="hidden">
                         {/* <SearchBar/> */}
