@@ -73,11 +73,12 @@ class ExperimentDetails extends Component {
     //     return allRows;
     // }
 
-    renderFlatExps = (exp) => {
+    renderFlatExps = (exp, rowIndex) => {
         const { biosampleRowSpan, assayRowSpan,
             mouse, biosample, assay, uuid, accession, paired_file_accession, status, submission } = exp;
 
         const allRows = [];
+        if (rowIndex === 0) {
             allRows.push(
                 <Table.Row key={`${mouse}:${biosample}:${assay}`}>
                     { (exp.hasOwnProperty('biosampleRowSpan')) ?
@@ -99,7 +100,21 @@ class ExperimentDetails extends Component {
                     </Table.Cell>
                 </Table.Row>
             )
-
+        } else {
+            allRows.push(
+                <Table.Row key={`${mouse}:${biosample}:${assay}`}>
+                    <Table.Cell>
+                        <File data={{uuid, accession, paired_file_accession}} />
+                    </Table.Cell> 
+                    <Table.Cell>
+                        <QCstatus data={{uuid, status}}/>
+                    </Table.Cell>
+                    <Table.Cell>
+                        <Submission data={{submission}}/>
+                    </Table.Cell>
+                </Table.Row>
+            )
+        }
 
         return allRows;
     }
@@ -124,8 +139,8 @@ class ExperimentDetails extends Component {
                 </Table.Header>
 
                 <Table.Body>
-                    { this.props.result.map((bioRep, mouseIndex) => {
-                        return this.renderFlatExps(bioRep)
+                    { this.props.result.map((bioRep, rowIndex) => {
+                        return this.renderFlatExps(bioRep, rowIndex)
                     })}
                 </Table.Body>
             </Table>

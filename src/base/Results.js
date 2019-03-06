@@ -1,19 +1,25 @@
 import React from 'react';
 import {ReactiveList} from "@appbaseio/reactivesearch";
 import Table from '../components/pivottable';
-// import { Dimmer } from 'semantic-ui-react'
+import { Dimmer, Header, Icon } from 'semantic-ui-react'
 import SetCards from '../set/SetCards';
 
 class Results extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { active: true }
+    this.state = { }
   }
 
   render() {
     return (
     <div className='test'>
-    {/* <Dimmer active={this.state.active} page/> */}
+    <Dimmer active={!this.props.viewExperiments} onClickOutside={this.props.handleClose} page>
+      <Header as='h2' icon inverted>
+        <Icon name='warning' />
+        Files view not available yet
+        <Header.Subheader>Coming soon..</Header.Subheader>
+      </Header>
+    </Dimmer>
     
     <ReactiveList
       componentId="Experiment"
@@ -44,9 +50,8 @@ class Results extends React.Component {
   
   onAllData = (results, streamResults, loadMoreData) => {
     if (results.length > 0) {
-      // this.setState({ active: false });
       // console.log(JSON.stringify(results));
-      return <Table data={results}/>
+      return <Table data={results} viewExperiments={this.props.viewExperiments}/>
     } else {
       return null;
     }

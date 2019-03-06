@@ -22,8 +22,11 @@ const inlineStyle = {
 class ExperimentSet extends Component {
     constructor(props) {
         super(props);
-        this.state = {mice_groups: []}
+        this.state = {mice_groups: [], viewGrid: true}
     }
+
+    setMode = () => this.setState({ viewGrid: !this.state.viewGrid })
+
     componentDidMount() {
         var nested_data = d3.nest()
             .key(function(d) { return d.experiment_set; })
@@ -86,6 +89,27 @@ class ExperimentSet extends Component {
                         </ul>
                     </div>
                     <div className="p-2 middle-column w-3/5 flex-1 border-b-2">
+                            <div className='text-center mt-4'>
+                                {(this.state.viewGrid) ? 
+                                    <Button.Group icon basic>
+                                        <Button active={this.state.viewGrid}>
+                                            <Icon name='th'/>
+                                        </Button>
+                                        <Button onClick={this.setMode}>
+                                            <Icon name='list'/>
+                                        </Button>
+                                    </Button.Group>
+                                    :
+                                    <Button.Group icon basic>
+                                        <Button onClick={this.setMode}>
+                                            <Icon name='th'/>
+                                        </Button>
+                                        <Button active={this.state.viewGrid}>
+                                            <Icon name='list'/>
+                                        </Button>
+                                    </Button.Group>
+                                }
+                            </div>
                         <div className="px-8 container-resolute mx-auto">
                             {/* <AccessionHeading accession='something' status='Experiment Set' iconName='database'/> */}
                             <ExperimentList results={this.state.mice_groups} />

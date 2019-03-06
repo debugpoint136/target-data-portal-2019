@@ -16,8 +16,8 @@ const Header = (props) => {
             <div className={styles.topBarMiddle}>
             </div>
             <div className='w-right'>
-                <div className='px-8 mx-auto text-center text-sm text-tracking-wide font-mono text-uppercase text-white hover:bg-white hover:text-grey-darker'>
-                    Documentation
+                <div >
+                    <a className='px-8 mx-auto text-center text-sm text-tracking-wide font-mono text-uppercase text-white hover:bg-white hover:text-grey-darker' href="https://bit.ly/2Rp9Oat">Documentation</a> 
                 </div>
             </div>
         </div>
