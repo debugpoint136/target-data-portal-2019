@@ -137,6 +137,7 @@ class ExperimentTable extends Component {
         const {result} = this.props; // uncomment after test
         const experimentRows = getSorted(result);
         const resultsFixed = fixMouseSpans(experimentRows);
+        console.log(resultsFixed);
 
         if (result.length === 0) { // uncomment after test
             return <h3>Not Found</h3> // uncomment after test
@@ -197,8 +198,24 @@ function fixMouseSpans(rows) {
     var i = 0;
     do {
         if (rows[i].mouseRowSpan > 1) {
-            delete rowsClone[rows[i].mouseRowSpan - 1].mouseRowSpan;
-            i = i + rows[i].mouseRowSpan - 1;
+            if (rows[i + 1]) {
+                if (rows[i + 1].hasOwnProperty('mouseRowSpan')) {
+                    for (let index = 1; index <= rows[i].mouseRowSpan; index++) {
+                        if (rows[i + index]) {
+                            if (rows[i + index].hasOwnProperty('mouseRowSpan')) {
+                                if (rows[i + index].mouseRowSpan > 1) {
+                                    delete rowsClone[i + index].mouseRowSpan;
+                                }
+                            }
+                        }
+                        i++;
+                    }
+                } else {
+                    i++;
+                }
+            } else {
+            i++;
+        }
         } else {
             i++;
         }

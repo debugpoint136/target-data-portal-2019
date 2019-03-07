@@ -9,7 +9,10 @@ class ProcessedFilesTable extends Component {
         const { file, assay, index } = this.props;
         const outDir = getPipelineOutDirOnly(file, assay);
         const res = fetchProcessedFileStats(outDir, assay, file.uuid);
-        res.then(resp => this.setState({ rowsData: resp, outDir: outDir, index: index }))
+        res.then(resp => {
+            console.log(resp);
+            this.setState({ rowsData: resp, outDir: outDir, index: index });
+        })
     }
 
     render() { 

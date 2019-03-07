@@ -155,13 +155,14 @@ function createDatahub(list) {
 
 function getDatahubBodyUnit(file,mode) {
     const {uuid, file_accession, Assay, Tissue, Age, Exposure, Dose, Sex } = file;
-
     let url = getPipelineOutDir(file);
     let assayType = Assay.split(' ')[0]; 
     let datahubType = null;
     if (assayType === 'ATAC-seq') {
         datahubType = 'bigWig'
     } else if (assayType === 'RNA-seq') {
+        datahubType = 'bedGraph'
+    } else if (assayType === 'RRBS-Seq') {
         datahubType = 'bedGraph'
     } else {
         alert(assayType + " is not supported yet");
@@ -209,11 +210,17 @@ const FormMetadata = () => (
 function getPipelineOutDir(obj) {
     const { Assay, submission, uuid } = obj;
     const assay = Assay.split(' ')[0]; // Just extract ATAC-seq or RNA-seq
-    const outDir = `${WEB_DIR}/${assay}/${submission}/${uuid}`;
+    let outDir = `${WEB_DIR}/${assay}/${submission}/${uuid}`;
+
+    if (assay === 'RRBS-Seq') {
+        outDir = `${WEB_DIR}/RRBS-seq/${submission}/${uuid}`;
+    }
     if (assay === 'ATAC-seq') {
         return `${outDir}/${uuid}.bigWig`;
     } else if (assay === 'RNA-seq') {
         return `${outDir}/${uuid}.sbg.gz`;
+    } else if (assay === 'RRBS-Seq') {
+        return `${outDir}/${uuid}.Q10.methylCall.gz`;
     } else {
         alert(assay + "is not supported yet");
     }

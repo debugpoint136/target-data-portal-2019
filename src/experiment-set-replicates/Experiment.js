@@ -46,7 +46,7 @@ class Experiment extends Component {
                 <div className={styles.leftSideBar}>
                         <ul className={styles.leftSideList}>
                             <div className={styles.leftSideListRow}>
-                                QC status: {status}
+                                {/* QC status: {status} */}
                             </div>
                             {/* <div className={styles.leftSideListRow}>
                                 <Button content={visible ? 'Hide Processed files' : 'Show Processed files'} onClick={this.toggleVisibility} />
@@ -79,7 +79,12 @@ class Experiment extends Component {
                         <AccessionHeading accession={experiment} status='Experiment' iconName='dna'/>
                         <div className="mb-4 p-4 w-auto"><InformationBanner result={this.state.data}/></div>
                         {/* <div className="m-4 bg-white w-auto"><DetailsContainer result={this.props.result}/></div> */}
-                        {(this.state.data.length > 0) ? <div className="m-4 bg-white w-auto"><ExperimentDetails result={this.state.data}/></div> : 'Loading..'}
+                        {(this.state.data.length > 0) ? 
+                            <div className="m-4 bg-white w-auto">
+                                {/* <ExperimentDetails result={this.state.data}/> */}
+                                <ExperimentTable result={this.state.data}/>
+                            </div> 
+                            : 'Loading..'}
                             <div className="text-xl text-uppercase font-extrabold font-sans p-4">Processed files :</div>
                             <ProcessedFilesScaffold>
                                 {(this.state.data.length > 0) ? <ProcessedFiles result={this.state.data} assay={this.state.data[0].Assay}/> : 'Loading..'}

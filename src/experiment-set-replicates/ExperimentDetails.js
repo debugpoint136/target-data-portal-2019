@@ -107,7 +107,7 @@ class ExperimentDetails extends Component {
                     <Table.Cell rowSpan={biosampleRowSpan}>
                         <Biosample biosample={biosample}/>
                     </Table.Cell> : null }
-                    { (exp.assayRowSpan === 1) ?
+                    { (exp.assayRowSpan > 1 && exp.astr > 1 && exp.sr > 1) ?
                     <Table.Cell rowSpan={assayRowSpan}>
                         <Assay assay={assay}/>
                     </Table.Cell> : null }

@@ -6,7 +6,8 @@ const path = require('path');
 
 const EXTENSIIONS = {
                     'ATAC-seq': ['.bam', '.bigWig', '.narrowPeak'],
-                    'RNA-seq': [ '.sbg.gz', '.sbg.gz.tbi', '_Rsem.genes.fpkm.tsv', '_Rsem.isoforms.fpkm.tsv', '_Rsem.transcript.bam' ]
+                    'RNA-seq': [ '.sbg.gz', '.sbg.gz.tbi', '_Rsem.genes.fpkm.tsv', '_Rsem.isoforms.fpkm.tsv', '_Rsem.transcript.bam' ],
+                    'RRBS-Seq': [ '.bam', '.Q10.bam', '.Q10.bedGraph.gz', '.Q10.bismark.cov.gz', '.Q10.methylCall.gz', '.Q10.methylCall.gz.tbi', '.Q10.readDepth.gz', '.Q10.readDepth.gz.tbi' ]
                     }   
 
 export function fetchProcessedFileStats(URL, ASSAY, UUID) {
@@ -52,6 +53,9 @@ export function fetchProcessedFileStats(URL, ASSAY, UUID) {
 const WEB_DIR = 'https://target.wustl.edu/files';
 
 export function getPipelineOutDirOnly(fileObj, assay) {
+    if (assay === 'RRBS-Seq') {
+        assay = 'RRBS-seq';
+    }
     const { submission, uuid } = fileObj;
     const outDir = `${WEB_DIR}/${assay}/${submission}/${uuid}`;
     return outDir;

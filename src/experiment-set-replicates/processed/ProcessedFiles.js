@@ -7,7 +7,7 @@ class ProcessedFiles extends Component {
     renderCols = (exp, replicateIndex) => {
         const { biosampleRowSpan, assayRowSpan,
             mouse, biosample, assay, Assay, uuid, accession, paired_file_accession, status, submission } = exp;
-
+        console.log(Assay);
         if ( Assay === 'ATAC-seq') {
             return <ProcessedFilesTable key={uuid} index={replicateIndex + 1} 
                         file={{uuid, accession, paired_file_accession, status, submission}} 
@@ -16,6 +16,10 @@ class ProcessedFiles extends Component {
             return <ProcessedFilesTable key={uuid} index={replicateIndex + 1} 
                         file={{uuid, accession, paired_file_accession, status, submission}} 
                         assay={'RNA-seq'} bioRepIndex={this.props.bioRepIndex}/>
+        } else if ( Assay === 'RRBS-Seq' ) {
+            return <ProcessedFilesTable key={uuid} index={replicateIndex + 1} 
+                        file={{uuid, accession, paired_file_accession, status, submission}} 
+                        assay={'RRBS-Seq'} bioRepIndex={this.props.bioRepIndex}/>
         } else {
             return <p>Unsupported assay type found</p>
         }
