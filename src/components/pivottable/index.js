@@ -52,7 +52,6 @@ const HIDDEN_KEYS = [
     "assay_starting_nucleic_acid",
     "assay_category",
     "assay_protocol_url"
- 
 ]
 
 // "experiment": "TGTEXP0JLOO0K",

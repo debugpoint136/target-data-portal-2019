@@ -38,7 +38,7 @@ class Experiment extends Component {
             return <h3>Not found</h3>
         }
 
-        console.log(this.state.data);
+        // console.log(this.state.data);
         const {experiment, mouse_strain, status} = this.state.data[0];
         return ( 
             <div><Header/>
@@ -91,11 +91,16 @@ class Experiment extends Component {
                         <div className="flex items-center justify-between p-4 mb-2">
                             <div className="font-semibold text-lg text-grey-darkest">Notes</div>
                         </div>
-                        {(this.state.data.length > 1)?
+                        {(this.state.data.length > 1 && (this.state.data[0].assayRowSpan > 1 && this.state.data[0].biosampleRowSpan > 1))?
                         <Card 
                         content='Sequencing Replicates'
                         date={`This experiment has ${this.state.data.length} sequencing replicates`}
                         />: null }
+                        {(this.state.data.length > 1 && (this.state.data[0].assayRowSpan === 1 && this.state.data[0].biosampleRowSpan === 1))?
+                        <Card 
+                        content='Technical Replicates'
+                        date={`This experiment has ${this.state.data.length} technical replicates`}
+                        />: null }                        
                         </div>
                     </div>                    
                 </div>

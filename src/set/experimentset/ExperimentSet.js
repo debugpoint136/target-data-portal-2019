@@ -89,7 +89,7 @@ class ExperimentSet extends Component {
                         </ul>
                     </div>
                     <div className="p-2 middle-column w-3/5 flex-1 border-b-2">
-                            <div className='text-center mt-4'>
+                            {/* <div className='text-center mt-4'>
                                 {(this.state.viewGrid) ? 
                                     <Button.Group icon basic>
                                         <Button active={this.state.viewGrid}>
@@ -109,7 +109,7 @@ class ExperimentSet extends Component {
                                         </Button>
                                     </Button.Group>
                                 }
-                            </div>
+                            </div> */}
                         <div className="px-8 container-resolute mx-auto">
                             {/* <AccessionHeading accession='something' status='Experiment Set' iconName='database'/> */}
                             <ExperimentList results={this.state.mice_groups} />

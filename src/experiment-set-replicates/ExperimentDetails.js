@@ -103,6 +103,14 @@ class ExperimentDetails extends Component {
         } else {
             allRows.push(
                 <Table.Row key={`${mouse}:${biosample}:${assay}`}>
+                    { (exp.biosampleRowSpan === 1) ?
+                    <Table.Cell rowSpan={biosampleRowSpan}>
+                        <Biosample biosample={biosample}/>
+                    </Table.Cell> : null }
+                    { (exp.assayRowSpan === 1) ?
+                    <Table.Cell rowSpan={assayRowSpan}>
+                        <Assay assay={assay}/>
+                    </Table.Cell> : null }
                     <Table.Cell>
                         <File data={{uuid, accession, paired_file_accession}} />
                     </Table.Cell> 
@@ -121,6 +129,7 @@ class ExperimentDetails extends Component {
 
     render() {
         // const { entry, mouse, info } = this.props.result;
+        console.log(this.props.result);
         return (
             <div className="border border-grey-light border-solid border-t-4 border-t-yellow rounded">
                 <Table structured>
