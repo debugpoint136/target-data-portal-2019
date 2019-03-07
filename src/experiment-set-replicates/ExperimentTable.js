@@ -136,6 +136,7 @@ class ExperimentTable extends Component {
     render() {
         const {result} = this.props; // uncomment after test
         const experimentRows = getSorted(result);
+        const resultsFixed = fixMouseSpans(experimentRows);
 
         if (result.length === 0) { // uncomment after test
             return <h3>Not Found</h3> // uncomment after test
@@ -159,7 +160,7 @@ class ExperimentTable extends Component {
                 </Table.Header>
 
                 <Table.Body>
-                {experimentRows.map((exp, mouseIndex) => {
+                {resultsFixed.map((exp, mouseIndex) => {
                         return this.renderFlatExps(exp)
                     })}
                 </Table.Body>
@@ -189,4 +190,20 @@ function convertElemToNumbers(arr) {
         return arrClone;
     })
     
+}
+
+function fixMouseSpans(rows) {
+    const rowsClone = [...rows];
+    var i = 0;
+    do {
+        if (rows[i].mouseRowSpan > 1) {
+            delete rowsClone[rows[i].mouseRowSpan - 1].mouseRowSpan;
+            i = i + rows[i].mouseRowSpan - 1;
+        } else {
+            i++;
+        }
+    }
+    while (i < rows.length);
+    
+    return rowsClone;
 }

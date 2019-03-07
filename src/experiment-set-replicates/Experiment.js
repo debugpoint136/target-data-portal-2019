@@ -38,7 +38,7 @@ class Experiment extends Component {
             return <h3>Not found</h3>
         }
 
-        // console.log(this.state.data);
+        console.log(this.state.data);
         const {experiment, mouse_strain, status} = this.state.data[0];
         return ( 
             <div><Header/>
@@ -100,7 +100,11 @@ class Experiment extends Component {
                         <Card 
                         content='Technical Replicates'
                         date={`This experiment has ${this.state.data.length} technical replicates`}
-                        />: null }                        
+                        />: null }
+                        <Card 
+                        content='Treatment Paradigm'
+                        date={`${this.state.data[0].treatment_exposure_paradigm}`}
+                        />                        
                         </div>
                     </div>                    
                 </div>
