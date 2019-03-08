@@ -86,6 +86,7 @@ class ExperimentTable extends Component {
     //     return allRows;
     // }
 
+    
     renderFlatExps = (exp) => {
         const { mouseRowSpan, biosampleRowSpan, assayRowSpan,
             mouse, biosample, assay, uuid, accession, paired_file_accession, status, sr } = exp;
@@ -137,7 +138,6 @@ class ExperimentTable extends Component {
         const {result} = this.props; // uncomment after test
         const experimentRows = getSorted(result);
         const resultsFixed = fixMouseSpans(experimentRows);
-        console.log(resultsFixed);
 
         if (result.length === 0) { // uncomment after test
             return <h3>Not Found</h3> // uncomment after test

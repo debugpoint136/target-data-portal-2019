@@ -3,7 +3,7 @@ import { Button, Image, Modal, Icon } from 'semantic-ui-react'
 import ExperimentList from './ExperimentList';
 import * as d3 from 'd3';
 import _ from 'lodash';
-import BrowserView from '../../file/BrowserView';
+import NewBrowserView from '../../file/NewBrowserView';
 import Header from '../../main/Header';
 import Card from '../../main/Card';
 import * as cn from 'classnames';
@@ -76,7 +76,26 @@ class ExperimentSet extends Component {
                                     <Modal.Content>
                                         <Modal.Description>
                                             {/* <BrowserView data={getAllFilesForThisSet(this.props.results)}/> */}
-                                            <BrowserView data={this.props.results}/>
+                                            <div className='flex justify-center'>
+                                                
+                                            
+                                            {/* <div className='container mx-auto bg-grey-lightest'>
+                                            <h5>ATAC-seq</h5>
+                                                <p>outDir/uuid.bigWig</p>
+                                            <h5>RNA-seq</h5>
+                                                <p>outDir/uuid.sbg.gz</p>
+                                            <h5>RRBS-seq</h5>
+                                                <p>outDir/uuid.Q10.methylCall.gz</p>
+                                            </div> */}
+
+                                            {/* <div className='mx-auto container'>
+                                                Please note: Metadata heatmap can be used to visually classify the tracks. It does not open automatically at the moment.
+                                                You can add metadata heatmap manually like below - 
+                                                <img src="/metadata.png" alt="" height='400px' width='auto'/>
+                                            </div> */}
+                                            </div>
+                                            {/* <BrowserView data={this.props.results}/> */}
+                                            <NewBrowserView data={this.props.results}/>
                                         </Modal.Description>
                                     </Modal.Content>
                                 </Modal>

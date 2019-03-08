@@ -5,12 +5,13 @@ import ExperimentTable from './ExperimentTable';
 import ProcessedFiles from './processed/ProcessedFiles';
 import ProcessedFilesScaffoldAll from './processed/ProcessedFilesScaffoldAll';
 import * as cn from 'classnames';
-import BrowserView from '../file/BrowserView';
 import Header from '../main/Header';
 import Card from '../main/Card';
-import {generateMetadataContent} from '../helpers';
+import { fetchProcessedFileStats, getPipelineOutDirOnly } from './processed/utils';
+// import {generateMetadataContent} from '../helpers';
 import AccessionHeading from '../main/AccessionHeading';
 const fileDownload = require('js-file-download')
+const PROCESSED_URL = "https://target.wustl.edu/files"
 
 const inlineStyle = {
     modal: {
@@ -44,6 +45,29 @@ class ReplicateDetails extends Component {
                             <div className={styles.leftSideListRow}>
                                 <Button content={visible ? 'Hide Processed files' : 'Show Processed files'} onClick={this.toggleVisibility} />
                             </div>
+                            <div className={styles.leftSideListRow}>
+                            {visible ?
+                            <Modal
+                                trigger={<Button className="m-8" basic color='teal' size='large' icon='download' content='Download'/>}
+                                style={inlineStyle.modal} size='large'>
+                                <Modal.Header>Batch Download instructions</Modal.Header>
+                                <Modal.Content>
+                                    <Modal.Description>
+                                        <p className='m-4 font-hairline text-grey-dark'>Copy these URLs to a file named “files.txt”
+                                        and copy to any server.
+                                        </p>
+                                        <p>The following command using cURL can be used to download all the files in the list: 
+                                        <pre className='m-4 bg-grey-lighter text-pink text-center'>xargs -n 1 curl -O -L &lt; files.txt</pre>
+                                        </p>
+                                        <DownloadWidget data={this.props.result}/>
+                                    </Modal.Description>
+                                </Modal.Content>
+                                {/* <Modal.Actions>
+                                    <Button positive icon='checkmark' labelPosition='right' content='Download' onClick={() => fileDownload(createDownloadManifest(this.state.result), "files.txt")}/>
+                                </Modal.Actions> */}
+                            </Modal> : null }
+                            </div>
+
                             
                         </ul>
                         {/* <ul className={styles.leftSideList}> 
@@ -124,4 +148,45 @@ const styles = {
     selectedItem: cn(`flex items-center py-1 pl-2 bg-white border-l-8 border-blue-resolute`),
     selectedItemIcon: cn(`pr-2 text-blue-resolute fix-negative-margin`),
     button: cn(`bg-white uppercase text-grey-darkest text-xs font-bold tracking-wide rounded border border-solid border-grey-light px-3 py-2 hover:text-white hover:bg-grey-darkest`)
+}
+
+
+class DownloadWidget extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
+    
+    render() {
+        return (
+            <div className="test">
+                {this.props.data.map((item, index) => <DownloadItem key={index} data={item}/>)}
+            </div>
+        );
+    }
+}
+
+
+class DownloadItem extends Component {
+    state = { rows: null }
+
+    componentDidMount() {
+        const {Assay, uuid, submission } = this.props.data;
+        const outDir = getPipelineOutDirOnly({ submission, uuid }, Assay);
+        const res = fetchProcessedFileStats(outDir, Assay, uuid);
+        res.then(resp => {
+            this.setState({ rows: resp });
+        })
+    }
+    render() { 
+        const {Assay, uuid, submission } = this.props.data;
+        if (!this.state.rows) {
+            return <p>Looking up..</p>
+        }
+        return ( 
+            <p className="text-xs font-hairline font-mono block text-grey-darker">
+                {(this.state.rows.map(item => `${PROCESSED_URL}/${Assay}/${submission}/${uuid}/${item.name}\n`))}
+            </p>
+        );
+    }
 }

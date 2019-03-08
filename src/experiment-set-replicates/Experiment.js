@@ -39,7 +39,38 @@ class Experiment extends Component {
         }
 
         console.log(this.state.data);
-        const {experiment, mouse_strain, status} = this.state.data[0];
+        const {experiment, mouse_strain, status,
+            treatment_exposure_age_last,
+            treatment_exposure_category,
+            treatment_exposure_life_stage,
+            treatment_exposure_paradigm,
+            treatment_exposure_specific,
+            mouse_animal_weight_sac,
+            mouse_fasted,
+            mouse_fasted_hours,
+            mouse_internal_id,
+            mouse_life_stage_collection,
+            mouse_liver_tumors,
+            mouse_perfusion,
+            assay_category,
+            assay_protocol_url,
+            biosample_collection_protocol_url
+        } = this.state.data[0];
+
+        const toList = {treatment_exposure_age_last,
+            treatment_exposure_category,
+            treatment_exposure_life_stage,
+            treatment_exposure_paradigm,
+            treatment_exposure_specific,
+            mouse_animal_weight_sac,
+            mouse_fasted,
+            mouse_fasted_hours,
+            mouse_internal_id,
+            mouse_life_stage_collection,
+            mouse_liver_tumors,
+            mouse_perfusion,
+            assay_category,
+            assay_protocol_url};
         return ( 
             <div><Header/>
                 <div className='three-columns flex'>
@@ -109,7 +140,20 @@ class Experiment extends Component {
                         <Card 
                         content='Treatment Paradigm'
                         date={`${this.state.data[0].treatment_exposure_paradigm}`}
-                        />                        
+                        />
+                        <div className='border-t-2 pt-4'>
+                            {Object.keys(toList).map(key => 
+                                <Card 
+                                content={key}
+                                date={toList[key]}
+                                />
+                            )}
+                            
+                            {(biosample_collection_protocol_url) ?
+                                <div className='pb-8'>
+                                    <a className='p-8 mb-4 no-underline' href={biosample_collection_protocol_url}>Biosample collection Protocol </a> 
+                                </div>: null}
+                        </div>                        
                         </div>
                     </div>                    
                 </div>
