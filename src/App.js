@@ -11,6 +11,7 @@ import Results from './base/Results';
 import Main from './main/index';
 import Card from './main/Card';
 import * as cn from 'classnames';
+import Axios from 'axios';
 
 const ESCLUSTER = 'https://search-targetdcc-3dlio7dsb2i4woj3cw6q4a4ghq.us-east-1.es.amazonaws.com/';
 // const ESCLUSTER =
@@ -40,7 +41,8 @@ class App extends Component {
       isClicked: false,
       message: "🔬Show Filters",
       qctoggle: false,
-      viewExperiments: true
+      viewExperiments: true,
+      updates: null
     };
   }
 
@@ -57,6 +59,11 @@ class App extends Component {
   })
 
   setMode = () => this.setState({ viewExperiments: !this.state.viewExperiments })
+
+  componentDidMount() {
+    Axios.get('https://target.wustl.edu/updates.json')
+      .then(res => this.setState({ updates: res.data }))
+  }
 
   render() {
     return (
@@ -105,31 +112,7 @@ class App extends Component {
                 {/* <button className={styles.button}>+ New Note</button> */}
               </div>
               <Tabs/>
-              <Card
-                content='Bartolomei Lab'
-                id='-L_9OavC7BcaNTgIwZeo'
-                by='Yemin Lan'
-                date='Mar 4, 2019 3:30 PM'/>
-              <Card
-                content='Bartolomei Lab'
-                id='-LZl9DdpCxAxswFbwF7v'
-                by='Yujie(Ivy) Chen'
-                date='Feb 27, 2019 4:52 PM'/>
-              <Card
-                content='Bartolomei Lab'
-                id='-LYmxmgFFGdxsBRwWVDA'
-                by='Yemin Lan'
-                date='Feb 15, 2019 4:01 PM'/>
-              <Card
-                content='Bartolomei Lab'
-                id='-LYbNvwSiLqzQxDZHlkb'
-                by='Yemin Lan'
-                date='Feb 13, 2019 10:05 AM'/>
-              <Card
-                content='Walker Lab'
-                id='-LY42hExwxX6b8aE4m_2'
-                by='Benpeng Miao'
-                date='Feb 6, 2019 5:05 PM'/>
+              {(!this.state.updates) ? <p>No updates found</p> : this.state.updates.map(item => <Card key={item.id} content={item.content} id={item.id} by={item.by} date={item.date}/>)}
             </div>
           </div>
         </ReactiveBase>

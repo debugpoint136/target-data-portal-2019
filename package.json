@@ -46,8 +46,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deployaws": "aws s3 sync build s3://target-data-portal",
-    "deployhttps": "aws s3 sync build/ s3://dcc.dev-targetepigenomics.org",
-    "deploy": "scp -r build/* dpuru@target.wustl.edu:/var/www/data-portal/build",
-    "postdeployhttps": "aws cloudfront create-invalidation --distribution-id ENYUSEBA77PZT --paths /"
+    "deploytargetserver": "scp -r build/* dpuru@target.wustl.edu:/var/www/data-portal/build",
+    "deployhttps": "aws s3 sync build/ s3://dcc.targetepigenomics.org",
+    "postdeployhttps": "aws cloudfront create-invalidation --distribution-id ET0XEYXUVY3BU --paths /*"
   }
 }

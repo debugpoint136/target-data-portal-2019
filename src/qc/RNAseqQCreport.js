@@ -5,7 +5,7 @@ import Information from './sections/Information';
 import { getFinalScoreRNAseq } from './qcutils';
 import YieldDistribution from './sections/YieldDistribution';
 import FeatureCounting from './RNA-seq/FeatureCounting';
-import KeyQCmetrics from './RNA-seq/KeyQCmetrics';
+// import KeyQCmetrics from './RNA-seq/KeyQCmetrics';
 import SimpleTable from './RNA-seq/SimpleTable';
 import LineChartSimple from './RNA-seq/LineChartSimple';
 import { parseObjAndSplitBy_, parseObjAndSplitBy_WithVal } from './RNA-seq/utils';
@@ -22,6 +22,7 @@ class RNAseqQCreport extends Component {
         if (Object.keys(this.props.data).length === 0) {
             return <p>Loading ... </p>  
         } 
+        console.log(this.props.data)
         return (
             <div className="test">
                 <Container>
@@ -38,9 +39,9 @@ class RNAseqQCreport extends Component {
                         gridAutoFlow: 'dense'
                     }}>
                     
-                    <GraphCard header="Key QC metrics" subtitle='Final overall score is calculated by adding these numbers' size='small'>
+                    {/* <GraphCard header="Key QC metrics" subtitle='Final overall score is calculated by adding these numbers' size='small'>
                         <KeyQCmetrics data={this.props.data.Key_QC_metrics} />
-                    </GraphCard>
+                    </GraphCard> */}
                     <GraphCard header="Feature Counting" subtitle='Important Stats' size='small'>
                         <FeatureCounting data={this.props.data.feature_counting} />
                     </GraphCard>
@@ -52,25 +53,25 @@ class RNAseqQCreport extends Component {
                                 keys={parseObjAndSplitBy_(this.props.data.feature_counting.detected_genes_cpm_distribution)} 
                                 />
                     </GraphCard>
-                    <GraphCard header='Library complexity' 
+                    {/* <GraphCard header='Library complexity' 
                             size='small'>
                             <GroupedBarChartComponentSimpleBottomLegend 
                                 data={[parseObjAndSplitBy_WithVal(this.props.data.library_complexity)]} 
                                 keys={parseObjAndSplitBy_(this.props.data.library_complexity)} 
                                 />
-                    </GraphCard>
+                    </GraphCard> */}
 
                     <GraphCard header="Yield Distribution" subtitle='Expected Distinction' size='small'>
                         <YieldDistribution data={this.props.data} show={'Expected Distinction'}/>
                     </GraphCard>
 
-                    <GraphCard header="Gene body coverage" size='small'>
+                    {/* <GraphCard header="Gene body coverage" size='small'>
                         <LineChartSimple 
                             xAxisLabel='Coverage' 
                             xAxisData={this.props.data.gene_body_covergae.percentile} 
                             yAxisLabel='Percentile'
                             yAxisData={this.props.data.gene_body_covergae.coverage}/>
-                    </GraphCard>
+                    </GraphCard> */}
 
                     <GraphCard header='Splice Junctions' 
                             size='small'>

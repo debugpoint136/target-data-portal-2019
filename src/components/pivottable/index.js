@@ -90,6 +90,7 @@ class TableMain extends Component {
   show = () => notify.createShowQueue()
 
   handleDataSelection = (list) => {
+    console.log(list);
     const redirectLink = constructCellRedirectLink(list);
     this.props.history.push(redirectLink);
     // this.setState({ setViewRedirectLink: redirectLink });

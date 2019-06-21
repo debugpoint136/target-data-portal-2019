@@ -6,6 +6,7 @@ const TISSUESimg = {
     'liver': 'liver.png',
     'Liver': 'liver.png',
     'Liver UBERON:0002107': 'liver.png',
+    'Liver': 'liver.png',
     'Liver - left lobe': 'liver.png',
     'Liver - Left Lobe': 'liver.png',
     'lung': 'lungs.png',

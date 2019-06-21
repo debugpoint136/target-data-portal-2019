@@ -1,6 +1,6 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
-// import './pagination.css'
+import './pagination.css'
 
 class Pagination extends React.Component {
     constructor(props, context) {

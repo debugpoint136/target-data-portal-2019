@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Button, Image, Modal, Icon } from 'semantic-ui-react'
 import ExperimentList from './ExperimentList';
+import FilesList from '../../file/FilesList';
 import * as d3 from 'd3';
 import _ from 'lodash';
 import NewBrowserView from '../../file/NewBrowserView';
@@ -22,7 +23,7 @@ const inlineStyle = {
 class ExperimentSet extends Component {
     constructor(props) {
         super(props);
-        this.state = {mice_groups: [], viewGrid: true}
+        this.state = {mice_groups: [], viewGrid: false}
     }
 
     setMode = () => this.setState({ viewGrid: !this.state.viewGrid })
@@ -76,7 +77,7 @@ class ExperimentSet extends Component {
                                     <Modal.Content>
                                         <Modal.Description>
                                             {/* <BrowserView data={getAllFilesForThisSet(this.props.results)}/> */}
-                                            <div className='flex justify-center'>
+                                            <div className='flex justify-center text-lg m-8'>
                                                 
                                             
                                             {/* <div className='container mx-auto bg-grey-lightest'>
@@ -93,6 +94,7 @@ class ExperimentSet extends Component {
                                                 You can add metadata heatmap manually like below - 
                                                 <img src="/metadata.png" alt="" height='400px' width='auto'/>
                                             </div> */}
+                                                <a target='_blank' href="https://www.youtube.com/watch?v=MPREBr0klQ4">How to add tracks on WashU Browser?</a>
                                             </div>
                                             {/* <BrowserView data={this.props.results}/> */}
                                             <NewBrowserView data={this.props.results}/>
@@ -108,7 +110,7 @@ class ExperimentSet extends Component {
                         </ul>
                     </div>
                     <div className="p-2 middle-column w-3/5 flex-1 border-b-2">
-                            {/* <div className='text-center mt-4'>
+                            <div className='text-center mt-4'>
                                 {(this.state.viewGrid) ? 
                                     <Button.Group icon basic>
                                         <Button active={this.state.viewGrid}>
@@ -128,10 +130,10 @@ class ExperimentSet extends Component {
                                         </Button>
                                     </Button.Group>
                                 }
-                            </div> */}
+                            </div> 
                         <div className="px-8 container-resolute mx-auto">
                             {/* <AccessionHeading accession='something' status='Experiment Set' iconName='database'/> */}
-                            <ExperimentList results={this.state.mice_groups} />
+                            {this.state.viewGrid ? <ExperimentList results={this.state.mice_groups} /> : <FilesList results={this.props.results}/>}
                         </div>
                     </div>
                     <div className="right-sidebar w-right bg-white shadow">

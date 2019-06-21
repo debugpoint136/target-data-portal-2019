@@ -57,19 +57,21 @@ class NewBrowserView extends Component {
             <div className="test">
                 {this.state.datahubID
                     ? 
-                    <div className="sdfsd">
+                    <div className="">
                         <div className="text-center font-sans">Datahub</div>
-                        <div className="m-4 p-4 bg-grey-darker text-white font-mono">{POST_DATAHUB_URL + '/' + this.state.datahubID}</div>
-                    <a href={link} target='_blank'>
-                            <Label>mm10</Label>
-                            <Button
-                                className="m-8"
-                                size='mini'
-                                color='pink'
-                                icon='external'
-                                content='WashU Epigenome Browser'/>
-                        </a>
-                    </div>
+                        <div className="flex justify-center m-8 p-4 bg-grey-darker text-white font-mono">{POST_DATAHUB_URL + '/' + this.state.datahubID}</div>
+                        <div className='flex justify-center'>
+                            <a href={link} target='_blank'>
+                                    <Label>mm10</Label>
+                                    <Button
+                                        className="m-8"
+                                        color='pink'
+                                        icon='external'
+                                        content='WashU Epigenome Browser'/>
+                                </a>
+                            </div>
+                        </div>
+                        
                     
                     : 
                     <div className="p-8 m-8 bg-orange-dark text-grey-lightest box-shadow">
