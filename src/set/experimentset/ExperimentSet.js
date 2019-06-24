@@ -113,20 +113,20 @@ class ExperimentSet extends Component {
                             <div className='text-center mt-4'>
                                 {(this.state.viewGrid) ? 
                                     <Button.Group icon basic>
-                                        <Button active={this.state.viewGrid}>
-                                            <Icon name='th'/>
-                                        </Button>
                                         <Button onClick={this.setMode}>
                                             <Icon name='list'/>
+                                        </Button>
+                                        <Button active={this.state.viewGrid}>
+                                            <Icon name='th'/>
                                         </Button>
                                     </Button.Group>
                                     :
                                     <Button.Group icon basic>
+                                        <Button active={!this.state.viewGrid}>
+                                            <Icon name='list'/>
+                                        </Button>
                                         <Button onClick={this.setMode}>
                                             <Icon name='th'/>
-                                        </Button>
-                                        <Button active={this.state.viewGrid}>
-                                            <Icon name='list'/>
                                         </Button>
                                     </Button.Group>
                                 }

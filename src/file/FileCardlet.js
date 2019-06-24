@@ -25,16 +25,17 @@ const TISSUESimg = {
 }
 
 const FileCardlet = (props) => {
+    console.log(props.result)
     return (
         <div className="min-w-md w-full flex mb-2">
-            <div className='w-48 flex flex-col'>
+            {/* <div className='w-48 flex flex-col'>
                 <div
                     className="pt-10 flex-none border-t  border-r border-l bg-white border-grey-light rounded-t-none text-center overflow-hidden">
                     <img height="20" width="40" src='./mouse.png' alt="tissue"/>
                     <div
                         className="bg-white text-xs text-center border-b border-grey-light text-grey-darkest font-light flex justify-around">
-                        <p className="text-grey-dark font-hairline">{props.result.age_of_mice}</p>
-                        <p>{props.result.mouse_gender}</p>
+                        <p className="text-grey-dark font-hairline">{props.result.Age}</p>
+                        <p>{props.result.Sex}</p>
                     </div>
                 </div>
 
@@ -52,15 +53,16 @@ const FileCardlet = (props) => {
                     <div
                         className="bg-white text-xs text-grey-dark font-hairline text-center border-b border-grey-light text-grey-darkest font-light">{props.result.exposure_type}</div>
                 </div>
-            </div>
+            </div> */}
 
             <div
                 className="w-full border-b border-l border-grey-light border-l-0 border-t border-grey-light bg-white rounded-b-none p-4 flex flex-col justify-between leading-normal">
                 <div>
                     <p className="text-sm text-grey-dark flex items-center">
-                        <Icon name='key'/> {props.result.uuid}
+                        <Icon name='key'/> {props.result._id}
                     </p>
-                    <div className="text-black font-bold text-xl mb-2">{props.result.Assay}</div>
+                    <div className="text-grey-darker font-bold text-lg mb-2">{props.result.Assay}</div>
+                    <div className="text-grey font-bold text-lg mb-2">{props.result.Tissue}</div>
                     <p className="text-grey-darker text-base">{props.result.filename}</p>
                     {/* <p className="text-grey-darker text-base">{props.result.Exposure}</p> */}
                 </div>
@@ -84,7 +86,7 @@ const FileCardlet = (props) => {
                         <div className="ml-2 mt-2 inline-flex">
                             <h5 className="ml-2">QC status: </h5>
                             {/* {makeQCStatusIndicator(props.result.QCScore, props.result.run_type)} */}
-                            {getScoreStatus(props.result.QCScore, props.result.Assay)}
+                            {getScoreStatus(props.result.score, props.result.Assay)}
                         </div>
                     </div>
                     

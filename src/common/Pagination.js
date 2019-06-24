@@ -11,7 +11,24 @@ class Pagination extends React.Component {
         }
     }
 
+    componentDidMount() {
+        const startingPage = this.props.startingPage
+            ? this.props.startingPage
+            : 1;
+        const data = this.props.data;
+        
+        const pageSize = this.props.pageSize;
+        let pageCount = parseInt(data.length / pageSize, 10);
+        if (data.length % pageSize > 0) {
+            pageCount++;
+        }
+        this.setState({currentPage: startingPage, pageCount: pageCount});
+    }
+
+    
+
     componentWillReceiveProps(nextProps) {
+
         const startingPage = nextProps.startingPage
             ? this.props.startingPage
             : 1;

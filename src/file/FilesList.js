@@ -36,6 +36,13 @@ class FilesList extends React.Component {
     state = {
         results: []
     }
+    componentDidMount() {
+        console.log('mounted');
+    }
+
+    componentWillUnmount() {
+        console.log('unmounted');
+    }
 /*
     componentDidMount() {
         let results = localStorage.getItem('results')
@@ -56,7 +63,7 @@ class FilesList extends React.Component {
                             ? <div className="flex flex-col">
                                     <div className="h-16 mb-4 w-full p-4 bg-grey-darker text-white text-center">
                                         <h3>
-                                            Files List</h3>
+                                            Experiments List</h3>
                                     </div>
                                     <Pagination data={this.props.results}>
                                         <FileCard/>
