@@ -36,13 +36,6 @@ class FilesList extends React.Component {
     state = {
         results: []
     }
-    componentDidMount() {
-        console.log('mounted');
-    }
-
-    componentWillUnmount() {
-        console.log('unmounted');
-    }
 /*
     componentDidMount() {
         let results = localStorage.getItem('results')

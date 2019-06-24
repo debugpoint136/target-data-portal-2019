@@ -1,6 +1,7 @@
 import React from 'react';
 import {Icon} from 'semantic-ui-react'
 // const QC_REPORT_URL = require('../../config.json').QC_REPORT_URL
+import { Link } from 'react-router-dom';
 
 const TISSUESimg = {
     'liver': 'liver.png',
@@ -25,7 +26,6 @@ const TISSUESimg = {
 }
 
 const FileCardlet = (props) => {
-    console.log(props.result)
     return (
         <div className="min-w-md w-full flex mb-2">
             {/* <div className='w-48 flex flex-col'>
@@ -58,9 +58,11 @@ const FileCardlet = (props) => {
             <div
                 className="w-full border-b border-l border-grey-light border-l-0 border-t border-grey-light bg-white rounded-b-none p-4 flex flex-col justify-between leading-normal">
                 <div>
-                    <p className="text-sm text-grey-dark flex items-center">
-                        <Icon name='key'/> {props.result._id}
-                    </p>
+                    <Link to={`/experiment/${props.result.experiment}`}>
+                        <p className="text-md font-mono text-blue-dark flex items-center">
+                            <Icon name='key'/> {props.result._id}
+                        </p>
+                    </Link>
                     <div className="text-grey-darker font-bold text-lg mb-2">{props.result.Assay}</div>
                     <div className="text-grey font-bold text-lg mb-2">{props.result.Tissue}</div>
                     <p className="text-grey-darker text-base">{props.result.filename}</p>

@@ -172,6 +172,7 @@ function addSelectedFlag(data) {
 // count=1&tissue=Liver&age_of_mice=5%20months&assay_technique=RNA-seq&lab=Chery
 // l%20Walker&exposure_type=Control&mouse_gender=Male
 function constructCellRedirectLink(list) {
+  console.log(list);
   const correctNAMES = {
     "tissue": "tissue_list",
     "assay_technique": "assay_list",
@@ -196,14 +197,16 @@ function constructCellRedirectLink(list) {
     //     tmp.push(`${correctNAMES[item]}=["${list[item]}"]`);
     //   }
     // });
-  let listSpreadConcat = "/set/?" + tmp.join('&');
+  let listSpreadConcat = "/set/?";
   const params = getSearchStringFromURL();
-  // if (params['search']) {
-  if (Object.keys(params).length > 0) {
-    Object.keys(params).forEach(additionalParam => {
-      listSpreadConcat = listSpreadConcat + '&' + additionalParam + '=' + params[additionalParam] ;
-    })
-  }
+  
+    listSpreadConcat = listSpreadConcat + tmp.join('&');
+    if (Object.keys(params).length > 0) {
+      Object.keys(params).forEach(additionalParam => {
+        listSpreadConcat = listSpreadConcat + '&' + additionalParam + '=' + params[additionalParam] ;
+      })
+    }
+  
   // console.log(listSpreadConcat);
   return listSpreadConcat;
 }

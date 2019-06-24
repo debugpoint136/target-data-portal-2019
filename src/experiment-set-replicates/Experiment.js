@@ -38,7 +38,6 @@ class Experiment extends Component {
             return <h3>Not found</h3>
         }
 
-        console.log(this.state.data);
         const {experiment, mouse_strain, status,
             treatment_exposure_age_last,
             treatment_exposure_category,

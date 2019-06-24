@@ -11,6 +11,7 @@ import NotFoundPage from './common/NotFound';
 import FileQCReportContainer from './file/FileQCReportContainer';
 // import FileMain from './file/FileMain';
 import Experiment from './experiment-set-replicates/Experiment';
+import ExperimentById from './experiment';
 // import Footer from './components/common/Footer';
 import Set from './set';
 // import SetView from './set/SetView';
@@ -26,7 +27,8 @@ const AppRouter = () => (
                     <Route path="/set" component={Set} exact={true}/>
                     <Route path="/experiment-set-replicates/:id" component={ExperimentReplicates} exact={true}/>
                     <Route path="/file/:id" component={FileQCReportContainer} exact={true}/>
-                    <Route path="/experiment/:id/:accession" component={Experiment} exact={true}/>
+                    <Route path="/experiment-replicate/:id/:accession" component={Experiment} exact={true}/>
+                    <Route path="/experiment/:id" component={ExperimentById} exact={true}/>
                     {/* <Route path="/experiment/:id/:accession?" component={Experiment}/> */}
                     
                     {/* <Route path="/experiments" component={ExperimentList} exact={true}/>*/}
