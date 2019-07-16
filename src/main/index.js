@@ -1,6 +1,7 @@
 import React from 'react';
 import * as cn from 'classnames';
 import SearchBar from '../base/SearchBar';
+import {Dropdown} from 'semantic-ui-react';
 
 const Main = (props) => {
     return (
@@ -32,7 +33,10 @@ const Main = (props) => {
                 <SearchBar/>
             </div>
             <div className='w-right'>
-                <a className="px-8 mx-auto text-center text-sm text-tracking-wide font-mono text-uppercase text-white hover:bg-white hover:text-grey-darker" href="https://bit.ly/2Rp9Oat" target='_blank'>Documentation</a> 
+                <div className='px-8 mx-auto text-center text-lg text-tracking-wide text-uppercase text-white hover:bg-white hover:text-grey-darker'>
+                    <DropdownExampleDropdown/>
+                </div>
+                {/* <a className="px-8 mx-auto text-center text-sm text-tracking-wide font-mono text-uppercase text-white hover:bg-white hover:text-grey-darker" href="https://bit.ly/2Rp9Oat" target='_blank'>Documentation</a>  */}
             </div>
         </div>
     );
@@ -57,3 +61,15 @@ const styles = {
     selectedItemIcon: cn(`pr-2 text-blue-resolute fix-negative-margin`),
     button: cn(`bg-white uppercase text-grey-darkest text-xs font-bold tracking-wide rounded border border-solid border-grey-light px-3 py-2 hover:text-white hover:bg-grey-darkest`)
 }
+
+const DropdownExampleDropdown = () => (
+    <Dropdown text='Help'>
+      <Dropdown.Menu>
+        <Dropdown.Item href="https://bit.ly/2Rp9Oat" text='Tutorial' />
+        {/* <Dropdown.Item href="https://docs.targetepigenomics.org" text='Documentation' /> */}
+        <Dropdown.Divider />
+        <Dropdown.Item icon='external' href='https://targetepigenomics.org/' text='TaRGET Homepage' />
+        <Dropdown.Item text='E-mail DCC' href='mailto:dpurushotham@wustl.edu' />
+      </Dropdown.Menu>
+    </Dropdown>
+  )

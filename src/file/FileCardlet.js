@@ -162,8 +162,8 @@ function makeQCStatusIndicator(score, run_type) {
 }
 */
 function getScoreStatus(score, assay) {
-    if (score) {
-        if (assay === 'ATAC-seq (transposase-accessible chromatin, OBI:0002039)') {
+    if (score || score === 0) {
+        if (assay === 'ATAC-seq (transposase-accessible chromatin, OBI:0002039)' || assay === 'ATAC-seq') {
             if (score >= 5) {
                 return '✅';
             } else {

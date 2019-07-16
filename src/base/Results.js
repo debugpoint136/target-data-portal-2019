@@ -50,7 +50,7 @@ class Results extends React.Component {
   
   onAllData = (results, streamResults, loadMoreData) => {
     if (results.length > 0) {
-      // console.log(JSON.stringify(results));
+      // console.log(JSON.stringify(results.map(d => ({ uuid: d.uuid, experiment_set: d.experiment_set, experiment: d._id, mouse: d.mouse, assay: d.assay, biosample: d.biosample }))));
       return <Table data={results} viewExperiments={this.props.viewExperiments}/>
     } else {
       return null;

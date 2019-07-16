@@ -1,6 +1,7 @@
 import React from 'react';
 import * as cn from 'classnames';
 import { Link } from 'react-router-dom';
+import {Dropdown} from 'semantic-ui-react';
 
 const Header = (props) => {
     return (
@@ -13,12 +14,15 @@ const Header = (props) => {
                     </div>
                 </div>
             </Link>
-            <div className={styles.topBarMiddle}>
-            </div>
+            {/* <div className={styles.topBarMiddle}>
+            </div> */}
             <div className='w-right'>
-                <div >
+                {/* <div >
                     <a className='px-8 mx-auto text-center text-sm text-tracking-wide font-mono text-uppercase text-white hover:bg-white hover:text-grey-darker' href="https://bit.ly/2Rp9Oat">Documentation</a> 
                 </div>
+                <div >
+                    <a className='px-8 mx-auto text-center text-sm text-tracking-wide font-mono text-uppercase text-white hover:bg-white hover:text-grey-darker' href="https://bit.ly/2Rp9Oat">Documentation</a> 
+                </div> */}
             </div>
         </div>
     );
@@ -43,3 +47,4 @@ const styles = {
     selectedItemIcon: cn(`pr-2 text-blue-resolute fix-negative-margin`),
     button: cn(`bg-white uppercase text-grey-darkest text-xs font-bold tracking-wide rounded border border-solid border-grey-light px-3 py-2 hover:text-white hover:bg-grey-darkest`)
 }
+

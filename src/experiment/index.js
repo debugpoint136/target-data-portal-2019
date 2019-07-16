@@ -11,11 +11,6 @@ const INDEX = 'experimentset';
 class ExperimentById extends Component {
   state = {}
 
-  componentDidMount() {
-    console.log(this.props.match.params.id);
-  }
-  
-
   render() {
     return (
       <div className="test">

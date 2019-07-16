@@ -23,10 +23,6 @@ const inlineStyle = {
 class ExperimentSingle extends Component {
   state = {}
 
-  componentDidMount() {
-    console.log(this.props.result)
-  }
-
   render() {
     const {experiment, mouse_strain, status,
       Assay,
@@ -45,7 +41,22 @@ class ExperimentSingle extends Component {
       assay_category,
       assay_protocol_url,
       biosample_collection_protocol_url
-  } = this.props.result;
+  } = this.props.result[0];
+
+  const toList = {treatment_exposure_age_last,
+    treatment_exposure_category,
+    treatment_exposure_life_stage,
+    treatment_exposure_paradigm,
+    treatment_exposure_specific,
+    mouse_animal_weight_sac,
+    mouse_fasted,
+    mouse_fasted_hours,
+    mouse_internal_id,
+    mouse_life_stage_collection,
+    mouse_liver_tumors,
+    mouse_perfusion,
+    assay_category,
+    assay_protocol_url};
 
     return (
       <div>
@@ -76,14 +87,38 @@ class ExperimentSingle extends Component {
                         </div>
                     </div>
                     <div className="right-sidebar w-right bg-white shadow">
-                        <div className="flex items-center justify-between p-4 mb-2">
+                        {/* <div className="flex items-center justify-between p-4 mb-2">
                             <div className="font-semibold text-lg text-grey-darkest">Common attributes</div>
                         </div>
                         <Card 
                         content={this.props.result[0].mouse_strain}
                         id="Mouse Strain"
-                        />
+                        /> */}
+                        <div className="flex items-center justify-between p-4 mb-2">
+                            <div className="font-semibold text-lg text-grey-darkest">Notes</div>
                         </div>
+                        <div>
+                        
+                        <Card 
+                        content='Treatment Paradigm'
+                        date={`${treatment_exposure_paradigm}`}
+                        />
+                        <div className='border-t-2 pt-4'>
+                            {Object.keys(toList).map(key => 
+                                <Card 
+                                key={key}
+                                content={makeKeyPrintable(key)}
+                                date={toList[key]}
+                                />
+                            )}
+                            
+                            {(biosample_collection_protocol_url) ?
+                                <div className='pb-8'>
+                                    <a className='p-8 mb-4 no-underline' href={biosample_collection_protocol_url}>Biosample collection Protocol </a> 
+                                </div>: null}
+                        </div>                        
+                        </div>
+                      </div>
                     </div>
                 </div>
     );
@@ -108,4 +143,15 @@ const styles = {
   selectedItem: cn(`flex items-center py-1 pl-2 bg-white border-l-8 border-blue-resolute`),
   selectedItemIcon: cn(`pr-2 text-blue-resolute fix-negative-margin`),
   button: cn(`bg-white uppercase text-grey-darkest text-xs font-bold tracking-wide rounded border border-solid border-grey-light px-3 py-2 hover:text-white hover:bg-grey-darkest`)
+}
+
+const capitalize = (s) => {
+  if (typeof s !== 'string') return ''
+  return s.charAt(0).toUpperCase() + s.slice(1)
+}
+
+function makeKeyPrintable(str) {
+  const parts = str.split('_');
+  const firstPart = capitalize(parts[0]);
+  return firstPart + " " +parts.slice(1).join(' ');
 }
