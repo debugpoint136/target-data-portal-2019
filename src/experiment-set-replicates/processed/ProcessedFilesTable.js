@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import {Icon, Table} from 'semantic-ui-react';
 import { fetchProcessedFileStats, getPipelineOutDirOnly } from './utils';
+import Axios from 'axios';
 const COLORS = ['orange', 'pink', 'purple', 'teal', 'green', 'red', 'blue', 'yellow', 'grey', 'indigo', 'orange', 'pink', 'purple', 'teal'];
+const BASEURL = 'https://5dum6c4ytb.execute-api.us-east-1.amazonaws.com/dev/submission';
+
 class ProcessedFilesTable extends Component {
     state = { rowsData: [], outDir: null, index: null }
 
-    componentDidMount() {
+    async componentDidMount() {
         const { file, assay, index } = this.props;
-        const outDir = getPipelineOutDirOnly(file, assay);
+        const { submission } = file;
+        const getres = await Axios.get(`${BASEURL}/${submission}`);
+        const SUBMISSION = getres.data.body[0];
+
+        const outDir = getPipelineOutDirOnly(SUBMISSION, file);
         const res = fetchProcessedFileStats(outDir, assay, file.uuid);
         res.then(resp => {
             this.setState({ rowsData: resp, outDir: outDir, index: index });

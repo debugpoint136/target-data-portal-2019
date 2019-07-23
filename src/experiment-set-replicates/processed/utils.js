@@ -52,11 +52,22 @@ export function fetchProcessedFileStats(URL, ASSAY, UUID) {
 
 const WEB_DIR = 'https://target.wustl.edu/files';
 
-export function getPipelineOutDirOnly(fileObj, assay) {
+export function getPipelineOutDirOnly(SUBMISSION, file) {
+    
+    let { _id, serverPath, assay} = SUBMISSION;
+    const { uuid } = file;
     if (assay === 'RRBS-Seq') {
         assay = 'RRBS-seq';
     }
-    const { submission, uuid } = fileObj;
-    const outDir = `${WEB_DIR}/${assay}/${submission}/${uuid}`;
+    let outDir = undefined;
+    
+    outDir = `${WEB_DIR}/${assay}/${_id}/${uuid}`;
+
+    if (serverPath !== undefined) {
+        outDir = `${WEB_DIR}${serverPath}/${uuid}`;
+    }
+
+    console.log(outDir);
+
     return outDir;
 }
